@@ -1,0 +1,7 @@
+a;
+b[visibility=hidden];
+c[visibility=hidden];
+---
+a -> b;
+---
+b -> c;

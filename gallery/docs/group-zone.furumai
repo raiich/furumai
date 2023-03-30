@@ -1,0 +1,27 @@
+group c1 {
+  fill=#ffe;
+  me[shape='person'];
+  browser1;
+  tool1;
+}
+group service1 {
+  fill: #ffe;
+  zone az1 {
+    fill=#fef;
+    proxy1;
+    backend1;
+  }
+  zone az2 {
+    fill=#fef;
+    proxy2;
+    backend2;
+  }
+}
+
+me -> browser1;
+tool1 -> browser1[];
+
+browser1 -> proxy1;
+browser1 -> proxy2;
+proxy1 -> backend1;
+proxy2 -> backend2;

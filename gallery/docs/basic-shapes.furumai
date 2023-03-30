@@ -1,0 +1,6 @@
+actor1[shape='person'];
+node1[shape='box'];
+store1[shape='cylinder'];
+
+actor1 -- node1;
+node1 -> store1;

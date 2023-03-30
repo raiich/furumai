@@ -1,0 +1,11 @@
+n1[t='text 1', fill=aquamarine];
+n2;
+
+n1 -> n2[
+  stroke-width=7,
+  stroke-linecap='round',
+  stroke-dasharray="3 9"
+  opacity="0.5"
+  t='a text',
+  text.fill=#a6f,
+];
