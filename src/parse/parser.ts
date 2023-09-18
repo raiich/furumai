@@ -34,13 +34,13 @@ import {
   UpdateContext,
   ValContext,
   ZoneContext,
-} from '@/generated/antlr4ts/FurumaiParser'
-import {FurumaiLexer} from '@/generated/antlr4ts/FurumaiLexer'
-import {FurumaiVisitor} from '@/generated/antlr4ts/FurumaiVisitor'
-import {Config, Layout, Story, Update} from '@/elem/Story'
-import {Elem} from '@/elem/Elem'
-import {Edge} from '@/elem/Edge'
-import {Hide} from '@/elem/Hide'
+} from '../generated/antlr4ts/FurumaiParser'
+import {FurumaiLexer} from '../generated/antlr4ts/FurumaiLexer'
+import {FurumaiVisitor} from '../generated/antlr4ts/FurumaiVisitor'
+import {Config, Layout, Story, Update} from '../elem/Story'
+import {Elem} from '../elem/Elem'
+import {Edge} from '../elem/Edge'
+import {Hide} from '../elem/Hide'
 import {
   Assigns,
   BasicSelector,
@@ -54,7 +54,7 @@ import {
   Selector,
   StyleList,
   UnivSelector,
-} from '@/style/Style'
+} from '../style/Style'
 
 export function parse(text: string): Story {
   const inputStream = CharStreams.fromString(text)

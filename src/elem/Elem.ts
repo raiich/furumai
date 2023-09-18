@@ -1,8 +1,8 @@
-import {AreaAttrs, TerritoryMap} from '@/layout/types'
-import {Assigns, Context, deleteField, StyleList} from '@/style/Style'
-import {Appearance, createElem, Group, Shape, SvgStyle} from '@/components/model/Svg'
-import {Box, LayoutStyle} from '@/layout/Engine'
-import {SecureSvgAttrs} from '@/components/model/security'
+import {AreaAttrs, TerritoryMap} from '../layout/types'
+import {Assigns, Context, deleteField, StyleList} from '../style/Style'
+import {Appearance, createElem, Group, Shape, SvgStyle} from '../components/model/Svg'
+import {Box, LayoutStyle} from '../layout/Engine'
+import {SecureSvgAttrs} from '../components/model/security'
 
 export class Elem {
   get _attrs(): Assigns {

@@ -1,9 +1,9 @@
-import {Vector2d} from '@/layout/Vector2d'
-import {SvgElem} from '@/components/model/SvgElem'
-import {Length, Point} from '@/layout/types'
-import {TextElem} from '@/components/model/TextElem'
-import {m} from '@/style/Style'
-import {Shape} from '@/components/model/Svg'
+import {Vector2d} from '../../layout/Vector2d'
+import {SvgElem} from './SvgElem'
+import {Length, Point} from '../../layout/types'
+import {TextElem} from './TextElem'
+import {m} from '../../style/Style'
+import {Shape} from './Svg'
 
 export class Arrow {
   private defaults = {

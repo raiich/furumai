@@ -1,7 +1,7 @@
-import {Length, Point} from '@/layout/types'
-import {TextElem} from '@/components/model/TextElem'
-import {SvgElem} from '@/components/model/SvgElem'
-import {Shape} from '@/components/model/Svg'
+import {Length, Point} from '../../layout/types'
+import {TextElem} from './TextElem'
+import {SvgElem} from './SvgElem'
+import {Shape} from './Svg'
 
 export class Person {
   constructor(

@@ -1,8 +1,8 @@
-import {StyleList} from '@/style/Style'
-import {Elem} from '@/elem/Elem'
-import {Edge} from '@/elem/Edge'
-import {Orientation} from '@/layout/Engine'
-import {Hide} from '@/elem/Hide'
+import {StyleList} from '../style/Style'
+import {Elem} from './Elem'
+import {Edge} from './Edge'
+import {Orientation} from '../layout/Engine'
+import {Hide} from './Hide'
 
 export interface Config {
   mode: 'snapshot' | 'diff'

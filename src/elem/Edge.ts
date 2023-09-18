@@ -1,10 +1,10 @@
-import {Assigns, deleteUndefined, StyleList} from '@/style/Style'
-import {Length, Territory} from '@/layout/types'
-import {Arrow} from '@/layout/Arrow'
-import {Appearance, createArrow, Shape, SvgStyle} from '@/components/model/Svg'
-import {TextAttrs} from '@/components/model/Arrow'
-import {SvgElem as SvgElem} from '@/components/model/SvgElem'
-import {Elem, ElemStyle} from '@/elem/Elem'
+import {Assigns, deleteUndefined, StyleList} from '../style/Style'
+import {Length, Territory} from '../layout/types'
+import {Arrow} from '../layout/Arrow'
+import {Appearance, createArrow, Shape, SvgStyle} from '../components/model/Svg'
+import {TextAttrs} from '../components/model/Arrow'
+import {SvgElem as SvgElem} from '../components/model/SvgElem'
+import {Elem, ElemStyle} from './Elem'
 
 export class Edge {
   public static of(from: string, op: string, to: string, attrs: Assigns = {}): Edge {

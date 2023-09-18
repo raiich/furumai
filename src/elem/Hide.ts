@@ -1,4 +1,4 @@
-import {Edge} from '@/elem/Edge'
+import {Edge} from './Edge'
 
 export class Hide {
   public static elem(id: string): Hide {

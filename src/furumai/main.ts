@@ -1,9 +1,9 @@
-import {parse} from '@/parse/parser'
-import {Config, Layout, Story} from '@/elem/Story'
-import {Engine as LayoutEngine} from '@/layout/Engine'
-import {Group, Svg} from '@/components/model/Svg'
-import {Point} from '@/layout/types'
-import {SvgElem} from '@/components/model/SvgElem'
+import {parse} from '../parse/parser'
+import {Config, Layout, Story} from '../elem/Story'
+import {Engine as LayoutEngine} from '../layout/Engine'
+import {Group, Svg} from '../components/model/Svg'
+import {Point} from '../layout/types'
+import {SvgElem} from '../components/model/SvgElem'
 
 export const defaultString = `config {
   mode: diff;

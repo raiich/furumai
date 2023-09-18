@@ -1,4 +1,4 @@
-import {deleteUndefined, m} from '@/style/Style'
+import {deleteUndefined, m} from '../style/Style'
 
 class Pixel {
   public static unit = 'px'

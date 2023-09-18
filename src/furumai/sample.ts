@@ -1,4 +1,4 @@
-import {DataEncoderDecoderV1} from '@/codec/codec'
+import {DataEncoderDecoderV1} from '../codec/codec'
 
 const sampleCode = `config { mode: snapshot; }
 style {

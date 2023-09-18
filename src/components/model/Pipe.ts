@@ -1,7 +1,7 @@
-import {Length, Point} from '@/layout/types'
-import {SvgElem} from '@/components/model/SvgElem'
-import {TextElem} from '@/components/model/TextElem'
-import {Shape} from '@/components/model/Svg'
+import {Length, Point} from '../../layout/types'
+import {SvgElem} from './SvgElem'
+import {TextElem} from './TextElem'
+import {Shape} from './Svg'
 
 export class Pipe {
   constructor(

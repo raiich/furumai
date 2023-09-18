@@ -1,5 +1,5 @@
-import {TextElem} from '@/components/model/TextElem'
-import {SecureSvgAttrs} from '@/components/model/security'
+import {TextElem} from './TextElem'
+import {SecureSvgAttrs} from './security'
 
 export interface SvgElem {
   id: string

@@ -1,5 +1,5 @@
-import {Length, Point} from '@/layout/types'
-import {SecureSvgAttrs} from '@/components/model/security'
+import {Length, Point} from '../../layout/types'
+import {SecureSvgAttrs} from './security'
 
 export class TextElem {
   constructor(
