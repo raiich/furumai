@@ -23,7 +23,7 @@ export interface LayoutStyle {
 }
 
 export class Engine {
-  constructor(readonly config: Config) {
+  constructor(readonly orientation: string) {
   }
 
   public fitRoot(root: Box) {
@@ -198,7 +198,7 @@ export class Engine {
   }
 
   private direction(style: LayoutStyle): 'row' | 'column' {
-    switch (this.config.orientation) {
+    switch (this.orientation) {
       case 'portrait':
         return style['flex-direction']
       case 'landscape':

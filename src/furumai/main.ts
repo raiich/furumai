@@ -70,7 +70,7 @@ export function toSvgModels(furumaiCode: string): Svg[] {
   const story = parseStory(furumaiCode)
   const config = story.config as Config
   let layout = story.layout
-  const engine = new LayoutEngine(config)
+  const engine = new LayoutEngine(config.orientation)
   const ret = [createSvg(engine, layout, config)]
 
   for (const update of story.updates) {
@@ -97,7 +97,7 @@ function createSvg(engine: LayoutEngine, layout: Layout, config: Config): Svg {
   engine.fitRoot(rootBox)
 
   const territories = rootBox.flatten(Point.zero)
-  const includeStyle = !config.css
+  const includeStyle = true
   const root = styled.shape(territories, includeStyle)
 
   const es = layout.edges.map((edge) => {

@@ -7,7 +7,6 @@ import {Hide} from './Hide'
 export interface Config {
   mode: 'snapshot' | 'diff'
   orientation: Orientation
-  css: 'style-tag' | undefined
 }
 
 export class Story {
