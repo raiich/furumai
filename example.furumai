@@ -1,0 +1,24 @@
+group clients {
+  c1;
+  c2;
+}
+
+group kvs {
+  s1;
+  s2;
+  s3;
+  hinted_hand_off[shape='box', label='Hinted Hand Off'];
+};
+
+---
+c1 -> s1 [
+  t='write x=1\n...',
+  stroke-dasharray=4
+];
+c1 -> s2 [t='write x=1'];
+s1[t='x=1'];
+s2[t='x=1'];
+
+---
+c2[t='x=1'];
+c2 -> s2 [t='read x=1'];

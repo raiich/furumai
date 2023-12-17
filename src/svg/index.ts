@@ -9,7 +9,9 @@ const d = dom.window.document
 const ns = 'http://www.w3.org/2000/svg'
 
 export function toSvg(input: Svg) {
-  const svg = d.createElementNS('http://www.w3.org/2000/svg', 'svg')
+  const ns = 'http://www.w3.org/2000/svg'
+  const svg = d.createElementNS(ns, 'svg')
+  svg.setAttribute('xmlns', ns)
   svg.setAttribute('id', 'svgRoot')
   svg.setAttribute('class', 'svg-root')
 
