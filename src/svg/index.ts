@@ -3,13 +3,14 @@ import {JSDOM} from 'jsdom'
 import {Length} from '../layout/types'
 import {SvgElem} from "../components/model/SvgElem";
 import {TextElem} from "../components/model/TextElem";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 const dom = new JSDOM()
 const d = dom.window.document
 const ns = 'http://www.w3.org/2000/svg'
 
 export function toSvg(input: Svg) {
-  const ns = 'http://www.w3.org/2000/svg'
   const svg = d.createElementNS(ns, 'svg')
   svg.setAttribute('xmlns', ns)
   svg.setAttribute('id', 'svgRoot')
@@ -38,7 +39,28 @@ export function toSvg(input: Svg) {
       }
       return ret
     } else if (elem.icon) {
-      throw new Error('not implemented')
+      const iconName = 'fa' + elem.icon.charAt(0).toUpperCase() + elem.icon.slice(1)
+      const icon = fas[iconName]
+      const path =icon.icon[4]
+
+      const pathElem = d.createElementNS(ns, 'path')
+      pathElem.setAttribute('d', Array.isArray(path) ? path.join(' ') : path)
+
+      const svg = d.createElementNS(ns, 'svg')
+      svg.setAttribute('xmlns', ns)
+      svg.setAttribute('id', 'svgRoot')
+      svg.setAttribute('class', 'svg-root')
+
+      const width = Length.parse(elem.secureAttrs.svgAttrs['width'])
+      const height = Length.parse(elem.secureAttrs.svgAttrs['height'])
+      svg.setAttribute('width', `${width}`)
+      svg.setAttribute('height', `${height}`)
+      svg.setAttribute('viewBox', `0 0 ${icon.icon[0]} ${icon.icon[1]}`)
+      svg.setAttribute('style', 'stroke: none; fill: black;')
+      svg.setAttribute('x', elem.secureAttrs.svgAttrs['x'])
+      svg.setAttribute('y', elem.secureAttrs.svgAttrs['y'])
+      svg.appendChild(pathElem)
+      return svg
     } else {
       const ret = d.createElementNS(ns, 'rect')
       const attrs = elem.secureAttrs.svgAttrs
