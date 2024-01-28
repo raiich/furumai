@@ -98,12 +98,14 @@ export class Arrow {
     const va = rotateBase(degree, pumpUp)
     const vb = rotateBase(-degree, pumpUp)
 
-    return `M ${x1} ${y1}
-L ${x2} ${y2}
-M ${va.x2} ${va.y2}
-L ${x2} ${y2}
-M ${vb.x2} ${vb.y2}
-L ${x2} ${y2}`
+    return [
+      `M ${x1} ${y1}`,
+      `L ${x2} ${y2}`,
+      `M ${va.x2} ${va.y2}`,
+      `L ${x2} ${y2}`,
+      `M ${vb.x2} ${vb.y2}`,
+      `L ${x2} ${y2}`
+    ].join(' ')
   }
 }
 
