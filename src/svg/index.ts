@@ -1,9 +1,8 @@
-import {Group, Svg} from '../components/model/Svg'
+import {Svg} from '../components/model/Svg'
 import {JSDOM} from 'jsdom'
 import {Length} from '../layout/types'
 import {SvgElem} from "../components/model/SvgElem";
 import {TextElem} from "../components/model/TextElem";
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 const dom = new JSDOM()
@@ -71,7 +70,7 @@ export function toSvg(input: Svg) {
     }
   }
 
-  function textNodeOf(text :TextElem, className: string) {
+  function textNodeOf(text :TextElem, classNames: string[]) {
     const ret = d.createElementNS(ns, 'text')
     const x = text.base.x.toString()
     const y = text.base.y.toString()
@@ -84,6 +83,7 @@ export function toSvg(input: Svg) {
     text.lines.forEach(function (t) {
       const tspan = d.createElementNS(ns, 'tspan')
       tspan.classList.add('text')
+      classNames.forEach((c) => tspan.classList.add(c))
       tspan.setAttribute('dy', t.dy)
       tspan.setAttribute('x', x)
       tspan.textContent = t.text
@@ -95,10 +95,10 @@ export function toSvg(input: Svg) {
   function process(elem: SvgElem) {
     root.appendChild(childNodeOf(elem))
     if (elem.text) {
-      root.appendChild(textNodeOf(elem.text, 'text'))
+      root.appendChild(textNodeOf(elem.text, []))
     }
     if (elem.label) {
-      root.appendChild(textNodeOf(elem.label, 'text'))
+      root.appendChild(textNodeOf(elem.label, ['label']))
     }
   }
 

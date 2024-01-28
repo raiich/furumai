@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "antlr4ts": "antlr4ts -o src/generated/antlr4ts/ -visitor Furumai.g4",
+    "tsc": "tsc",
     "tslint": "tslint --fix **/*.ts",
     "license-checker": "license-checker --production --json --relativeLicensePath --excludePrivatePackages",
-    "tsc": "tsc",
-    "snippets": "tsc --outDir ./dist/ && node dist/tools/tools.js"
+    "txt2svg:all": "sh ./tasks/txt2svg-all.sh",
+    "antlr4ts": "antlr4ts -o src/generated/antlr4ts/ -visitor Furumai.g4"
   },
-  "a": {
+  "deprecated": {
+    "snippets": "tsc --outDir ./dist/ && node dist/tools/tools.js",
     "dependencies": "yarn -s license-checker | jq 'del(.[]|.path)' > ./.vuepress/components/dependencies.json",
-    "copyLicenses": "yarn -s license-checker | jq -r '.[].licenseFile' | xargs -IX sh -c 'mkdir -p ./.vuepress/public/$(dirname X) && cp X ./.vuepress/public/X'",
+    "copyLicenses": "yarn -s license-checker | jq -r '.[].licenseFile' | xargs -I{} sh -c 'mkdir -p ./.vuepress/public/$(dirname {}) && cp {} ./.vuepress/public/{}'",
     "dependencies:all": "yarn dependencies && yarn copyLicenses",
     "build:all": "yarn dependencies:all && yarn build && yarn build:docs && mv .vuepress/dist docs/docs"
   },
