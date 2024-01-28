@@ -6,7 +6,7 @@
     "tsc": "tsc",
     "tslint": "tslint --fix **/*.ts",
     "license-checker": "license-checker --production --json --relativeLicensePath --excludePrivatePackages",
-    "txt2svg:all": "sh ./tasks/txt2svg-all.sh",
+    "txt2svg:all": "bash ./tasks/txt2svg-all.sh",
     "antlr4ts": "antlr4ts -o src/generated/antlr4ts/ -visitor Furumai.g4"
   },
   "deprecated": {

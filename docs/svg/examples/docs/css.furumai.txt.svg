@@ -1,0 +1,28 @@
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 640 320"
+ width="640" height="320"
+>
+<text
+font-size="12pt"
+>
+<tspan y="1.3em" x="0.5em">style {</tspan>
+<tspan y="2.6em" x="1.5em">#n1 { stroke: #6af }</tspan>
+<tspan y="3.9000000000000004em" x="1.5em">#n1 .label { fill: #f6a; font-size: 32px; }</tspan>
+<tspan y="5.2em" x="1.5em">#n1 .text { fill: #a6f;}</tspan>
+<tspan y="6.5em" x="1.5em">.cls-1 { fill: #faa;}</tspan>
+<tspan y="7.800000000000001em" x="0.5em">};</tspan>
+<tspan y="9.1em" x="0.5em"></tspan>
+<tspan y="10.4em" x="0.5em">n1[t='text 1', fill=aquamarine];</tspan>
+<tspan y="11.700000000000001em" x="0.5em">n2[class="cls-1"];</tspan>
+<tspan y="13em" x="0.5em"></tspan>
+<tspan y="14.3em" x="0.5em">n1 -> n2[</tspan>
+<tspan y="15.600000000000001em" x="1.5em">stroke-width=7,</tspan>
+<tspan y="16.900000000000002em" x="1.5em">stroke-linecap='round',</tspan>
+<tspan y="18.2em" x="1.5em">stroke-dasharray="3 9"</tspan>
+<tspan y="19.5em" x="1.5em">opacity="0.5"</tspan>
+<tspan y="20.8em" x="1.5em">t='a text',</tspan>
+<tspan y="22.1em" x="1.5em">text.fill=#a6f,</tspan>
+<tspan y="23.400000000000002em" x="0.5em">];</tspan>
+</text>
+</svg>

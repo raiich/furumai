@@ -12,8 +12,14 @@ console.log(`<text
 font-size="12pt"
 >`)
 
+const offsetX = 0.5
+let lineNum = 0;
 reader.on('line', (line) => {
-  console.log(`<tspan dy="1.3em" x="0em">${line}</tspan>`)
+  lineNum++
+  const ts = line.trimStart()
+  const x =  (line.length - ts.length) * 0.5 + offsetX
+  const y = lineNum * 1.3
+  console.log(`<tspan y="${y}em" x="${x}em">${ts}</tspan>`)
 })
 
 reader.on('close', () => {

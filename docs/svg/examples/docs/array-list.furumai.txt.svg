@@ -1,0 +1,33 @@
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 640 320"
+ width="640" height="320"
+>
+<text
+font-size="12pt"
+>
+<tspan y="1.3em" x="0.5em">visibility=hidden;</tspan>
+<tspan y="2.6em" x="0.5em"></tspan>
+<tspan y="3.9000000000000004em" x="0.5em">group array {</tspan>
+<tspan y="5.2em" x="1.5em">node[margin=0, padding=10, width=80, height=85, label=''];</tspan>
+<tspan y="6.5em" x="1.5em">c1;</tspan>
+<tspan y="7.800000000000001em" x="1.5em">c2;</tspan>
+<tspan y="9.1em" x="1.5em">c3;</tspan>
+<tspan y="10.4em" x="1.5em">c4;</tspan>
+<tspan y="11.700000000000001em" x="1.5em">c5;</tspan>
+<tspan y="13em" x="1.5em">c6[label='...', stroke='none'];</tspan>
+<tspan y="14.3em" x="1.5em">c7;</tspan>
+<tspan y="15.600000000000001em" x="1.5em">c8;</tspan>
+<tspan y="16.900000000000002em" x="0.5em">};</tspan>
+<tspan y="18.2em" x="0.5em">---</tspan>
+<tspan y="19.5em" x="0.5em">c1[t='a123'];</tspan>
+<tspan y="20.8em" x="0.5em">c2[t='b124'];</tspan>
+<tspan y="22.1em" x="0.5em">c3[t='c125'];</tspan>
+<tspan y="23.400000000000002em" x="0.5em">c4[t='d126'];</tspan>
+<tspan y="24.7em" x="0.5em">---</tspan>
+<tspan y="26em" x="0.5em">c5[t='e127'];</tspan>
+<tspan y="27.3em" x="0.5em">c6;</tspan>
+<tspan y="28.6em" x="0.5em">c7;</tspan>
+<tspan y="29.900000000000002em" x="0.5em">c8;</tspan>
+</text>
+</svg>

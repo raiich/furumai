@@ -1,0 +1,37 @@
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 640 320"
+ width="640" height="320"
+>
+<text
+font-size="12pt"
+>
+<tspan y="1.3em" x="0.5em">group c1 {</tspan>
+<tspan y="2.6em" x="1.5em">fill=#ffe;</tspan>
+<tspan y="3.9000000000000004em" x="1.5em">me[shape='person'];</tspan>
+<tspan y="5.2em" x="1.5em">browser1;</tspan>
+<tspan y="6.5em" x="1.5em">tool1;</tspan>
+<tspan y="7.800000000000001em" x="0.5em">}</tspan>
+<tspan y="9.1em" x="0.5em">group service1 {</tspan>
+<tspan y="10.4em" x="1.5em">fill: #ffe;</tspan>
+<tspan y="11.700000000000001em" x="1.5em">zone az1 {</tspan>
+<tspan y="13em" x="2.5em">fill=#fef;</tspan>
+<tspan y="14.3em" x="2.5em">proxy1;</tspan>
+<tspan y="15.600000000000001em" x="2.5em">backend1;</tspan>
+<tspan y="16.900000000000002em" x="1.5em">}</tspan>
+<tspan y="18.2em" x="1.5em">zone az2 {</tspan>
+<tspan y="19.5em" x="2.5em">fill=#fef;</tspan>
+<tspan y="20.8em" x="2.5em">proxy2;</tspan>
+<tspan y="22.1em" x="2.5em">backend2;</tspan>
+<tspan y="23.400000000000002em" x="1.5em">}</tspan>
+<tspan y="24.7em" x="0.5em">}</tspan>
+<tspan y="26em" x="0.5em"></tspan>
+<tspan y="27.3em" x="0.5em">me -> browser1;</tspan>
+<tspan y="28.6em" x="0.5em">tool1 -> browser1[];</tspan>
+<tspan y="29.900000000000002em" x="0.5em"></tspan>
+<tspan y="31.200000000000003em" x="0.5em">browser1 -> proxy1;</tspan>
+<tspan y="32.5em" x="0.5em">browser1 -> proxy2;</tspan>
+<tspan y="33.800000000000004em" x="0.5em">proxy1 -> backend1;</tspan>
+<tspan y="35.1em" x="0.5em">proxy2 -> backend2;</tspan>
+</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 640 320"
+ width="640" height="320"
+>
+<text
+font-size="12pt"
+>
+<tspan y="1.3em" x="0.5em">style {</tspan>
+<tspan y="2.6em" x="1.5em">#root { visibility: hidden }</tspan>
+<tspan y="3.9000000000000004em" x="1.5em">.node { fill: #60EFDB; stroke: none; }</tspan>
+<tspan y="5.2em" x="1.5em">.node.text { fill: #6F89A2 }</tspan>
+<tspan y="6.5em" x="1.5em">.edge { stroke: #C3C5F8 }</tspan>
+<tspan y="7.800000000000001em" x="0.5em">}</tspan>
+<tspan y="9.1em" x="0.5em"></tspan>
+<tspan y="10.4em" x="0.5em">group layer1 {</tspan>
+<tspan y="11.700000000000001em" x="1.5em">b1;</tspan>
+<tspan y="13em" x="1.5em">b2;</tspan>
+<tspan y="14.3em" x="0.5em">};</tspan>
+<tspan y="15.600000000000001em" x="0.5em"></tspan>
+<tspan y="16.900000000000002em" x="0.5em">group layer2 {</tspan>
+<tspan y="18.2em" x="1.5em">a1;</tspan>
+<tspan y="19.5em" x="1.5em">a2;</tspan>
+<tspan y="20.8em" x="1.5em">a3;</tspan>
+<tspan y="22.1em" x="1.5em">a4;</tspan>
+<tspan y="23.400000000000002em" x="0.5em">};</tspan>
+<tspan y="24.7em" x="0.5em"></tspan>
+<tspan y="26em" x="0.5em">---</tspan>
+<tspan y="27.3em" x="0.5em">b1[t='thresholds=[10]', label='root'];</tspan>
+<tspan y="28.6em" x="0.5em">a1[t='v=[8,9]'];</tspan>
+<tspan y="29.900000000000002em" x="0.5em">a3[t='v=[9]'];</tspan>
+<tspan y="31.200000000000003em" x="0.5em">a4[t='v=[10]'];</tspan>
+<tspan y="32.5em" x="0.5em"></tspan>
+<tspan y="33.800000000000004em" x="0.5em">b1 -> a1;</tspan>
+<tspan y="35.1em" x="0.5em">b1 -> a4;</tspan>
+<tspan y="36.4em" x="0.5em">a1 -> a4[dy=20px];</tspan>
+<tspan y="37.7em" x="0.5em">a3 -> a4;</tspan>
+<tspan y="39em" x="0.5em"></tspan>
+<tspan y="40.300000000000004em" x="0.5em">---</tspan>
+<tspan y="41.6em" x="0.5em">hide a1 -> a4;</tspan>
+<tspan y="42.9em" x="0.5em"></tspan>
+<tspan y="44.2em" x="0.5em">b1[t='threshold=[9,10]', label='root'];</tspan>
+<tspan y="45.5em" x="0.5em">b2[t='threshold=[9,10]'];</tspan>
+<tspan y="46.800000000000004em" x="0.5em">a1[t='v=[8]'];</tspan>
+<tspan y="48.1em" x="0.5em"></tspan>
+<tspan y="49.4em" x="0.5em">a1 -> a3;</tspan>
+<tspan y="50.7em" x="0.5em">b1 -> a3;</tspan>
+<tspan y="52em" x="0.5em">b2 -> a3;</tspan>
+<tspan y="53.300000000000004em" x="0.5em">b2 -> a4;</tspan>
+</text>
+</svg>
