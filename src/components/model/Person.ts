@@ -60,21 +60,23 @@ export class Person {
     const y2 = y + cr * 3
     const y3 = cr * 4 + y
 
-    return `M ${cxr},${yum}
-C ${cxr},${yud}
-${cxl},${yud}
-${cxl},${yum}
-M ${cxr},${yum}
-C ${cxr},${yuu}
-${cxl},${yuu}
-${cxl},${yum}
-M${cx},${y1}
-L${cx},${y3}
-M${xl},${y2}
-L${xr},${y2}
-M${cx},${y3}
-L${xl},${yy}
-M${cx},${y3}
-L${xr},${yy}`
+    return [
+      `M ${cxr},${yum}`,
+      `C ${cxr},${yud}`,
+      `  ${cxl},${yud}`,
+      `  ${cxl},${yum}`,
+      `M ${cxr},${yum}`,
+      `C ${cxr},${yuu}`,
+      `  ${cxl},${yuu}`,
+      `  ${cxl},${yum}`,
+      `M ${cx},${y1}`,
+      `L ${cx},${y3}`,
+      `M ${xl},${y2}`,
+      `L ${xr},${y2}`,
+      `M ${cx},${y3}`,
+      `L ${xl},${yy}`,
+      `M ${cx},${y3}`,
+      `L ${xr},${yy}`,
+    ].join(' ')
   }
 }

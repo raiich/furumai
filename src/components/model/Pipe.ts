@@ -49,19 +49,21 @@ export class Pipe {
     const yum = cy - (height / 2)
     const ydm = cy + (height / 2)
 
-    return `M ${xl},${yum}
-C ${xl + curve},${yum}
-  ${xl + curve},${ydm}
-  ${xl},${ydm}
-M ${xl},${yum}
-C ${xl - curve},${yum}
-  ${xl - curve},${ydm}
-  ${xl},${ydm}
-M ${xl},${yum}
-L ${xr},${yum}
-C ${xr + curve},${yum}
-  ${xr + curve},${ydm}
-  ${xr},${ydm}
-L ${xl},${ydm}`
+    return [
+      `M ${xl},${yum}`,
+      `C ${xl + curve},${yum}`,
+      `  ${xl + curve},${ydm}`,
+      `  ${xl},${ydm}`,
+      `M ${xl},${yum}`,
+      `C ${xl - curve},${yum}`,
+      `  ${xl - curve},${ydm}`,
+      `  ${xl},${ydm}`,
+      `M ${xl},${yum}`,
+      `L ${xr},${yum}`,
+      `C ${xr + curve},${yum}`,
+      `  ${xr + curve},${ydm}`,
+      `  ${xr},${ydm}`,
+      `L ${xl},${ydm}`,
+    ].join(' ')
   }
 }

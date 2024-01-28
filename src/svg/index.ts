@@ -3,7 +3,10 @@ import {JSDOM} from 'jsdom'
 import {Length} from '../layout/types'
 import {SvgElem} from "../components/model/SvgElem";
 import {TextElem} from "../components/model/TextElem";
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import {fas, prefix as fasPrefix} from '@fortawesome/free-solid-svg-icons'
+import {far, prefix as farPrefix} from '@fortawesome/free-regular-svg-icons'
+import {fab, prefix as fabPrefix} from '@fortawesome/free-brands-svg-icons'
+import {brands} from "@fortawesome/fontawesome-svg-core/import.macro";
 
 const dom = new JSDOM()
 const d = dom.window.document
@@ -38,9 +41,35 @@ export function toSvg(input: Svg) {
       }
       return ret
     } else if (elem.icon) {
-      const iconName = 'fa' + elem.icon.charAt(0).toUpperCase() + elem.icon.slice(1)
-      const icon = fas[iconName]
-      const path =icon.icon[4]
+      const prefixAndName = elem.icon.split('/')
+      const [prefix, name] = prefixAndName.length < 2 ? ['solid', elem.icon] : prefixAndName
+      const icon = function () {
+        function camelize(kebab: string) {
+          const camel = kebab.replace(/-./g, (x)=>x[1].toUpperCase())
+          return camel.charAt(0).toUpperCase() + camel.slice(1)
+        }
+        const camel = camelize(name)
+        switch (prefix) {
+          case 'solid':
+            return fas['fa' + camel]
+          case 'regular':
+            return far['fa' + camel]
+          case 'brands':
+            return fab['fa' + camel]
+          default:
+            throw new Error(`icon not found: ${elem.icon} ${prefix} ${name} ${camel}`)
+        }
+      }()
+
+      if (!icon) {
+        function camelize(s: string) {
+          return s.replace(/-./g, (x)=>x[1].toUpperCase())
+        }
+        const c = camelize(name)
+        throw new Error(`icon not found: ${elem.icon} ${prefix} ${name} ${c}`)
+      }
+
+      const path = icon.icon[4]
 
       const pathElem = d.createElementNS(ns, 'path')
       pathElem.setAttribute('d', Array.isArray(path) ? path.join(' ') : path)
@@ -70,7 +99,7 @@ export function toSvg(input: Svg) {
     }
   }
 
-  function textNodeOf(text :TextElem, classNames: string[]) {
+  function textNodeOf(text: TextElem, classNames: string[]) {
     const ret = d.createElementNS(ns, 'text')
     const x = text.base.x.toString()
     const y = text.base.y.toString()

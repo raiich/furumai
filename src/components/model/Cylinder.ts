@@ -32,19 +32,21 @@ export class Cylinder {
     const ydm = cy + (height / 2)
     const ydd = ydm + curve
 
-    return `M ${xr},${yum}
-C ${xr},${yud}
-  ${xl},${yud}
-  ${xl},${yum}
-M ${xr},${yum}
-C ${xr},${yuu}
-  ${xl},${yuu}
-  ${xl},${yum}
-M ${xr},${yum}
-L ${xr},${ydm}
-C ${xr},${ydd}
-  ${xl},${ydd}
-  ${xl},${ydm}
-L ${xl},${yum}`
+    return [
+      `M ${xr},${yum}`,
+      `C ${xr},${yud}`,
+      `  ${xl},${yud}`,
+      `  ${xl},${yum}`,
+      `M ${xr},${yum}`,
+      `C ${xr},${yuu}`,
+      `  ${xl},${yuu}`,
+      `  ${xl},${yum}`,
+      `M ${xr},${yum}`,
+      `L ${xr},${ydm}`,
+      `C ${xr},${ydd}`,
+      `  ${xl},${ydd}`,
+      `  ${xl},${ydm}`,
+      `L ${xl},${yum}`,
+    ].join(' ')
   }
 }
