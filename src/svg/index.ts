@@ -1,12 +1,11 @@
-import {Svg} from '../components/model/Svg'
+import {Group, Svg} from '../components/model/Svg'
 import {JSDOM} from 'jsdom'
 import {Length} from '../layout/types'
 import {SvgElem} from "../components/model/SvgElem";
 import {TextElem} from "../components/model/TextElem";
-import {fas, prefix as fasPrefix} from '@fortawesome/free-solid-svg-icons'
-import {far, prefix as farPrefix} from '@fortawesome/free-regular-svg-icons'
-import {fab, prefix as fabPrefix} from '@fortawesome/free-brands-svg-icons'
-import {brands} from "@fortawesome/fontawesome-svg-core/import.macro";
+import {fas} from '@fortawesome/free-solid-svg-icons'
+import {far} from '@fortawesome/free-regular-svg-icons'
+import {fab} from '@fortawesome/free-brands-svg-icons'
 
 const dom = new JSDOM()
 const d = dom.window.document
@@ -121,23 +120,22 @@ export function toSvg(input: Svg) {
     return ret
   }
 
-  function process(elem: SvgElem) {
-    root.appendChild(childNodeOf(elem))
+  function traverse(group :Group) :SVGGElement{
+    const elem = group.elem
+    const g = d.createElementNS(ns, 'g')
+    g.setAttribute('visibility', elem.visibility ? elem.visibility : 'inherit')
+    g.appendChild(childNodeOf(elem))
     if (elem.text) {
-      root.appendChild(textNodeOf(elem.text, []))
+      g.appendChild(textNodeOf(elem.text, []))
     }
     if (elem.label) {
-      root.appendChild(textNodeOf(elem.label, ['label']))
+      g.appendChild(textNodeOf(elem.label, ['label']))
     }
+    group.children.map(traverse).forEach((c)=>g.appendChild(c))
+    return g
   }
 
-  const node = input.root
-  const queue = [node]
-  while (queue.length > 0) {
-    const item = queue.shift()!
-    process(item.elem)
-    queue.push(...item.children)
-  }
+  root.appendChild(traverse(input.root))
   return svg
 }
 
