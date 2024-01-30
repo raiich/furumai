@@ -25,11 +25,11 @@ export class Edge {
   }
 
   public static idName(from: string, op: string, to: string): string {
-    return `_furumai_${from}_${this.connectorName(op)}_${to}`
+    return `_edge_id_${from}_${this.connectorName(op)}_${to}`
   }
 
   public static className(from: string, op: string, to: string): string {
-    return `_furumai_${from}_${this.connectorName(op)}_${to}`
+    return `_edge_class_${from}_${this.connectorName(op)}_${to}`
   }
 
   private static connectorName(op: string): string {

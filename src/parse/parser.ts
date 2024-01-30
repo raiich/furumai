@@ -75,6 +75,25 @@ export function parse(text: string): Story {
   }
 }
 
+export function parseStyle(text: string): Ruleset[] {
+  const inputStream = CharStreams.fromString(text)
+  const errorListener = new FurumaiErrorListener()
+  const lexer = new FurumaiLexer(inputStream)
+  lexer.removeErrorListeners()
+  lexer.addErrorListener(errorListener)
+  const tokenStream = new CommonTokenStream(lexer)
+  const parser = new FurumaiParser(tokenStream)
+  parser.removeErrorListeners()
+  parser.addErrorListener(errorListener)
+  const tree = parser.css_stmt()
+  if (errorListener.errors.length > 0) {
+    throw new SyntaxError(JSON.stringify(errorListener.errors))
+  } else {
+    const visitor = new FurumaiVisitorImpl()
+    return visitor.visit(tree)
+  }
+}
+
 class FurumaiErrorListener implements ANTLRErrorListener<any> {
   public errors: any[] = []
 

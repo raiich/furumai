@@ -10,7 +10,7 @@ import {Person} from './Person'
 import {Pipe} from './Pipe'
 import {asString} from '../../style/Style'
 
-export interface Svg {
+export interface Snapshot {
   styles: string
   size: Boundary
   root: Group

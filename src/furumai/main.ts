@@ -1,9 +1,10 @@
-import {parse} from '../parse/parser'
+import {parse, parseStyle} from '../parse/parser'
 import {Config, Layout, Story} from '../elem/Story'
 import {Engine as LayoutEngine} from '../layout/Engine'
-import {Group, Svg} from '../components/model/Svg'
+import {Group, Snapshot} from '../components/model/Svg'
 import {Point} from '../layout/types'
 import {SvgElem} from '../components/model/SvgElem'
+import {StyleList} from "../style/Style";
 
 export const defaultString = `config {
   mode: diff;
@@ -66,31 +67,66 @@ style {
 };
 `
 
-export function toSvgModels(furumaiCode: string): Svg[] {
+export function makeSnapshots(furumaiCode: string): Snapshot[] {
   const story = parseStory(furumaiCode)
   const config = story.config as Config
   let layout = story.layout
   const engine = new LayoutEngine(config.orientation)
-  const ret = [createSvg(engine, layout, config)]
+  const ret = [createSnapshot(engine, layout, config)]
 
   for (const update of story.updates) {
     if (config.mode === 'diff') {
       layout = layout.update(update)
-      ret.push(createSvg(engine, layout, config))
+      ret.push(createSnapshot(engine, layout, config))
     } else {
       layout = parseStory(furumaiCode).layout.update(update)
-      ret.push(createSvg(engine, layout, config))
+      ret.push(createSnapshot(engine, layout, config))
     }
   }
   return ret
 }
+export function makeSnapshots_(text: string): Snapshot[] {
+  const [header, code] = split(text)
+  const ruleSets = parseStyle(header)
+  const story = parseStory(code)
+  let layout = new Layout(story.layout.root, story.layout.edges, StyleList.of(ruleSets))
 
-function parseStory(furumaiCode: string): Story {
-  const defaults = parse(defaultString)
-  return parse(furumaiCode).withDefault(defaults.config as Config, defaults.layout.styles)
+  const config = story.config as Config
+  const engine = new LayoutEngine(config.orientation)
+
+  const snapshots = [createSnapshot(engine, layout, config)]
+  for (const update of story.updates) {
+    if (config.mode === 'diff') {
+      layout = layout.update(update)
+    } else {
+      const base = parseStory(code).layout
+      layout = new Layout(base.root, base.edges, StyleList.of(ruleSets)).update(update)
+    }
+    snapshots.push(createSnapshot(engine, layout, config))
+  }
+  return snapshots
 }
 
-function createSvg(engine: LayoutEngine, layout: Layout, config: Config): Svg {
+export function split(text: string): [string, string] {
+  const trimmed = text.trim()
+  if (trimmed.startsWith('---\n')) {
+    const at = trimmed.indexOf('---\n', 1)
+    if (at > 0) {
+      throw new Error('invalid format')
+    }
+    const header = trimmed.substring(4, at)
+    const code = trimmed.substring(at + 4)
+    return [header, code]
+  }
+  return ['', trimmed]
+}
+
+function parseStory(code: string): Story {
+  const defaults = parse(defaultString)
+  return parse(code).withDefault(defaults.config as Config, defaults.layout.styles)
+}
+
+function createSnapshot(engine: LayoutEngine, layout: Layout, config: Config): Snapshot {
   const styles = layout.styles
   const styled = layout.root.resolveStyle(styles, layout.root.contextMap)
   const rootBox = styled.layoutBox()

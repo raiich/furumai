@@ -1,10 +1,10 @@
 import * as fs from 'fs'
 import * as process from 'process'
-import {toSvgModels} from '../furumai/main'
-import {toSvg} from '../svg'
+import {makeSnapshots} from '../furumai/main'
+import {toSvgXml} from '../svg'
 
-const text = fs.readFileSync(process.stdin.fd, 'utf8')
-let svgs = toSvgModels(text)
-svgs.forEach((svg) => {
-  console.log(toSvg(svg).outerHTML)
+const content = fs.readFileSync(process.stdin.fd, 'utf8')
+let snapshots = makeSnapshots(content)
+snapshots.forEach((snapshot) => {
+  console.log(toSvgXml(snapshot).outerHTML)
 })

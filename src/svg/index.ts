@@ -1,4 +1,4 @@
-import {Group, Svg} from '../components/model/Svg'
+import {Group, Snapshot} from '../components/model/Svg'
 import {JSDOM} from 'jsdom'
 import {Length} from '../layout/types'
 import {SvgElem} from "../components/model/SvgElem";
@@ -11,7 +11,7 @@ const dom = new JSDOM()
 const d = dom.window.document
 const ns = 'http://www.w3.org/2000/svg'
 
-export function toSvg(input: Svg) {
+export function toSvgXml(input: Snapshot) {
   const svg = d.createElementNS(ns, 'svg')
   svg.setAttribute('xmlns', ns)
   svg.setAttribute('id', 'svgRoot')
