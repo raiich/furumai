@@ -1,4 +1,6 @@
-config {orientation=landscape}
+---
+direction: landscape
+---
 
 node1;
 actor1[shape=person];

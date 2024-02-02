@@ -1,7 +1,8 @@
-style {
+---
+style: |
   #root { visibility: hidden; }
   .transient { dy: 20px; }
-}
+---
 
 group layer0 {
   c1;

@@ -1,9 +1,10 @@
-style {
+---
+style: |
   #root { visibility: hidden }
   .node { fill: #60EFDB; stroke: none; }
   .node.text { fill: #6F89A2 }
   .edge { stroke: #C3C5F8 }
-}
+---
 
 group layer1 {
   b1;

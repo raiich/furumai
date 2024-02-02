@@ -1,4 +1,6 @@
-config {mode: snapshot}
+---
+mode: snapshot
+---
 
 a;
 b;

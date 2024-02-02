@@ -1,6 +1,6 @@
-config { mode: snapshot; }
-
-style {
+---
+mode: snapshot
+style: |
   .group, .zone { label: '';}
   #clients { justify-content: start }
   #services { justify-content: start; }
@@ -8,7 +8,7 @@ style {
   #KDC {fill: #f0f0f0}
   #KDC .node { fill: #FFE5C0; stroke: none; }
   #KDC .text { fill: #555555; }
-}
+---
 
 group client_server {
   zone clients {

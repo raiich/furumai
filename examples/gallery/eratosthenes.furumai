@@ -1,9 +1,10 @@
-style {
+---
+style: |
   .group{margin: 0; padding: 0; label: '';}
   .node{margin: 0; width: 45; height: 45}
   .group .node .label {dy: 14px; dx: 8px}
   #primes {width: auto; margin: 30px 0px;}
-}
+---
 
 primes[label='prime list:', t='[]'];
 
