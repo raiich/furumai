@@ -9,7 +9,6 @@ import {
   Class_selectorContext,
   CombinatorContext,
   Combined_selectorContext,
-  ConfigContext,
   Css_stmtContext,
   DeclarationContext,
   Edge_selectorContext,
@@ -27,8 +26,7 @@ import {
   Semi_colonContext,
   Stmt_listContext,
   StmtContext,
-  StoryContext,
-  StyleContext,
+  StoryContext, StyleContext,
   Type_selectorContext,
   Univ_selectorContext,
   UpdateContext,
@@ -37,7 +35,7 @@ import {
 } from '../generated/antlr4ts/FurumaiParser'
 import {FurumaiLexer} from '../generated/antlr4ts/FurumaiLexer'
 import {FurumaiVisitor} from '../generated/antlr4ts/FurumaiVisitor'
-import {Config, Layout, Story, Update} from '../elem/Story'
+import {Layout, Story, Update} from '../elem/Story'
 import {Elem} from '../elem/Elem'
 import {Edge} from '../elem/Edge'
 import {Hide} from '../elem/Hide'
@@ -76,6 +74,9 @@ export function parse(text: string): Story {
 }
 
 export function parseStyle(text: string): Ruleset[] {
+  if (!text || text.trim().length === 0) {
+    return []
+  }
   const inputStream = CharStreams.fromString(text)
   const errorListener = new FurumaiErrorListener()
   const lexer = new FurumaiLexer(inputStream)
@@ -85,12 +86,12 @@ export function parseStyle(text: string): Ruleset[] {
   const parser = new FurumaiParser(tokenStream)
   parser.removeErrorListeners()
   parser.addErrorListener(errorListener)
-  const tree = parser.css_stmt()
+  const tree = parser.style()
   if (errorListener.errors.length > 0) {
     throw new SyntaxError(JSON.stringify(errorListener.errors))
   } else {
     const visitor = new FurumaiVisitorImpl()
-    return visitor.visit(tree)
+    return visitor.visit(tree).rules
   }
 }
 
@@ -122,19 +123,12 @@ class FurumaiVisitorImpl implements FurumaiVisitor<any> {
   public visitStory(ctx: StoryContext): Story {
     const eof = ctx.EOF()
     if (eof) {
-      const configContext = ctx.config()
-      const conf: Partial<Config> = configContext ? this.visit(configContext) : {}
       const layout: Layout = this.visit(ctx.layout())
       const updates: Update[] = ctx.update().map((u) => this.visit(u))
-      return new Story(conf, layout, updates)
+      return new Story(layout, updates)
     } else {
       throw new SyntaxError('invalid input statement syntax')
     }
-  }
-
-  public visitConfig(ctx: ConfigContext): Partial<Config> {
-    const assigns: Declaration[] = ctx.declaration().map((c) => this.visit(c))
-    return Declaration.reduce(assigns)
   }
 
   public visitLayout(ctx: LayoutContext): Layout {
@@ -151,7 +145,6 @@ class FurumaiVisitorImpl implements FurumaiVisitor<any> {
         ...attrs,
       }, s.elems),
       s.edges,
-      Style.flatten(s.styles),
     )
   }
 
@@ -164,7 +157,6 @@ class FurumaiVisitorImpl implements FurumaiVisitor<any> {
       s.elems,
       s.edges,
       s.hides,
-      Style.flatten(s.styles),
     )
   }
 
@@ -209,7 +201,6 @@ class FurumaiVisitorImpl implements FurumaiVisitor<any> {
       || ctx.edge_stmt()
       || ctx.hide()
       || ctx.declaration()
-      || ctx.style()
       || ctx.semi_colon()
     if (stmt) {
       return this.visit(stmt)

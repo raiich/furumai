@@ -11,7 +11,7 @@ const dom = new JSDOM()
 const d = dom.window.document
 const ns = 'http://www.w3.org/2000/svg'
 
-export function toSvgXml(input: Snapshot) {
+export function toSVGElement(input: Snapshot) {
   const svg = d.createElementNS(ns, 'svg')
   svg.setAttribute('xmlns', ns)
   svg.setAttribute('id', 'svgRoot')

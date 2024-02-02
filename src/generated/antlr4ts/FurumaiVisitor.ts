@@ -1,10 +1,9 @@
-// Generated from Furumai.g4 by ANTLR 4.7.3-SNAPSHOT
+// Generated from Furumai.g4 by ANTLR 4.9.0-SNAPSHOT
 
 
 import { ParseTreeVisitor } from "antlr4ts/tree/ParseTreeVisitor";
 
 import { StoryContext } from "./FurumaiParser";
-import { ConfigContext } from "./FurumaiParser";
 import { LayoutContext } from "./FurumaiParser";
 import { UpdateContext } from "./FurumaiParser";
 import { Stmt_listContext } from "./FurumaiParser";
@@ -48,13 +47,6 @@ export interface FurumaiVisitor<Result> extends ParseTreeVisitor<Result> {
 	 * @return the visitor result
 	 */
 	visitStory?: (ctx: StoryContext) => Result;
-
-	/**
-	 * Visit a parse tree produced by `FurumaiParser.config`.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	visitConfig?: (ctx: ConfigContext) => Result;
 
 	/**
 	 * Visit a parse tree produced by `FurumaiParser.layout`.

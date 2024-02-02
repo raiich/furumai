@@ -11,25 +11,9 @@ export interface Config {
 
 export class Story {
   constructor(
-    readonly config: Partial<Config>,
     readonly layout: Layout,
     readonly updates: Update[],
   ) {
-  }
-
-  public withDefault(config: Config, styles: StyleList): Story {
-    return new Story(
-      {
-        ...config,
-        ...this.config,
-      },
-      new Layout(
-        this.layout.root,
-        this.layout.edges,
-        styles.update(this.layout.styles),
-      ),
-      this.updates,
-    )
   }
 }
 
@@ -37,7 +21,6 @@ export class Layout {
   constructor(
     readonly root: Elem,
     readonly edges: Edge[],
-    readonly styles: StyleList,
   ) {
   }
 
@@ -93,7 +76,6 @@ export class Layout {
         throw new Error('unsupported')
       }
     })
-    this.styles.update(update.styles)
     return this
   }
 }
@@ -103,7 +85,7 @@ export class Update {
     readonly elems: Elem[],
     readonly edges: Edge[],
     readonly hides: Hide[],
-    readonly styles: StyleList,
+    // readonly styles: StyleList,
   ) {
   }
 }

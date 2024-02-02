@@ -207,10 +207,10 @@ export class Engine {
         } else if (style['flex-direction'] === 'column') {
           return 'row'
         } else {
-          throw new Error('not implemented')
+          throw new Error('not implemented: ' + this.orientation)
         }
       default:
-        throw new Error('not implemented')
+        throw new Error('not implemented: ' + this.orientation)
     }
   }
 }
