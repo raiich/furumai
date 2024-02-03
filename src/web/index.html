@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Furumai | a visualization tool to generate system behavior</title>
+  <style>
+    .app {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .code-editor-wrap {
+      max-width: 80rem;
+      padding-left: 1.5rem;
+    }
+
+    .code-editor {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      height: 70vh;
+    }
+
+    .card {
+      overflow: scroll;
+      margin: 1.5rem;
+    }
+
+    .moments-footer {
+      margin-right: 1.5rem;
+    }
+
+    .text-error {
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body>
+<noscript>
+  <strong>
+    We're sorry but doesn't work properly without JavaScript enabled.
+    Please enable it to continue.
+  </strong>
+</noscript>
+
+<!-- Header -->
+<div>
+  <div class="tabs">
+    <a href="#">Top</a>
+    <a href="https://github.com/raiich/furumai">GitHub</a>
+    <a href="https://github.com/raiich/furumai">About</a>
+  </div>
+</div>
+<!-- Header -->
+
+<!-- Content -->
+<div class="app">
+  <div class="code-editor-wrap">
+    <textarea title="Code Editor" id="editor" class="code-editor"></textarea>
+    <label for="editor"></label>
+    <button id="draw-button" class="button primary">Draw (Ctrl + Enter)</button>
+    <hr>
+    <div>
+      Default settings:
+      <pre>config {
+          ...
+          }
+        </pre>
+    </div>
+  </div>
+  <div>
+    <div id="cards">
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" class="svg-root" width="640px" height="332px" viewBox="0 0 640 332">
+          <style></style>
+          <g visibility="inherit">
+            <rect stroke="none" fill="none" x="0px" y="0px" width="172px" height="332px"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <button id="download-button" class="button primary">Download SVG(s)</button>
+  </div>
+</div>
+<!-- Content -->
+
+</body>
+</html>

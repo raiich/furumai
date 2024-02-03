@@ -101,7 +101,7 @@ export function parseStyle(text: string): Ruleset[] {
   }
 }
 
-class FurumaiErrorListener /* extends DiagnosticErrorListener<any>*/ implements ErrorListener<any> {
+class FurumaiErrorListener /*extends DiagnosticErrorListener<any>*/ implements ErrorListener<any> {
   public errors: any[] = []
 
   public syntaxError(recognizer: Recognizer<any>, offendingSymbol: any, line: number, column: number, msg: string, e: RecognitionException | undefined): void {
