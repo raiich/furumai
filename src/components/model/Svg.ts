@@ -70,7 +70,7 @@ export class Shape {
   public elem(id: string, className: string): SvgElem {
     const visibility = this.appearance.visibility
     if (visibility) {
-      if (visibility !== 'visible' && visibility !== 'hidden') {
+      if (visibility !== 'visible' && visibility !== 'hidden' && visibility !== 'inherit') {
         throw new Error('not supported: ' + visibility)
       }
     }

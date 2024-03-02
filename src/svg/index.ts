@@ -1,5 +1,4 @@
 import {Group, Snapshot} from '../components/model/Svg'
-import {JSDOM} from 'jsdom'
 import {Length} from '../layout/types'
 import {SvgElem} from "../components/model/SvgElem";
 import {TextElem} from "../components/model/TextElem";
@@ -7,11 +6,9 @@ import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
 import {fab} from '@fortawesome/free-brands-svg-icons'
 
-const dom = new JSDOM()
-const d = dom.window.document
 const ns = 'http://www.w3.org/2000/svg'
 
-export function toSVGElement(input: Snapshot) {
+export function toSVGElement(input: Snapshot, d: Document) {
   const svg = d.createElementNS(ns, 'svg')
   svg.setAttribute('xmlns', ns)
   svg.setAttribute('id', 'svgRoot')
