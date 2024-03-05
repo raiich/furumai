@@ -28,48 +28,23 @@ function encode(version:string, decoded: string): string {
   }
 }
 
-function getEditor(): HTMLTextAreaElement {
-  return document.getElementById('editor') as HTMLTextAreaElement
-}
+function onload() {
+  const {version, code} = parseHash(document.location.hash)
+  const editor = document.getElementById('editor') as HTMLTextAreaElement
+  editor.value = code
 
-
-function refreshPage() {
-  const hash = document.location.hash
-
-  const at = hash.indexOf('/', 2)
-  console.log('hash', hash, 'at', at)
-  if (at < 0) {
-    console.log('redirecting', at)
-    redirect('v1', 'a;')
-    return
-  }
-  const version = hash.substring(2, at)
-  const encoded = hash.substring(at + 1)
-  if (encoded.length === 0) {
-    console.log('redirecting', at, version)
-    redirect(version, 'a;')
-  }
-  getEditor().value = decode(version, encoded)
-
-  const snapshots = makeSnapshots(getEditor().value)
-  const elems = snapshots.map((snapshot) => {
-    return toSVGElement(snapshot, document)
-  })
-  const cards = document.getElementById('cards')!
-  elems.forEach((elem) => {
-    cards.appendChild(elem)
-  })
+  const drawer = new Drawer(version)
+  drawer.redirectAndDraw()
 
   document.getElementById('editor')!.addEventListener("keydown", (e) => {
-    console.log('keydown')
     if ((e.key === 'Enter' || e.code === 'Enter' || e.keyCode === 10 || e.keyCode === 13) && (e.ctrlKey || e.metaKey)) {
-      redirect(version, getEditor().value)
+      drawer.redirectAndDraw()
     }
   });
 
-  const drawButton = document.getElementById('draw-button')!
+  const drawButton = document.getElementById('redirectAndDraw-button')!
   drawButton.addEventListener('click', (e) => {
-    redirect(version, getEditor().value)
+    drawer.redirectAndDraw()
   })
 
   const downloadButton = document.getElementById('download-button')!
@@ -93,20 +68,137 @@ function refreshPage() {
   })
 }
 
-function redirect(version: string, code: string) {
-  const hash = `#/${version}/${encode(version, code)}`
-  console.log(version, code, hash)
-  window.addEventListener("hashchange", () => {
-    console.log('hash changed')
-    refreshPage()
-  })
-  history.pushState(null, '',  hash)
+function parseHash(hash: string): {version: string, code: string} {
+  const at = hash.indexOf('/', 2)
+  console.log('hash', hash, 'at', at)
+  if (at < 0) {
+    return {
+      version: 'v1',
+      code: 'a;',
+    }
+  }
+  const version = hash.substring(2, at)
+  const encoded = hash.substring(at + 1)
+  if (encoded.length === 0) {
+    return {
+      version,
+      code: 'a;',
+    }
+  }
+  return {
+    version: version,
+    code: decode(version, encoded),
+  }
+}
+
+class Drawer {
+  constructor(readonly version: string) {
+  }
+
+  redirectAndDraw() {
+    const version = this.version
+    const editor = document.getElementById('editor') as HTMLTextAreaElement
+    const code = editor.value
+    const hash = `#/${version}/${encode(version, code)}`
+    console.log(version, code, hash)
+    history.pushState(null, '',  hash)
+    this.draw(code)
+  }
+
+  draw(decoded: string) {
+    const cards = document.getElementById('cards')!
+    while (cards.firstChild) {
+      cards.removeChild(cards.firstChild)
+    }
+
+    const snapshots = makeSnapshots(decoded)
+    const elems = snapshots.map((snapshot) => {
+      return toSVGElement(snapshot, document)
+    })
+    elems.forEach((elem) => {
+      cards.appendChild(elem)
+      cards.appendChild(document.createElement('hr'))
+    })
+  }
 }
 
 if (typeof document !== 'undefined') {
-  refreshPage()
-  window.addEventListener("hashchange", () => {
-    console.log('hash changed')
-    refreshPage()
-  })
+  onload()
 }
+
+// function refreshPage() {
+//   const hash = document.location.hash
+//
+//   const at = hash.indexOf('/', 2)
+//   console.log('hash', hash, 'at', at)
+//   if (at < 0) {
+//     console.log('redirecting', at)
+//     redirect('v1', 'a;')
+//     return
+//   }
+//   const version = hash.substring(2, at)
+//   const encoded = hash.substring(at + 1)
+//   if (encoded.length === 0) {
+//     console.log('redirecting', at, version)
+//     redirect(version, 'a;')
+//   }
+//   getEditor().value = decode(version, encoded)
+//
+//   const snapshots = makeSnapshots(getEditor().value)
+//   const elems = snapshots.map((snapshot) => {
+//     return toSVGElement(snapshot, document)
+//   })
+//   const cards = document.getElementById('cards')!
+//   elems.forEach((elem) => {
+//     cards.appendChild(elem)
+//   })
+//
+//   document.getElementById('editor')!.addEventListener("keydown", (e) => {
+//     if ((e.key === 'Enter' || e.code === 'Enter' || e.keyCode === 10 || e.keyCode === 13) && (e.ctrlKey || e.metaKey)) {
+//       redirect(version, getEditor().value)
+//     }
+//   });
+//
+//   const drawButton = document.getElementById('redirectAndDraw-button')!
+//   drawButton.addEventListener('click', (e) => {
+//     redirect(version, getEditor().value)
+//   })
+//
+//   const downloadButton = document.getElementById('download-button')!
+//   downloadButton.addEventListener('click', (e) => {
+//     console.log('downloading')
+//
+//     const cards = document.getElementsByClassName('svg-root')
+//     for (let i = 0; i < cards.length; i++) {
+//       const c = cards.item(i)!
+//       if (c) {
+//         const blob = '<?xml version="1.0" encoding="UTF-8"?>' + c.outerHTML
+//         const url = URL.createObjectURL(new Blob([blob], {type: 'image/svg+xml'}))
+//         const link = document.createElement('a')
+//         link.href = url
+//         link.download = `furumai-${i}.svg`
+//         document.body.appendChild(link)
+//         link.click()
+//         document.body.removeChild(link)
+//       }
+//     }
+//   })
+// }
+//
+// function redirect(version: string, code: string) {
+//   const hash = `#/${version}/${encode(version, code)}`
+//   console.log(version, code, hash)
+//   window.addEventListener("hashchange", () => {
+//     console.log('hash changed')
+//     refreshPage()
+//   })
+//   history.pushState(null, '',  hash)
+// }
+//
+// if (typeof document !== 'undefined') {
+//   refreshPage()
+//   window.addEventListener("hashchange", () => {
+//     console.log('hash changed')
+//     refreshPage()
+//   })
+// }
