@@ -105,7 +105,16 @@ class FurumaiErrorListener /*extends DiagnosticErrorListener<any>*/ implements E
   public errors: any[] = []
 
   public syntaxError(recognizer: Recognizer<any>, offendingSymbol: any, line: number, column: number, msg: string, e: RecognitionException | undefined): void {
-    throw new Error('Method not implemented.')
+    const error = {
+      message: msg,
+      range: {
+        at: {
+          column: column,
+          row: line,
+        },
+      },
+    }
+    this.errors.push(error)
   }
 
   public reportAmbiguity(recognizer: any, dfa: any, startIndex: any, stopIndex: any, exact: any, ambigAlts: any, configs: any) {
@@ -119,7 +128,6 @@ class FurumaiErrorListener /*extends DiagnosticErrorListener<any>*/ implements E
   public reportContextSensitivity(recognizer: any, dfa: any, startIndex: any, stopIndex: any, prediction: any, configs: any) {
     //console.log('reportContextSensitivity(), args: ', arguments)
   }
-
 
   public _syntaxError<T extends any>(
     recognizer: Recognizer<T>,
@@ -400,30 +408,12 @@ class FurumaiVisitorImpl implements FurumaiVisitor<any> {
     return new SemiColon()
   }
 
-  // visit(tree: ParseTree) {
-  //   throw new Error('Method not implemented.')
-  // }
-  // visitChildren(node: RuleNode) {
-  //   throw new Error('Method not implemented.')
-  // }
-
   public visit(tree: ParseTree): any {
     throw new Error('Method not implemented.')
-    //return tree.accept(this)
   }
 
   public visitChildren(node: RuleNode): any {
     throw new Error('Method not implemented.')
-//
-//
-// node
-//     let result
-//     const n = node.childCount
-//     for (let i = 0; i < n; i++) {
-//       const c = node.getChild(i)
-//       result = c.accept(this)
-//     }
-//     return result
   }
 
   public visitErrorNode(node: ErrorNode): any {

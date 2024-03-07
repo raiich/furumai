@@ -5,20 +5,17 @@
   <title>Furumai | a visualization tool to generate system behavior</title>
   <style>
     .app {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+      width: 98vw;
     }
 
     .code-editor-wrap {
-      max-width: 80rem;
-      padding-left: 1.5rem;
+      padding-left: 1rem;
     }
 
     .code-editor {
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
-      height: 70vh;
+      height: 85vh;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     .card {
@@ -26,8 +23,8 @@
       margin: 1.5rem;
     }
 
-    .moments-footer {
-      margin-right: 1.5rem;
+    .viewer {
+      padding-right: 1.5rem;
     }
 
     .text-error {
@@ -46,7 +43,7 @@
 <!-- Header -->
 <div>
   <div class="tabs">
-    <a href="#">Top</a>
+    <a href="/">Top</a>
     <a href="https://github.com/raiich/furumai">GitHub</a>
     <a href="https://github.com/raiich/furumai">About</a>
   </div>
@@ -54,32 +51,20 @@
 <!-- Header -->
 
 <!-- Content -->
-<div class="app">
-  <div class="code-editor-wrap">
+<div class="app row">
+  <div class="code-editor-wrap col">
     <textarea title="Code Editor" id="editor" class="code-editor"></textarea>
     <label for="editor"></label>
-    <button id="draw-button" class="button primary">Draw (Ctrl + Enter)</button>
-    <hr>
-    <div>
-      Default settings:
-      <pre>config {
-          ...
-          }
-        </pre>
+    <div class="nav-right">
+      <button id="draw-button" class="button primary">Draw (Ctrl + Enter)</button>
     </div>
   </div>
-  <div>
+  <div class="col-6 viewer">
     <div id="cards">
-      <div class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" class="svg-root" width="640px" height="332px" viewBox="0 0 640 332">
-          <style></style>
-          <g visibility="inherit">
-            <rect stroke="none" fill="none" x="0px" y="0px" width="172px" height="332px"></rect>
-          </g>
-        </svg>
-      </div>
     </div>
-    <button id="download-button" class="button primary">Download SVG(s)</button>
+    <div class="nav-right">
+      <button id="download-button" class="button primary">Download SVG(s)</button>
+    </div>
   </div>
 </div>
 <!-- Content -->
