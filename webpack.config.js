@@ -4,9 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
 
-//const isProduction = process.env.NODE_ENV == 'production';
-const isProduction = true
-
+const isProduction = process.env.NODE_ENV === 'production';
 
 const stylesHandler = 'style-loader';
 
@@ -21,11 +19,6 @@ const config = {
         new HtmlWebpackPlugin({
             template: './src/web/index.html',
         }),
-      new webpack.DefinePlugin({
-        'process.env' : {
-          "NODE_DEBUG": undefined
-        },
-      }),
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],
