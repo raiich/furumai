@@ -21,6 +21,7 @@ const config = {
       }),
         new HtmlWebpackPlugin({
             template: './src/web/about.html',
+          filename: 'about.html',
         }),
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/

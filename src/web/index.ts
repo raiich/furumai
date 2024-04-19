@@ -1,7 +1,10 @@
-import {makeSnapshots} from "../furumai/main";
-import {toSVGElement} from "../svg";
+import {makeSnapshots} from '../furumai/main';
+import {toSVGElement} from '../svg';
 import LZString from 'lz-string'
-import "chota/dist/chota.min.css";
+import 'chota/dist/chota.min.css';
+import dependencies from '../../resources/dependencies.json';
+
+
 console.log('hello world');
 
 function decode(version:string, encoded: string): string {
@@ -46,9 +49,28 @@ function onload() {
     setupDownloadButton(downloadButton as HTMLButtonElement)
   }
 
-  const dependencies = document.getElementById('dependencies')
-  if (dependencies) {
+  const table = document.getElementById('dependencies')
+  if (table) {
+    Object.entries(dependencies).forEach(([key, value]) => {
+      const a1 = document.createElement('a')
+      a1.textContent = key
+      a1.href = value.repository
 
+      const a2 = document.createElement('a')
+      a2.textContent = value.licenses
+      a2.href = 'public/' + value.licenseFile
+
+
+      const tdName = document.createElement('td')
+      const tdLicense = document.createElement('td')
+      tdName.appendChild(a1)
+      tdLicense.appendChild(a2)
+
+      const tr = document.createElement('tr')
+      tr.appendChild(tdName)
+      tr.appendChild(tdLicense)
+      table.appendChild(tr)
+    })
   }
 }
 
