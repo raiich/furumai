@@ -13,7 +13,7 @@
     "tsc": "tsc",
     "tslint": "tslint --fix **/*.ts",
     "license-checker": "license-checker --production --json --relativeLicensePath --excludePrivatePackages",
-    "dependencies": "npm run -s license-checker | jq 'del(.[]|.path)' > ./dist/dependencies.json",
+    "dependencies": "npm run -s license-checker | jq 'del(.[]|.path)' > ./resources/dependencies.json",
     "copyLicenses": "npm run -s license-checker | jq -r '.[].licenseFile' | xargs -I{} sh -c 'mkdir -p ./dist/public/$(dirname {}) && cp {} ./dist/public/{}'",
     "dependencies:all": "npm run dependencies && npm run copyLicenses",
     "txt2svg:all": "bash ./tasks/txt2svg-all.sh",

@@ -29,31 +29,121 @@ function encode(version:string, decoded: string): string {
 }
 
 function onload() {
-  const {version, code} = parseHash(document.location.hash)
-  const editor = document.getElementById('editor') as HTMLTextAreaElement
-  editor.value = code
+  const {version, code} = parseParams(document.location.hash)
+  const results = document.getElementById('results')
+  if (results) {
+    const drawer = new Drawer(version, results)
+    drawer.draw(results, code)
 
-  const drawer = new Drawer(version)
-  drawer.redirectAndDraw()
-
-  document.getElementById('editor')!.addEventListener("keydown", (e) => {
-    if ((e.key === 'Enter' || e.code === 'Enter' || e.keyCode === 10 || e.keyCode === 13) && (e.ctrlKey || e.metaKey)) {
-      drawer.redirectAndDraw()
+    const editor = document.getElementById('editor')
+    if (editor) {
+      drawer.setupEditor(editor as HTMLTextAreaElement, code)
     }
-  });
+  }
 
-  const drawButton = document.getElementById('draw-button')!
-  drawButton.addEventListener('click', (e) => {
-    drawer.redirectAndDraw()
-  })
+  const downloadButton = document.getElementById('download-button')
+  if (downloadButton) {
+    setupDownloadButton(downloadButton as HTMLButtonElement)
+  }
 
-  const downloadButton = document.getElementById('download-button')!
+  const dependencies = document.getElementById('dependencies')
+  if (dependencies) {
+
+  }
+}
+
+function parseParams(hash: string): Params {
+  const at = hash.indexOf('/', 2)
+  console.log('hash', hash, 'at', at)
+  if (at < 0) {
+    return {
+      version: 'v1',
+      code: '',
+    }
+  }
+  const version = hash.substring(2, at)
+  const encoded = hash.substring(at + 1)
+  if (encoded.length === 0) {
+    return {
+      version,
+      code: '',
+    }
+  }
+  return {
+    version: version,
+    code: decode(version, encoded),
+  }
+}
+
+class Drawer {
+  constructor(
+    readonly version: string,
+    readonly results: HTMLElement,
+  ) {
+  }
+
+  setupEditor(editor: HTMLTextAreaElement, code: string) {
+    if (editor) {
+      editor.value = code
+      editor.addEventListener("keydown", (e) => {
+        if ((e.key === 'Enter' || e.code === 'Enter' || e.keyCode === 10 || e.keyCode === 13) && (e.ctrlKey || e.metaKey)) {
+          this.redirectAndDraw(editor.value)
+        }
+      });
+
+      const drawButton = document.getElementById('draw-button') as (HTMLButtonElement | null)
+      if (drawButton) {
+        this.setupDrawButton(drawButton, editor)
+      }
+    }
+  }
+
+  setupDrawButton(drawButton: HTMLButtonElement, editor: HTMLTextAreaElement) {
+    drawButton.addEventListener('click', (e) => {
+      this.redirectAndDraw(editor.value)
+    })
+  }
+
+  redirectAndDraw(code: string) {
+    const version = this.version
+    const hash = `#/${version}/${encode(version, code)}`
+    console.log(version, code, hash)
+    history.pushState(null, '',  hash)
+    const results = this.results
+    while (results.firstChild) {
+      results.removeChild(results.firstChild)
+    }
+    this.draw(results, code)
+  }
+
+  draw(results: HTMLElement, decoded: string) {
+    try {
+      const snapshots = makeSnapshots(decoded)
+      const elems = snapshots.map((snapshot) => {
+        return toSVGElement(snapshot, document)
+      })
+      elems.forEach((elem) => {
+        // elem.classList.add('card')
+        results.appendChild(elem)
+        results.appendChild(document.createElement('hr'))
+      })
+    } catch (e) {
+      console.log(e)
+      const pre = document.createElement('pre')
+      pre.classList.add('text-error')
+      pre.textContent = (e as any).stack || ''
+      results.appendChild(pre)
+    }
+  }
+}
+
+function setupDownloadButton(downloadButton: HTMLButtonElement) {
   downloadButton.addEventListener('click', (e) => {
     console.log('downloading')
 
-    const cards = document.getElementsByClassName('svg-root')
-    for (let i = 0; i < cards.length; i++) {
-      const c = cards.item(i)!
+    const results = document.getElementsByClassName('svg-root')
+    for (let i = 0; i < results.length; i++) {
+      const c = results.item(i)!
       if (c) {
         const blob = '<?xml version="1.0" encoding="UTF-8"?>' + c.outerHTML
         const url = URL.createObjectURL(new Blob([blob], {type: 'image/svg+xml'}))
@@ -68,72 +158,10 @@ function onload() {
   })
 }
 
-function parseHash(hash: string): {version: string, code: string} {
-  const at = hash.indexOf('/', 2)
-  console.log('hash', hash, 'at', at)
-  if (at < 0) {
-    return {
-      version: 'v1',
-      code: 'a;',
-    }
-  }
-  const version = hash.substring(2, at)
-  const encoded = hash.substring(at + 1)
-  if (encoded.length === 0) {
-    return {
-      version,
-      code: 'a;',
-    }
-  }
-  return {
-    version: version,
-    code: decode(version, encoded),
-  }
-}
 
-class Drawer {
-  constructor(readonly version: string) {
-  }
-
-  redirectAndDraw() {
-    const version = this.version
-    const editor = document.getElementById('editor') as HTMLTextAreaElement
-    const code = editor.value
-    const hash = `#/${version}/${encode(version, code)}`
-    console.log(version, code, hash)
-    history.pushState(null, '',  hash)
-    this.draw(code)
-  }
-
-  draw(decoded: string) {
-    try {
-      this.drawSvg(decoded)
-    } catch (e) {
-      console.log(e)
-      const cards = document.getElementById('cards')!
-      const pre = document.createElement('pre')
-      pre.classList.add('text-error')
-      pre.textContent = (e as any).stack || ''
-      cards.appendChild(pre)
-    }
-  }
-
-  drawSvg(decoded: string) {
-    const cards = document.getElementById('cards')!
-    while (cards.firstChild) {
-      cards.removeChild(cards.firstChild)
-    }
-
-    const snapshots = makeSnapshots(decoded)
-    const elems = snapshots.map((snapshot) => {
-      return toSVGElement(snapshot, document)
-    })
-    elems.forEach((elem) => {
-      // elem.classList.add('card')
-      cards.appendChild(elem)
-      cards.appendChild(document.createElement('hr'))
-    })
-  }
+interface Params {
+  version: string
+  code: string
 }
 
 if (typeof document !== 'undefined') {
