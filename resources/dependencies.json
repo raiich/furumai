@@ -37,7 +37,7 @@
   "antlr4@4.13.1-patch-1": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/antlr/antlr4",
-    "licenseFile": "node_modules/antlr4/README.md"
+    "licenseFile": "node_modules/antlr4/LICENSE.txt"
   },
   "chota@0.9.2": {
     "licenses": "MIT",

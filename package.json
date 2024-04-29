@@ -8,12 +8,15 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "_build:all": "npm run dependencies:all && npm run build:prod && mv ./dist docs/docs",
-    "build:all": "npm run dependencies:all && npm run build:prod",
+    "build:all": "bash ./tasks/license-checker.sh && npm run build:prod",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "tsc": "tsc",
     "tslint": "tslint --fix **/*.ts",
     "license-checker": "license-checker --production --json --relativeLicensePath --excludePrivatePackages",
+
+    "--------------------": "",
+
     "dependencies": "npm run -s license-checker | jq 'del(.[]|.path)' > ./resources/dependencies.json",
     "copyLicenses": "npm run -s license-checker | jq -r '.[].licenseFile' | xargs -I{} sh -c 'mkdir -p ./dist/public/$(dirname {}) && cp {} ./dist/public/{}'",
     "dependencies:all": "npm run dependencies && npm run copyLicenses",
