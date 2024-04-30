@@ -6,39 +6,40 @@
 <text
 font-size="12pt"
 >
-<tspan y="1.3em" x="0.5em">config { mode: snapshot }</tspan>
-<tspan y="2.6em" x="0.5em">style {</tspan>
-<tspan y="3.9000000000000004em" x="1.5em">.group, .zone { label: ''; }</tspan>
-<tspan y="5.2em" x="0.5em">}</tspan>
-<tspan y="6.5em" x="0.5em"></tspan>
-<tspan y="7.800000000000001em" x="0.5em">group clients {</tspan>
-<tspan y="9.1em" x="1.5em">zone real {</tspan>
-<tspan y="10.4em" x="2.5em">User[shape='person'];</tspan>
-<tspan y="11.700000000000001em" x="1.5em">};</tspan>
-<tspan y="13em" x="1.5em">zone pc {</tspan>
-<tspan y="14.3em" x="2.5em">Browser;</tspan>
-<tspan y="15.600000000000001em" x="1.5em">}</tspan>
-<tspan y="16.900000000000002em" x="0.5em">};</tspan>
-<tspan y="18.2em" x="0.5em"></tspan>
-<tspan y="19.5em" x="0.5em">group servers {</tspan>
-<tspan y="20.8em" x="1.5em">zone AS {</tspan>
-<tspan y="22.1em" x="2.5em">Authorizer;</tspan>
-<tspan y="23.400000000000002em" x="1.5em">};</tspan>
-<tspan y="24.7em" x="1.5em">zone RP {</tspan>
-<tspan y="26em" x="2.5em">Service;</tspan>
-<tspan y="27.3em" x="1.5em">}</tspan>
-<tspan y="28.6em" x="0.5em">}</tspan>
-<tspan y="29.900000000000002em" x="0.5em">---</tspan>
-<tspan y="31.200000000000003em" x="0.5em"></tspan>
-<tspan y="32.5em" x="0.5em">Browser -> Service [t='request a service',dx=-16px, text.dy=-20px];</tspan>
-<tspan y="33.800000000000004em" x="0.5em">Service -> Browser [t='reply: 303 https://[authorizer url..]', dx=16px, text.dy=20px];</tspan>
-<tspan y="35.1em" x="0.5em">---</tspan>
-<tspan y="36.4em" x="0.5em"></tspan>
-<tspan y="37.7em" x="0.5em">Browser -> Authorizer[t='request auth page', dx=-20px, dy=-20px, text.dy=-20px, text.dx=10px];</tspan>
-<tspan y="39em" x="0.5em">Authorizer -> Browser [t='reply input form', dx='10', dy='20'];</tspan>
-<tspan y="40.300000000000004em" x="0.5em">---</tspan>
-<tspan y="41.6em" x="0.5em"></tspan>
-<tspan y="42.9em" x="0.5em">User -> Browser [t='input id/password'];</tspan>
-<tspan y="44.2em" x="0.5em">Browser -> Authorizer[t='send id/password'];</tspan>
+<tspan y="1.3em" x="0.5em">---</tspan>
+<tspan y="2.6em" x="0.5em">mode: snapshot</tspan>
+<tspan y="3.9000000000000004em" x="0.5em">style: |</tspan>
+<tspan y="5.2em" x="1em">.group, .zone { label: ''; }</tspan>
+<tspan y="6.5em" x="0.5em">---</tspan>
+<tspan y="7.800000000000001em" x="0.5em"></tspan>
+<tspan y="9.1em" x="0.5em">group clients {</tspan>
+<tspan y="10.4em" x="1.5em">zone real {</tspan>
+<tspan y="11.700000000000001em" x="2.5em">User[shape='person'];</tspan>
+<tspan y="13em" x="1.5em">};</tspan>
+<tspan y="14.3em" x="1.5em">zone pc {</tspan>
+<tspan y="15.600000000000001em" x="2.5em">Browser;</tspan>
+<tspan y="16.900000000000002em" x="1.5em">}</tspan>
+<tspan y="18.2em" x="0.5em">};</tspan>
+<tspan y="19.5em" x="0.5em"></tspan>
+<tspan y="20.8em" x="0.5em">group servers {</tspan>
+<tspan y="22.1em" x="1.5em">zone AS {</tspan>
+<tspan y="23.400000000000002em" x="2.5em">Authorizer;</tspan>
+<tspan y="24.7em" x="1.5em">};</tspan>
+<tspan y="26em" x="1.5em">zone RP {</tspan>
+<tspan y="27.3em" x="2.5em">Service;</tspan>
+<tspan y="28.6em" x="1.5em">}</tspan>
+<tspan y="29.900000000000002em" x="0.5em">}</tspan>
+<tspan y="31.200000000000003em" x="0.5em">---</tspan>
+<tspan y="32.5em" x="0.5em"></tspan>
+<tspan y="33.800000000000004em" x="0.5em">Browser -> Service [t='request a service',dx=-16px, text.dy=-20px];</tspan>
+<tspan y="35.1em" x="0.5em">Service -> Browser [t='reply: 303 https://[authorizer url..]', dx=16px, text.dy=20px];</tspan>
+<tspan y="36.4em" x="0.5em">---</tspan>
+<tspan y="37.7em" x="0.5em"></tspan>
+<tspan y="39em" x="0.5em">Browser -> Authorizer[t='request auth page', dx=-20px, dy=-20px, text.dy=-20px, text.dx=10px];</tspan>
+<tspan y="40.300000000000004em" x="0.5em">Authorizer -> Browser [t='reply input form', dx='10', dy='20'];</tspan>
+<tspan y="41.6em" x="0.5em">---</tspan>
+<tspan y="42.9em" x="0.5em"></tspan>
+<tspan y="44.2em" x="0.5em">User -> Browser [t='input id/password'];</tspan>
+<tspan y="45.5em" x="0.5em">Browser -> Authorizer[t='send id/password'];</tspan>
 </text>
 </svg>

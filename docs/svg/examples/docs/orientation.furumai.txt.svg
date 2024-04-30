@@ -6,10 +6,12 @@
 <text
 font-size="12pt"
 >
-<tspan y="1.3em" x="0.5em">config {orientation=landscape}</tspan>
-<tspan y="2.6em" x="0.5em"></tspan>
-<tspan y="3.9000000000000004em" x="0.5em">node1;</tspan>
-<tspan y="5.2em" x="0.5em">actor1[shape=person];</tspan>
-<tspan y="6.5em" x="0.5em">store1[shape=cylinder];</tspan>
+<tspan y="1.3em" x="0.5em">---</tspan>
+<tspan y="2.6em" x="0.5em">direction: landscape</tspan>
+<tspan y="3.9000000000000004em" x="0.5em">---</tspan>
+<tspan y="5.2em" x="0.5em"></tspan>
+<tspan y="6.5em" x="0.5em">node1;</tspan>
+<tspan y="7.800000000000001em" x="0.5em">actor1[shape=person];</tspan>
+<tspan y="9.1em" x="0.5em">store1[shape=cylinder];</tspan>
 </text>
 </svg>

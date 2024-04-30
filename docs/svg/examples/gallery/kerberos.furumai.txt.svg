@@ -6,9 +6,9 @@
 <text
 font-size="12pt"
 >
-<tspan y="1.3em" x="0.5em">config { mode: snapshot; }</tspan>
-<tspan y="2.6em" x="0.5em"></tspan>
-<tspan y="3.9000000000000004em" x="0.5em">style {</tspan>
+<tspan y="1.3em" x="0.5em">---</tspan>
+<tspan y="2.6em" x="0.5em">mode: snapshot</tspan>
+<tspan y="3.9000000000000004em" x="0.5em">style: |</tspan>
 <tspan y="5.2em" x="1.5em">.group, .zone { label: '';}</tspan>
 <tspan y="6.5em" x="1.5em">#clients { justify-content: start }</tspan>
 <tspan y="7.800000000000001em" x="1.5em">#services { justify-content: start; }</tspan>
@@ -16,7 +16,7 @@ font-size="12pt"
 <tspan y="10.4em" x="1.5em">#KDC {fill: #f0f0f0}</tspan>
 <tspan y="11.700000000000001em" x="1.5em">#KDC .node { fill: #FFE5C0; stroke: none; }</tspan>
 <tspan y="13em" x="1.5em">#KDC .text { fill: #555555; }</tspan>
-<tspan y="14.3em" x="0.5em">}</tspan>
+<tspan y="14.3em" x="0.5em">---</tspan>
 <tspan y="15.600000000000001em" x="0.5em"></tspan>
 <tspan y="16.900000000000002em" x="0.5em">group client_server {</tspan>
 <tspan y="18.2em" x="1.5em">zone clients {</tspan>
