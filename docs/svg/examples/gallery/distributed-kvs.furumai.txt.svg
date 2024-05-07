@@ -1,11 +1,9 @@
 <svg
  xmlns="http://www.w3.org/2000/svg"
- viewBox="0 0 640 320"
- width="640" height="320"
+ viewBox="0 0 640 880"
+ width="640" height="880"
 >
-<text
-font-size="12pt"
->
+<text font-size="12pt">
 <tspan y="1.3em" x="0.5em">group clients {</tspan>
 <tspan y="2.6em" x="1.5em">ca[label='client a'];</tspan>
 <tspan y="3.9000000000000004em" x="1.5em">cb[label='client b'];</tspan>

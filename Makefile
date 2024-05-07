@@ -21,7 +21,7 @@ antlr4-license:
 
 .PHONY: svg
 svg: dist/cli.js
-	cat "$(FILE)" | node ./dist/cli.js | split -d -l 1 -a=3 - "$(FILE)."
+	cat "$(FILE)" | node ./dist/cli.js | split -d -l 1 - "$(FILE)."
 	ls "$(FILE)."* | xargs -I{} mv {} {}.svg
 
 dist/cli.js:
