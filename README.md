@@ -3,6 +3,9 @@
 A tool of behavior visualization, via a DOT (Graphviz) like description:
 <a href="https://raiich.github.io/furumai/">Furumai - behavior visualization tool</a>
 
+
+<img src="docs/svg/examples/docs/array-list.furumai.txt.svg">
+
 # Gallery
 
 <ClientOnly>

@@ -1,10 +1,14 @@
 .PHONY: all
-all:
-	@echo "Hello, World!"
+all: init dist
+	mv ./dist/* .docs/
 
-.PHONY: build
-build: resources/dependencies.json license-files
-	npm run build:prod && mv ./dist docs/docs
+.PHONY: init
+init:
+	npm install
+
+# .PHONY: dist
+dist: resources/dependencies.json license-files
+	npm run build:prod
 
 .PHONY: resources/dependencies.json
 resources/dependencies.json:
@@ -12,12 +16,13 @@ resources/dependencies.json:
 
 .PHONY: license-files
 license-files: antlr4-license
-	npm run -s license-checker | jq -r '.[].licenseFile' | xargs -I{} sh -c 'mkdir -p ./dist/public/$(dirname {}) && cp {} ./dist/public/{}'
+	npm run -s license-checker | jq -r '.[].licenseFile' \
+	| xargs -I{} sh ./scripts/copy-file.sh {}
 
 .PHONY: antlr4-license
 antlr4-license:
 	# copy unhandled license
-	cp ./resources/antlr4/LICCENSE.txt  ./node_modules/antlr4/LICENSE.txt
+	cp ./resources/antlr4/LICENSE.txt  ./node_modules/antlr4/LICENSE.txt
 
 .PHONY: svg
 svg: dist/cli.js
