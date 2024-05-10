@@ -1,12 +1,25 @@
 .PHONY: all
-all: init dist
-	mv ./dist/* .docs/
+all: init docs dist
+	mv ./dist/* ./docs/
+
+.PHONY: clean
+clean:
+	rm -r ./dist | true
+	rm -r ./docs | true
 
 .PHONY: init
 init:
 	npm install
 
-# .PHONY: dist
+.PHONY: svg
+svg: dist/cli.js
+	cat "$(FILE)" | node ./dist/cli.js | split -d -l 1 - "$(FILE)."
+	ls "$(FILE)."* | xargs -I{} mv {} {}.svg
+
+dist/cli.js:
+	npm run build:cli
+
+.PHONY: dist
 dist: resources/dependencies.json license-files
 	npm run build:prod
 
@@ -24,16 +37,11 @@ antlr4-license:
 	# copy unhandled license
 	cp ./resources/antlr4/LICENSE.txt  ./node_modules/antlr4/LICENSE.txt
 
-.PHONY: svg
-svg: dist/cli.js
-	cat "$(FILE)" | node ./dist/cli.js | split -d -l 1 - "$(FILE)."
-	ls "$(FILE)."* | xargs -I{} mv {} {}.svg
-
-dist/cli.js:
-	npm run build:cli
+.PHONY: docs
+docs: example-svg-all example-text-svg-all
 
 .PHONY: example-svg-all
-example-svg-all: dist/cli.js
+example-svg-all:
 	find ./examples -type f -name \*.furumai -print0 \
 	| xargs -0 -I{} sh ./scripts/gensvg.sh {}
 
