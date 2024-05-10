@@ -55,9 +55,6 @@ const config = {
 };
 
 module.exports = (env, argv) => {
-    // console.log('env: ', env);
-    // console.log('argv: ', argv);
-
     if (isProduction) {
         config.mode = 'production';
 

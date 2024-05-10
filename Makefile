@@ -37,8 +37,8 @@ antlr4-license:
 	# copy unhandled license
 	cp ./resources/antlr4/LICENSE.txt  ./node_modules/antlr4/LICENSE.txt
 
-.PHONY: docs
-docs: example-svg-all example-text-svg-all
+.PHONY: images
+images: example-svg-all example-text-svg-all
 
 .PHONY: example-svg-all
 example-svg-all:
@@ -49,3 +49,7 @@ example-svg-all:
 example-text-svg-all:
 	find ./examples -type f -name \*.furumai -print0 \
   | xargs -0 -I{} sh -c 'node ./scripts/txt2svg.js < {} > ./docs/svg/{}.txt.svg'
+
+.PHONY: parser
+parser:
+	java -jar antlr-4.13.1-complete.jar -Dlanguage=TypeScript -o src/generated/antlr4ts/ -visitor Furumai.g4

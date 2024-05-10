@@ -1,6 +1,6 @@
 {
   "name": "furumai",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build:web": "webpack --mode=production --node-env=production",
@@ -11,8 +11,7 @@
     "watch": "webpack --watch",
     "tsc": "tsc",
     "tslint": "tslint --fix **/*.ts",
-    "license-checker": "license-checker --production --json --relativeLicensePath --excludePrivatePackages",
-    "antlr4": "java -jar antlr-4.13.1-complete.jar -Dlanguage=TypeScript -o src/generated/antlr4ts/ -visitor Furumai.g4"
+    "license-checker": "license-checker --production --json --relativeLicensePath --excludePrivatePackages"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
