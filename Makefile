@@ -1,5 +1,5 @@
 .PHONY: all
-all: init docs dist
+all: init images dist
 	mv ./dist/* ./docs/
 
 .PHONY: clean
@@ -10,6 +10,8 @@ clean:
 .PHONY: init
 init:
 	npm install
+	mkdir -p docs/svg/examples/docs/
+	mkdir -p docs/svg/examples/gallery/
 
 .PHONY: svg
 svg: dist/cli.js
