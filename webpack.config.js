@@ -62,6 +62,9 @@ module.exports = (env, argv) => {
             config.target = 'node';
             config.output.filename = 'cli.js';
             config.entry = './src/cli/index.ts';
+            config.optimization = {
+                minimize: false
+            }
         }
 
 

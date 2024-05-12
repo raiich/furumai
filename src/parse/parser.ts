@@ -401,7 +401,8 @@ class FurumaiVisitorImpl implements FurumaiVisitor<any> {
 
   public visitDeclaration(ctx: DeclarationContext): Declaration {
     const vs = ctx.val_list().map((v) => this.visitVal(v))
-    return new Declaration(ctx.ID().getText(), vs.join(' '))
+    const key = ctx.ID().getText() + ctx.DOT_list().map((d) => d.getText()).join()
+    return new Declaration(key, vs.join(' '))
   }
 
   public visitSemi_colon(ctx: Semi_colonContext): SemiColon {

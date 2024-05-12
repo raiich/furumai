@@ -25,22 +25,11 @@ export class Edge {
   }
 
   public static idName(from: string, op: string, to: string): string {
-    return `_edge_id_${from}_${this.connectorName(op)}_${to}`
+    return `-furumai-id-${from}-${to}`
   }
 
   public static className(from: string, op: string, to: string): string {
-    return `_edge_class_${from}_${this.connectorName(op)}_${to}`
-  }
-
-  private static connectorName(op: string): string {
-    switch (op) {
-      case '->':
-        return 'to'
-      case '--':
-        return 'edge'
-      default:
-        throw new Error('not implemented')
-    }
+    return `-furumai-class-${from}-${to}`
   }
 
   private constructor(

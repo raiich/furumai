@@ -16,6 +16,7 @@ svg: dist/cli.js
 	cat "$(FILE)" | node ./dist/cli.js | split -d -l 1 - "$(FILE)."
 	ls "$(FILE)."* | xargs -I{} mv {} {}.svg
 
+.PHONY: dist/cli.js
 dist/cli.js:
 	npm run build:cli
 
@@ -38,7 +39,7 @@ antlr4-license:
 	cp ./resources/antlr4/LICENSE.txt  ./node_modules/antlr4/LICENSE.txt
 
 .PHONY: images
-images: example-svg-all example-text-svg-all
+images: dist/cli.js example-svg-all example-text-svg-all
 
 .PHONY: example-svg-all
 example-svg-all:

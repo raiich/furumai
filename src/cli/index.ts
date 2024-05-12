@@ -2,9 +2,9 @@ import * as fs from 'fs'
 import * as process from 'process'
 import {makeSnapshots} from '../furumai/main'
 import {toSVGElement} from '../svg'
-import {DOM} from './dom'
+import {JSDOM} from 'jsdom'
 
-const dom = new DOM()
+const dom = new JSDOM()
 const d = dom.window.document
 
 const content = fs.readFileSync(process.stdin.fd, 'utf8')
