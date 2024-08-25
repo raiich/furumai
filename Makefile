@@ -56,3 +56,9 @@ example-text-svg-all:
 .PHONY: parser
 parser:
 	java -jar antlr-4.13.1-complete.jar -Dlanguage=TypeScript -o src/generated/antlr4ts/ -visitor Furumai.g4
+
+antlr-4.13.1-complete.jar:
+	open https://www.antlr.org/download.html
+
+src/generated/antlr4ts: Furumai.g4 antlr-4.13.1-complete.jar
+	java -jar .antlr4/antlr-4.13.1-complete.jar -Dlanguage=TypeScript -o src/generated/antlr4ts/ -visitor Furumai.g4

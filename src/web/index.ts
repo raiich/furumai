@@ -4,9 +4,6 @@ import LZString from 'lz-string'
 import 'chota/dist/chota.min.css';
 import dependencies from '../../resources/dependencies.json';
 
-
-console.log('hello world');
-
 function decode(version:string, encoded: string): string {
   switch (version) {
     case 'v1':
@@ -32,10 +29,10 @@ function encode(version:string, decoded: string): string {
 }
 
 function onload() {
-  const {version, code} = parseParams(document.location.hash)
+  const {code} = parseParams(document.location.hash)
   const results = document.getElementById('results')
   if (results) {
-    const drawer = new Drawer(version, results)
+    const drawer = new Drawer('v1', results)
     drawer.draw(results, code)
 
     const editor = document.getElementById('editor')
