@@ -53,12 +53,15 @@ example-text-svg-all:
 	find ./examples -type f -name \*.furumai -print0 \
   | xargs -0 -I{} sh -c 'node ./scripts/txt2svg.js < {} > ./docs/svg/{}.txt.svg'
 
-.PHONY: parser
-parser:
-	java -jar antlr-4.13.1-complete.jar -Dlanguage=TypeScript -o src/generated/antlr4ts/ -visitor Furumai.g4
+ANTLR_JAR := antlr-4.13.1-complete.jar
+ANTLR_OUT := src/generated/antlr4ts
 
-antlr-4.13.1-complete.jar:
+.PHONY: parser
+parser: Furumai.g4 $(ANTLR_JAR) $(ANTLR_OUT)
+	java -jar $(ANTLR_JAR) -Dlanguage=TypeScript -o $(ANTLR_OUT) -visitor Furumai.g4
+
+$(ANTLR_JAR):
 	open https://www.antlr.org/download.html
 
-src/generated/antlr4ts: Furumai.g4 antlr-4.13.1-complete.jar
-	java -jar .antlr4/antlr-4.13.1-complete.jar -Dlanguage=TypeScript -o src/generated/antlr4ts/ -visitor Furumai.g4
+$(ANTLR_OUT):
+	mkdir -p $(ANTLR_OUT)

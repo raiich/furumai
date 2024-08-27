@@ -7,7 +7,9 @@
 
 <h3>some title</h3>
 
-<!-- furumai:view a.furumai -->
+<!-- furumai:describe examples/gallery/native-buffer.furumai -->
+
+<!-- furumai:generate examples/gallery/native-buffer.furumai -->
 
 <!-- furumai:desc a.furumai -->
 <!-- furumai:generated --> <a href="">edit</a><br />
@@ -17,12 +19,7 @@
 <img src="examples/gallery/b-tree-like.furumai.generated.01.svg" alt="b-tree-like svg 3" />
 <img src="examples/gallery/b-tree-like.furumai.generated.02.svg" alt="b-tree-like svg 1" />
 
-
-<pre>
-
-
-</pre>
-
+<p align="right"><a href="." >Edit</a></p>
 
 
 <ClientOnly>
