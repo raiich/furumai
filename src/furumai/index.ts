@@ -10,7 +10,7 @@ import {Layout} from '../elem/Story'
 import {Engine as LayoutEngine} from '../layout/Engine'
 import {StyleList} from "../style/Style";
 import {parse as parseYaml} from 'yaml'
-import {convertSvg} from "../effect/rougher";
+import {Rougher} from "../effect/rougher";
 
 const defaultString = `mode: diff
 # mode: snapshot
@@ -95,7 +95,8 @@ export function generateSVGSVGElement(d: Document, text: string): SVGSVGElement[
 
   const ret = snapshots.map((s) => toSVGElement(s, d))
   if (config.rough) {
-    return ret.map(convertSvg)
+    const r = new Rougher(d)
+    return ret.map(r.convertSvg)
   } else {
     return ret
   }
