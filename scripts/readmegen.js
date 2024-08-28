@@ -33,7 +33,6 @@ reader.on('line', (line) => {
 
     const dirname = path.dirname(filePath)
     const filename = path.basename(filePath)
-    console.log('dirname:', dirname)
 
     fs.readdirSync(dirname)
       .filter((generated) => generated.includes(filename + '.generated.'))

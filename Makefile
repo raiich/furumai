@@ -10,16 +10,8 @@ clean:
 .PHONY: init
 init:
 	npm install
-	mkdir -p docs/svg/examples/docs/
-	mkdir -p docs/svg/examples/gallery/
 
-.PHONY: svg
-svg: dist/cli.js
-	cat "$(FILE)" | node ./dist/cli.js | split -d -l 1 - "$(FILE)."
-	ls "$(FILE)."* | xargs -I{} mv {} {}.svg
-
-.PHONY: dist/cli.js
-dist/cli.js:
+dist/cli.js: $(shell find src -name '*.ts')
 	npm run build:cli
 
 .PHONY: dist
@@ -41,17 +33,8 @@ antlr4-license:
 	cp ./resources/antlr4/LICENSE.txt  ./node_modules/antlr4/LICENSE.txt
 
 .PHONY: images
-images: dist/cli.js example-svg-all example-text-svg-all
-
-.PHONY: example-svg-all
-example-svg-all:
-	find ./examples -type f -name \*.furumai -print0 \
-	| xargs -0 -I{} sh ./scripts/gensvg.sh {}
-
-.PHONY: example-text-svg-all
-example-text-svg-all:
-	find ./examples -type f -name \*.furumai -print0 \
-  | xargs -0 -I{} sh -c 'node ./scripts/txt2svg.js < {} > ./docs/svg/{}.txt.svg'
+images: dist/cli.js
+	find ./examples -type f -name \*.furumai -print0 | xargs -0 -I{} sh ./scripts/gensvg.sh {}
 
 ANTLR_JAR := antlr-4.13.1-complete.jar
 ANTLR_OUT := src/generated/antlr4ts
@@ -66,8 +49,5 @@ $(ANTLR_JAR):
 $(ANTLR_OUT):
 	mkdir -p $(ANTLR_OUT)
 
-%.md: template/%.md
+%.md: %.template.md
 	cat $^ | node scripts/readmegen.js > $@
-
-readme: README.md README.ja.md
-	@echo "generated README.md"
