@@ -355,7 +355,7 @@
     "email": "github@smayr.name",
     "licenseFile": "node_modules/whatwg-url/LICENSE.txt"
   },
-  "ws@8.17.0": {
+  "ws@8.18.0": {
     "licenses": "MIT",
     "repository": "https://github.com/websockets/ws",
     "publisher": "Einar Otto Stangvik",

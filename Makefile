@@ -1,15 +1,13 @@
 SRC := $(shell find src -name '*.ts')
 
 .PHONY: app
-app: init images dist
+app: init dist
+	mkdir -p docs
 	mv ./dist/* ./docs/
 
 .PHONY: dist
-dist: $(SRC) resources/dependencies.json license-files
+dist: $(SRC) license-files resources/dependencies.json
 	npm run build:prod
-
-resources/dependencies.json: package-lock.json
-	npm run -s license-checker | jq 'del(.[]|.path)' > ./resources/dependencies.json
 
 .PHONY: license-files
 license-files: package-lock.json node_modules/antlr4/LICENSE.txt
@@ -18,12 +16,15 @@ license-files: package-lock.json node_modules/antlr4/LICENSE.txt
 
 node_modules/antlr4/LICENSE.txt: resources/antlr4/LICENSE.txt
 	# copy unhandled license
-	cp resources/antlr4/LICENSE.txt  node_modules/antlr4/LICENSE.txt
+	cp resources/antlr4/LICENSE.txt node_modules/antlr4/LICENSE.txt
+
+resources/dependencies.json: package-lock.json
+	npm run -s license-checker | jq 'del(.[]|.path)' > ./resources/dependencies.json
 
 .PHONY: clean
 clean:
-	rm -r ./dist | true
-	rm -r ./docs | true
+	rm -r ./dist || true
+	rm -r ./docs || true
 
 .PHONY: init
 init:
@@ -31,7 +32,7 @@ init:
 
 .PHONY: images
 images: dist/cli.js
-	find ./examples -type f -name \*.furumai -print0 | xargs -0 -I{} make "{}.generated.svg"
+	find ./examples -type f -name \*.furumai -print0 | xargs -0 -I{} make svg FILE={}
 
 .PHONY: svg
 svg: dist/cli.js

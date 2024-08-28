@@ -3,6 +3,6 @@
 SRC=$1
 DST="${SRC}.generated"
 
-rm "${DST}".*
+rm "${DST}".* || true
 node dist/cli.js < "${SRC}" | split -d -l 1 - "${DST}."
 ls "${DST}".* | xargs -I{} mv {} {}.svg
