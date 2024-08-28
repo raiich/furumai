@@ -5,22 +5,14 @@
 
 # ギャラリー
 
-<h3>some title</h3>
-
-<!-- furumai:describe examples/gallery/native-buffer.furumai -->
-
-<!-- furumai:generate examples/gallery/native-buffer.furumai -->
-
-<!-- furumai:desc a.furumai -->
-<!-- furumai:generated --> <a href="">edit</a><br />
-<!-- furumai:generated --> <img src="" />
-
-<img src="examples/gallery/native-buffer.furumai.generated.00.svg" alt="native-buffer.svg" />
-<img src="examples/gallery/b-tree-like.furumai.generated.01.svg" alt="b-tree-like svg 3" />
-<img src="examples/gallery/b-tree-like.furumai.generated.02.svg" alt="b-tree-like svg 1" />
-
-<p align="right"><a href="." >Edit</a></p>
-
+<ClientOnly>
+<DocSnippet
+  filename="Buffered Writer/Sender"
+  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00B0A5lAgK4AOmrAL2S1gNSgEMARhEqoaAcnk0Avo2YBiJONJxIdGgDM4lWTXX4ADAaviVa1nCRJoAWgj42ImmU4BrCC744jAAFuJQUOLkcgAsNADMANzepH4QchxRyapIyomMjBzcPDQA6hCSAGpwEADudPZcMNAA2qHiPBAAvJ2wyAC6+Uw0OCGcALYQLXB4SF3ykpFI+DAA9KMTEPL8EtKU8+VVNbXyg4x5BUhFvDRaOnoMw7sy8wBy2rq0AII8PPJDzAAMgg2KUoHBSK0Zsh5lxlghtmIpC95MC2GVwZCoKcATRJFwDAZWki9vMAEIEonY-jtTo9OCdfikebMFoQSBIUg0dD9TD0RhsjlcgBMvP5wxYkqUZ2GaIAyhBllDZvMoO4ETtkftUSCaAqldiZRckIVODdJOIcP5lg1hs0oJAoNMVfJ7Y7Ec9tWTLdb8DjzkNGE1oDQXAA+EZjBCTFrM+QAYUoM18-qQG2jtHDNDRYIhrTjAAUuJIk6FUznMSGs-jCa0cBIYDAuo5nFA3B4IDKa1TQxH5YrCE768Emy3XO5PDL+wbe3ifQPY-N9X6ZSBsOIkHBxh9kGhQJb7kRUKkuBBlNgzWwQmgT2egA"
+  viewCode="false"
+></DocSnippet>
+</ClientOnly>
+<a v-if="false" href="https://raiich.github.io/furumai/docs/ja">Image not rendered. [view image]</a>
 
 <ClientOnly>
 <DocSnippet
@@ -64,15 +56,13 @@
 基本図形として `box` / `person` / `cylinder` / `pipe` が指定できます。
 要素間に矢印 (`->` or `--`) を配置できます。
 
----
-
-<img src="docs/svg/examples/docs/basic-shapes.furumai.txt.svg" alt="basic-shapes.furumai.txt" />
-
----
-
-<img src="examples/docs/basic-shapes.furumai.generated.00.svg" alt="basic-shapes.svg" />
-
----
+<ClientOnly>
+<DocSnippet
+  filename="./gallery/docs/basic-shapes.furumai"
+  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIAhjgC4JToDaMAFiQA4QC8A5C7MuwLoDcAHSRICEWg2Zt2AIwQAPPkKQxKUcXUYsOOAJ4AbOEkJQlw4WTXoABAFpb10YXTKn4uwD5rqquOUhsEiQ4AFsSckQUVFBLOEg0cigAVwgAX1SgA"
+></DocSnippet>
+</ClientOnly>
+<a v-if="false" href="https://raiich.github.io/furumai/docs/ja">Image not rendered. [view image]</a>
 
 ## アイコン
 

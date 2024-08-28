@@ -65,3 +65,9 @@ $(ANTLR_JAR):
 
 $(ANTLR_OUT):
 	mkdir -p $(ANTLR_OUT)
+
+%.md: template/%.md
+	cat $^ | node scripts/readmegen.js > $@
+
+readme: README.md README.ja.md
+	@echo "generated README.md"

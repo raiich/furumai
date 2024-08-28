@@ -1,15 +1,18 @@
 # Furumai
 
 システムやアルゴリズムの動作図（パラパラ漫画）を、DOT（Graphviz）風のテキスト記述から生成できるツールを作りました:
-<a href="https://raiich.github.io/furumai/">Furumai - behavior visualization tool</a>
+<a href="https://raiich.github.io/furumai/">Furumai | behavior visualization tool</a>
 
 # ギャラリー
 
-<h3>some title</h3>
-
-<!-- furumai:describe examples/gallery/native-buffer.furumai -->
-
-<!-- furumai:generate examples/gallery/native-buffer.furumai -->
+<ClientOnly>
+<DocSnippet
+  filename="Buffered Writer/Sender"
+  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00B0A5lAgK4AOmrAL2S1gNSgEMARhEqoaAcnk0Avo2YBiJONJxIdGgDM4lWTXX4ADAaviVa1nCRJoAWgj42ImmU4BrCC744jAAFuJQUOLkcgAsNADMANzepH4QchxRyapIyomMjBzcPDQA6hCSAGpwEADudPZcMNAA2qHiPBAAvJ2wyAC6+Uw0OCGcALYQLXB4SF3ykpFI+DAA9KMTEPL8EtKU8+VVNbXyg4x5BUhFvDRaOnoMw7sy8wBy2rq0AII8PPJDzAAMgg2KUoHBSK0Zsh5lxlghtmIpC95MC2GVwZCoKcATRJFwDAZWki9vMAEIEonY-jtTo9OCdfikebMFoQSBIUg0dD9TD0RhsjlcgBMvP5wxYkqUZ2GaIAyhBllDZvMoO4ETtkftUSCaAqldiZRckIVODdJOIcP5lg1hs0oJAoNMVfJ7Y7Ec9tWTLdb8DjzkNGE1oDQXAA+EZjBCTFrM+QAYUoM18-qQG2jtHDNDRYIhrTjAAUuJIk6FUznMSGs-jCa0cBIYDAuo5nFA3B4IDKa1TQxH5YrCE768Emy3XO5PDL+wbe3ifQPY-N9X6ZSBsOIkHBxh9kGhQJb7kRUKkuBBlNgzWwQmgT2egA"
+  viewCode="false"
+></DocSnippet>
+</ClientOnly>
+<a v-if="false" href="https://raiich.github.io/furumai/docs/ja">Image not rendered. [view image]</a>
 
 <ClientOnly>
 <DocSnippet
@@ -23,11 +26,11 @@
 # 特徴
 
 - テキストベースの記述
-  - DOT（Graphviz）風の言語で記述
-    - システムやアルゴリズムの記述に特化したDSLでSVG画像を生成
-  - 1枚絵ではなく動作図（パラパラ漫画）をテキスト記述から生成
+    - DOT（Graphviz）風の言語で記述
+        - システムやアルゴリズムの記述に特化したDSLでSVG画像を生成
+    - 1枚絵ではなく動作図（パラパラ漫画）をテキスト記述から生成
 - SVGでの出力
-  - SVG属性の指定により見た目を変更できます
+    - SVG属性の指定により見た目を変更できます
 - CSS風のFlexboxモデルで配置を指定できるレイアウトエンジン
 
 # 背景
@@ -35,14 +38,14 @@
 既存のお絵かきツール・図表生成ツールには下記の使いにくさがありました。
 
 - GUIのお絵かきツール
-  - 自由に配置できる反面、要素数が多いと作図・調整が手間
-  - 複数枚の図があるとき、1枚変更すると後続の図も修正しないといけない
+    - 自由に配置できる反面、要素数が多いと作図・調整が手間
+    - 複数枚の図があるとき、1枚変更すると後続の図も修正しないといけない
 
 - テキストベースの図表生成ツール
-  - 要素の位置の指定がしにくい
-  - 状態変化を表現しにくい
-    - 要素の追加・削除で他要素の位置が変わってしまう
-    - 記述量が多くなりがち（図全体を枚数分だけ記述しないといけない）
+    - 要素の位置の指定がしにくい
+    - 状態変化を表現しにくい
+        - 要素の追加・削除で他要素の位置が変わってしまう
+        - 記述量が多くなりがち（図全体を枚数分だけ記述しないといけない）
 
 そこで自動で図中の各要素の配置を調整して動作図を作成できるツールを開発しました。
 
@@ -53,15 +56,13 @@
 基本図形として `box` / `person` / `cylinder` / `pipe` が指定できます。
 要素間に矢印 (`->` or `--`) を配置できます。
 
----
-
-<img src="docs/svg/examples/docs/basic-shapes.furumai.txt.svg" alt="basic-shapes.furumai.txt" />
-
----
-
-<img src="examples/docs/basic-shapes.furumai.generated.00.svg" alt="basic-shapes.svg" />
-
----
+<ClientOnly>
+<DocSnippet
+  filename="./gallery/docs/basic-shapes.furumai"
+  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIAhjgC4JToDaMAFiQA4QC8A5C7MuwLoDcAHSRICEWg2Zt2AIwQAPPkKQxKUcXUYsOOAJ4AbOEkJQlw4WTXoABAFpb10YXTKn4uwD5rqquOUhsEiQ4AFsSckQUVFBLOEg0cigAVwgAX1SgA"
+></DocSnippet>
+</ClientOnly>
+<a v-if="false" href="https://raiich.github.io/furumai/docs/ja">Image not rendered. [view image]</a>
 
 ## アイコン
 
@@ -139,9 +140,9 @@
 図表の構成要素をまとめる方法として下記のものがあります。
 
 - `group`
-  - 横方向にならべてまとめます
+    - 横方向にならべてまとめます
 - `zone`
-  - 縦方向にならべてまとめます
+    - 縦方向にならべてまとめます
 
 <ClientOnly>
 <DocSnippet
@@ -247,6 +248,6 @@ CSSのようにスタイル指定ができます。
 
 # 文法
 
-<<< ./Furumai.g4
+[Furumai.g4](Furumai.g4)
 
 <Footer></Footer>

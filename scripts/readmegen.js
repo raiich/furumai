@@ -15,27 +15,34 @@ reader.on('line', (line) => {
 
   if (generate || describe) {
     const args = line.split(' ')
-    const filename = args[2]
-    const content = fs.readFileSync(filename).toString()
+    const filePath = args[2]
+    const content = fs.readFileSync(filePath).toString().trim()
+
+    const encoded = LZString.compressToEncodedURIComponent(content)
+    const editUrl = `https://raiich.github.io/furumai/#/v1/${encoded}`
+    result.push(`<p align="right"><a href="${editUrl}">Edit</a></p>`)
+    result.push(``)
 
     if (describe) {
-      result.push('<!-- furumai:generated --> <pre>')
+      result.push('```')
       content.split('\n').forEach((value) => {
-        result.push(`<!-- furumai:generated --> ${value}`)
+        result.push(`${value}`)
       })
-      result.push('<!-- furumai:generated --> </pre>')
+      result.push('```')
     }
 
-    const dirname = path.dirname(filename)
+    const dirname = path.dirname(filePath)
+    const filename = path.basename(filePath)
+    console.log('dirname:', dirname)
+
     fs.readdirSync(dirname)
-      .filter((generated) => generated.startsWith(filename))
+      .filter((generated) => generated.includes(filename + '.generated.'))
       .forEach((generated) => {
         const url = dirname + '/' + generated
-        result.push(`<!-- furumai:generated --> <img src="${url}" alt="furumai generated image from ${filename}"/>`)
+        result.push(`<img src="${url}" alt="furumai generated image from ${filePath}"/>`)
       })
-    const encoded = LZString.compressToEncodedURIComponent(content)
-    const editUrl = `https://raiich.github.io/furumai/#/${version}/${encoded}`
-    result.push(`<!-- furumai:generated --> <p align="right"><a href="${editUrl}">Edit</a></p>`)
+  } else {
+    result.push(line)
   }
 })
 
