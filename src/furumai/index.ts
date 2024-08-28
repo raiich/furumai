@@ -1,14 +1,156 @@
 import {Group, Snapshot} from '../components/model/Svg'
-import {Length} from '../layout/types'
+import {Length, Point} from '../layout/types'
 import {SvgElem} from "../components/model/SvgElem";
 import {TextElem} from "../components/model/TextElem";
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
 import {fab} from '@fortawesome/free-brands-svg-icons'
+import {parse, parseStyle} from '../parse/parser'
+import {Layout} from '../elem/Story'
+import {Engine as LayoutEngine} from '../layout/Engine'
+import {StyleList} from "../style/Style";
+import {parse as parseYaml} from 'yaml'
+import {convertSvg} from "../effect/rougher";
+
+const defaultString = `mode: diff
+# mode: snapshot
+direction: portrait
+# direction: landscape
+rough: false
+style: |
+ #root {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  stroke: none;
+  padding: 16px;
+  fill: none;
+ }
+ .group, .zone {
+  align-items: center;
+  justify-content: space-around;
+
+  fill: none;
+  padding: 18px;
+  margin: 24px;
+  stroke: none;
+ }
+ .group {
+  flex-direction: row;
+ }
+ .zone {
+  flex-direction: column;
+ }
+ .edge {
+  stroke: black;
+  label: "";
+ }
+ .node {
+  stroke: black;
+  width: 100px;
+  height: 60px;
+  padding: 18px 7px;
+  margin: 20px;
+  fill: none;
+ }
+ .icon {
+  stroke: none;
+  fill: black;
+ }
+ .text, .label {
+  visibility: inherit;
+  font-size: 9pt;
+ }
+ .text {
+  dy: 5px;
+ }
+ .label {
+  dy: -14px;
+ }
+`
+
+export function generateSVGSVGElement(d: Document, text: string): SVGSVGElement[] {
+  const {style,  ...defaults } = parseYaml(defaultString)
+
+  const [header, code] = split(text)
+  const config = { ...defaults, ...parseYaml(header)}
+
+  const defaultStyle = StyleList.of(parseStyle(style))
+  const styles = defaultStyle.update(StyleList.of(parseStyle(config.style)))
+
+  const story = parse(code)
+  let layout = story.layout
+
+  const engine = new LayoutEngine(config.direction)
+  const snapshots = [createSnapshot(engine, layout, styles)]
+  for (const update of story.updates) {
+    if (config.mode === 'diff') {
+      layout = layout.update(update)
+    } else {
+      layout = parse(code).layout.update(update)
+    }
+    snapshots.push(createSnapshot(engine, layout, styles))
+  }
+
+  const ret = snapshots.map((s) => toSVGElement(s, d))
+  if (config.rough) {
+    return ret.map(convertSvg)
+  } else {
+    return ret
+  }
+}
+
+function split(text: string): [string, string] {
+  const trimmed = text.trim()
+  if (trimmed.startsWith('---\n')) {
+    const at = trimmed.indexOf('---\n', 1)
+    if (at < 0) {
+      throw new Error('invalid format')
+    }
+    const header = trimmed.substring(4, at)
+    const code = trimmed.substring(at + 4)
+    return [header, code]
+  }
+  return ['', trimmed]
+}
+
+function createSnapshot(engine: LayoutEngine, layout: Layout, styles: StyleList): Snapshot {
+  const styled = layout.root.resolveStyle(styles, layout.root.contextMap)
+  const rootBox = styled.layoutBox()
+  engine.fitRoot(rootBox)
+
+  const territories = rootBox.flatten(Point.zero)
+  const includeStyle = true
+  const root = styled.shape(territories, includeStyle)
+
+  const es = layout.edges.map((edge) => {
+    const f = territories[edge.from]
+    const t = territories[edge.to]
+    const elem = edge.resolveStyle(styles).arrow(f, edge.op, t, includeStyle)
+    return {
+      elem,
+      children: [],
+    }
+  })
+  root.children.push(...es)
+  return {
+    styles: '',
+    size: rootBox.totalSize,
+    root,
+  }
+}
+
+interface Config {
+  mode: string
+  style: string
+  direction: string
+  rough: boolean
+}
 
 const ns = 'http://www.w3.org/2000/svg'
 
-export function toSVGElement(input: Snapshot, d: Document) {
+function toSVGElement(input: Snapshot, d: Document): SVGSVGElement {
   const svg = d.createElementNS(ns, 'svg')
   svg.setAttribute('xmlns', ns)
   svg.setAttribute('id', 'svgRoot')

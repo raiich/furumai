@@ -3,7 +3,7 @@ import {RoughSVG} from 'roughjs/bin/svg'
 const d = document
 let rc: RoughSVG = new RoughSVG(document.createElementNS('http://www.w3.org/2000/svg', 'svg'))
 
-export function convertSvg(root: SVGElement): SVGElement {
+export function convertSvg(root: SVGSVGElement): SVGSVGElement {
   const width = root.getAttribute('width') || 0
   const height = root.getAttribute('height') || 0
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')

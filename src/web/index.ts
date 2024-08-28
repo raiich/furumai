@@ -1,5 +1,4 @@
-import {makeSnapshots} from '../furumai/main';
-import {toSVGElement} from '../svg';
+import {generateSVGSVGElement} from '../furumai';
 import LZString from 'lz-string'
 import 'chota/dist/chota.min.css';
 import dependencies from '../../resources/dependencies.json';
@@ -137,11 +136,7 @@ class Drawer {
 
   draw(results: HTMLElement, decoded: string) {
     try {
-      const snapshots = makeSnapshots(decoded)
-      const elems = snapshots.map((snapshot) => {
-        return toSVGElement(snapshot, document)
-      })
-      elems.forEach((elem) => {
+      generateSVGSVGElement(document, decoded).forEach((elem) => {
         // elem.classList.add('card')
         results.appendChild(elem)
         results.appendChild(document.createElement('hr'))
