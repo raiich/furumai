@@ -1,6 +1,24 @@
-.PHONY: all
-all: init images dist
+SRC := $(shell find src -name '*.ts')
+
+.PHONY: app
+app: init images dist
 	mv ./dist/* ./docs/
+
+.PHONY: dist
+dist: $(SRC) resources/dependencies.json license-files
+	npm run build:prod
+
+resources/dependencies.json: package-lock.json
+	npm run -s license-checker | jq 'del(.[]|.path)' > ./resources/dependencies.json
+
+.PHONY: license-files
+license-files: package-lock.json node_modules/antlr4/LICENSE.txt
+	npm run -s license-checker | jq -r '.[].licenseFile' \
+	| xargs -I{} sh ./scripts/copy-file.sh {}
+
+node_modules/antlr4/LICENSE.txt: resources/antlr4/LICENSE.txt
+	# copy unhandled license
+	cp resources/antlr4/LICENSE.txt  node_modules/antlr4/LICENSE.txt
 
 .PHONY: clean
 clean:
@@ -11,30 +29,19 @@ clean:
 init:
 	npm install
 
-dist/cli.js: $(shell find src -name '*.ts')
-	npm run build:cli
-
-.PHONY: dist
-dist: resources/dependencies.json license-files
-	npm run build:prod
-
-.PHONY: resources/dependencies.json
-resources/dependencies.json:
-	npm run -s license-checker | jq 'del(.[]|.path)' > ./resources/dependencies.json
-
-.PHONY: license-files
-license-files: antlr4-license
-	npm run -s license-checker | jq -r '.[].licenseFile' \
-	| xargs -I{} sh ./scripts/copy-file.sh {}
-
-.PHONY: antlr4-license
-antlr4-license:
-	# copy unhandled license
-	cp ./resources/antlr4/LICENSE.txt  ./node_modules/antlr4/LICENSE.txt
-
 .PHONY: images
 images: dist/cli.js
-	find ./examples -type f -name \*.furumai -print0 | xargs -0 -I{} sh ./scripts/gensvg.sh {}
+	find ./examples -type f -name \*.furumai -print0 | xargs -0 -I{} make "{}.generated.svg"
+
+.PHONY: svg
+svg: dist/cli.js
+	make "$(FILE).generated.svg"
+
+%.generated.svg: %
+	sh ./scripts/gensvg.sh $^
+
+dist/cli.js: $(SRC)
+	npm run build:cli
 
 ANTLR_JAR := antlr-4.13.1-complete.jar
 ANTLR_OUT := src/generated/antlr4ts
