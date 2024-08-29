@@ -1,4 +1,5 @@
 import {RoughSVG} from 'roughjs/bin/svg'
+import {stringify} from "yaml";
 
 export class Rougher {
     private readonly svg: SVGSVGElement
@@ -7,32 +8,30 @@ export class Rougher {
     constructor(
         readonly d: Document,
     ) {
-        this.svg = this.d.createElementNS('http://www.w3.org/2000/svg', 'svg')
+        this.svg = d.createElementNS('http://www.w3.org/2000/svg', 'svg')
         this.rc = new RoughSVG(this.svg)
     }
 
-    convertSvg(root: SVGSVGElement): SVGSVGElement {
+    public convertSvg(root: SVGSVGElement): SVGSVGElement {
         const svg = this.svg
         svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
         svg.setAttribute('xmlns:svgns', 'http://www.w3.org/2000/svg')
 
-        const width = root.getAttribute('width') || 0
-        const height = root.getAttribute('height') || 0
+        const width = root.getAttribute('width') || '0px'
+        const height = root.getAttribute('height') || '0px'
         svg.setAttribute('width', `${width}`)
         svg.setAttribute('height', `${height}`)
-        svg.setAttribute('viewBox', `0 0 ${Number(width) * 2} ${Number(height) * 2}`)
+        svg.setAttribute('viewBox', root.getAttribute('viewBox') || '0 0 0 0')
 
-        const cs = root.children
-        for (let i = 0; i < cs.length; i++) {
-            const c = cs.item(i)
+        for (const c of root.children) {
             if (c) {
                 if (c.tagName === 'svgns:style') {
-                    svg.append(c)
+                    svg.append(this.copy(c))
+                } else if (c.tagName === 'style') {
+                    svg.append(this.copy(c))
                 } else {
-                    svg.append(this.convert(c, this.convertIfPossible))
+                    svg.append(this.convert(c, (elem) => this.convertIfPossible(elem)))
                 }
-            } else {
-                throw new Error('null')
             }
         }
         return svg
@@ -85,7 +84,7 @@ export class Rougher {
                 for (let i = 0; i < cs.length; i++) {
                     const c = cs.item(i)
                     if (c) {
-                        svg.append(this.convert(c, this.copy))
+                        svg.append(this.convert(c, (elem) => this.copy(elem)))
                     } else {
                         throw new Error('null')
                     }

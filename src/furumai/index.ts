@@ -95,8 +95,7 @@ export function generateSVGSVGElement(d: Document, text: string): SVGSVGElement[
 
   const ret = snapshots.map((s) => toSVGElement(s, d))
   if (config.rough) {
-    const r = new Rougher(d)
-    return ret.map(r.convertSvg)
+    return ret.map((svg) => new Rougher(d).convertSvg(svg))
   } else {
     return ret
   }
