@@ -36,10 +36,7 @@ images: dist/cli.js
 
 .PHONY: svg
 svg: dist/cli.js
-	make "$(FILE).generated.svg"
-
-%.generated.svg: %
-	sh ./scripts/gensvg.sh $^
+	sh ./scripts/gensvg.sh "$(FILE)" "$(FILE).generated"
 
 dist/cli.js: $(SRC)
 	npm run build:cli
