@@ -141,6 +141,12 @@ To hide the displayed element, use `hide` as follows.
 
 <!-- furumai:describe examples/docs/hide.furumai -->
 
+### Theme
+
+<!-- furumai:describe examples/docs/theme.furumai -->
+
+`theme: default` is used by default if `theme` is not specified.
+
 ### Comment
 
 `//` is line comment.

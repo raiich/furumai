@@ -7,7 +7,7 @@ Translations:
 
 - [日本語](README.ja.md)
 
-# Gallery
+## Gallery
 
 <p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQCcHsFcHMAsBcACALuaBTUBnVBPAG0xQB9RlkA6WKaABwBpqAvSAO02QG9lCBDAEaZCKAORjkAXwrIAxO36oAlgDcuvAGbLCo+QBMADJuP9psqsvadwwTPtgbkeKAGtMwffxzx+4cPz4KAAsyADMANzO6JDuKLSBUTIgwKCgtDD0yADqmIIAasqYAO48stA4mOAA2j789JgAvA3gOBwAuhGyAMbwUAC2mNXK3RyNYoIB7Po4APS9A5hizALChOO5BUXFYp2gUl3pdFmKKupllKsi4wBySmpcAIL09GJdlAAykLDZ4MqoVWGo3Y42g00gyz4QmuYi+sByfwB4F272Qgmgmk0gKha3GACEMVjkcw6g1msoGsxUONKNVMOp2KhkABGdqMAA67DpDKZACY2ZzKFRhZI9p9vgBlTDTQEjMZicD2CEraHrWHfZBSmXIvYHNIZBho-jddzTC7OKrqGpykFiSrgK2Qq5qvHG036FH7Q4VKrIYAAPmQC0gg2q1LEAGFCCNXJ7g4M-YG4b9-oDwwAFaCCaM+T3JxG+gNowmA7oCHA4RpWGx2ByYPbozGFpOS6X6UvlyvVqq1xx7OFa9vgRNGk1tsPjQcooA">Edit</a></p>
 <img src="examples/gallery/native-buffer.furumai.generated.00.svg" alt="furumai generated image from examples/gallery/native-buffer.furumai"/>
@@ -21,7 +21,7 @@ Translations:
 
 <img src="examples/gallery/b-tree-like.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/b-tree-like.furumai"/>
 
-# Features
+## Features
 
 - Text-based description
     - You can write behavior in DOT (Graphviz) style
@@ -31,7 +31,7 @@ Translations:
     - You can also adjust the appearance by specifying the SVG attribute.
 - Layout engine that can specify placement in `Flexbox model` like CSS.
 
-# Background
+## Background
 
 The existing drawing tools had the following difficulties.
 
@@ -47,9 +47,9 @@ The existing drawing tools had the following difficulties.
 
 Therefore, I developed a tool that can automatically create an action diagram by adjusting each element.
 
-# Functions
+## Functions
 
-## Basic Shapes
+### Basic Shapes
 
 You can specify `box` / `person` / `cylinder` / `pipe` as the basic shape.
 Arrows (`->` or `--`) can be placed between elements.
@@ -67,7 +67,7 @@ node1 -> store1;
 
 <img src="examples/docs/basic-shapes.furumai.generated.00.svg" alt="furumai generated image from examples/docs/basic-shapes.furumai"/>
 
-## Icon Shapes
+### Icon Shapes
 
 You can specify Font Awesome icon as below.
 
@@ -81,11 +81,11 @@ c[icon='brands/github'];
 
 <img src="examples/docs/icon.furumai.generated.00.svg" alt="furumai generated image from examples/docs/icon.furumai"/>
 
-## Behavior motion diagram (like a flipbook comic)
+### Behavior motion diagram (like a flipbook comic)
 
 Separate each frame of the motion diagram with `---`.
 
-### Diff mode (default)
+#### Diff mode (default)
 
 Default is `diff mode`.
 The `diff mode` is useful especially for "incremental small changes" such as explaining how an algorithm works.
@@ -135,7 +135,7 @@ c4[t='128'];
 
 <img src="examples/docs/diff-mode-box.furumai.generated.02.svg" alt="furumai generated image from examples/docs/diff-mode-box.furumai"/>
 
-### Snapshot mode
+#### Snapshot mode
 
 If each frame is independent, use the `snapshot` mode.
 
@@ -161,7 +161,7 @@ b -> c;
 
 <img src="examples/docs/simple-animation-snapshot.furumai.generated.02.svg" alt="furumai generated image from examples/docs/simple-animation-snapshot.furumai"/>
 
-## Label / Text
+### Label / Text
 
 <p align="right"><a href="https://raiich.github.io/furumai/#/v1/HYewJgpgjA2gzgCwIYAcIF4DkAjEAPTAGgAIAXLAYxGFIhuIQgCcJMBdAbgCgkLSQmsRKgyY0TONSLEANkmwQZWJMQCucZu25x+LIcjSUAnjICWwSE2lyFSzDoEQAhNPKYA1lABcxAG5QtIA">Edit</a></p>
 
@@ -173,7 +173,7 @@ store1[shape='cylinder', label='store!', t='k1: v1'];
 
 <img src="examples/docs/label-text.furumai.generated.00.svg" alt="furumai generated image from examples/docs/label-text.furumai"/>
 
-## SVG attribute
+### SVG attribute
 
 <p align="right"><a href="https://raiich.github.io/furumai/#/v1/HYRg2gLgvA5BCmAPCACEMA0KBmBLANvlAIYCOArsQLbEBOuw8AugNwBQwATOxyCgLQA+FFzBsUKAM4RaAewDW8fgHdcAEwgALKAHYM4qTIVL8DeAGNiAB1hzywNZgPS5i-muKTNdWsQCeUABEAMwoAJyBBrJWxOa4EAGBAAwAdACskRLQMMQoCMhOWUgQKXiEUADExABs2PqsQA">Edit</a></p>
 
@@ -193,7 +193,7 @@ n1 -> n2[
 
 <img src="examples/docs/svg-attributes.furumai.generated.00.svg" alt="furumai generated image from examples/docs/svg-attributes.furumai"/>
 
-## Zone / Group
+### Zone / Group
 
 There are the following methods to summarize the diagram elements.
 
@@ -236,7 +236,7 @@ proxy2 -> backend2;
 
 <img src="examples/docs/group-zone.furumai.generated.00.svg" alt="furumai generated image from examples/docs/group-zone.furumai"/>
 
-## Style
+### Style
 
 It can be styled just like CSS.
 The name of the node, etc. is used as the `id`. You can also set `class` names.
@@ -274,7 +274,7 @@ n1 -> n2[
 
 <img src="examples/docs/css.furumai.generated.00.svg" alt="furumai generated image from examples/docs/css.furumai"/>
 
-## Margin / Padding
+### Margin / Padding
 
 You can set `margin` / `padding`, like web pages.
 
@@ -288,7 +288,7 @@ n22[margin=30px];
 
 <img src="examples/docs/margin-padding.furumai.generated.00.svg" alt="furumai generated image from examples/docs/margin-padding.furumai"/>
 
-## dx / dy
+### dx / dy
 
 There are cases where arrows overlap as a result of automatic placement.
 You can shift the arrangement of arrows by specifying the `dx` / `dy` attribute.
@@ -314,7 +314,7 @@ e -> f[dy=20];
 
 <img src="examples/docs/dx-dy.furumai.generated.00.svg" alt="furumai generated image from examples/docs/dx-dy.furumai"/>
 
-## Layout like CSS Flexbox
+### Layout like CSS Flexbox
 
 <p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyDEBzATMgN4abIBWArlAJYBm0wAxgPYB2k87KUAhgE6QA3CQC+JXAGYiJTJRr0mbDl2TgADj0bxg-ZhVYATYZjEhgoUDj561yHAEYiyHoOQAjV2Ks27BQskZPS2sKWxwpfyNkLxCwgBYneE8gA">Edit</a></p>
 
@@ -337,7 +337,7 @@ group g4 { e; }
 
 <img src="examples/docs/justify-content.furumai.generated.00.svg" alt="furumai generated image from examples/docs/justify-content.furumai"/>
 
-## Direction / Orientation
+### Direction / Orientation
 
 You can change the layout direction by specifying `flex-direction` in `style` or `orientation` in `config`.
 
@@ -370,7 +370,7 @@ store1[shape=cylinder];
 
 <img src="examples/docs/orientation.furumai.generated.00.svg" alt="furumai generated image from examples/docs/orientation.furumai"/>
 
-## Hide displayed elements
+### Hide displayed elements
 
 To hide the displayed element, use `hide` as follows.
 
@@ -398,11 +398,27 @@ hide b;
 
 <img src="examples/docs/hide.furumai.generated.02.svg" alt="furumai generated image from examples/docs/hide.furumai"/>
 
-## Comment
+### Theme
+
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQBcAsFMFtoFwAIAOBDAxga2gE1CMKAOYBOA9gK4pIAeSA3qEkgF7kB20SAno0mgDcSAEbCAvszadurfhgmhxQA">Edit</a></p>
+
+```
+---
+theme: packed
+---
+group x {
+  zone y { a; b; }
+  zone z { c; }
+}
+```
+
+<img src="examples/docs/theme.furumai.generated.00.svg" alt="furumai generated image from examples/docs/theme.furumai"/>
+
+### Comment
 
 `//` is line comment.
 
-## Rough Mode
+### Rough Mode
 
 <p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQCcHsFcHMAsBcACALuaBTUJigIYDcQA">Edit</a></p>
 
@@ -415,7 +431,7 @@ a;
 
 <img src="examples/docs/rough.furumai.generated.00.svg" alt="furumai generated image from examples/docs/rough.furumai"/>
 
-# Syntax
+## Syntax
 
 [Furumai.g4](Furumai.g4)
 

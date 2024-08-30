@@ -12,19 +12,13 @@ import {StyleList} from "../style/Style";
 import {parse as parseYaml} from 'yaml'
 import {Rougher} from "../effect/rougher";
 
-const defaultString = `mode: diff
-# mode: snapshot
-direction: portrait
-# direction: landscape
-rough: false
-style: |
+const themeMinimal = `
  #root {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
   stroke: none;
-  padding: 16px;
   fill: none;
  }
  .group, .zone {
@@ -32,8 +26,6 @@ style: |
   justify-content: space-around;
 
   fill: none;
-  padding: 18px;
-  margin: 24px;
   stroke: none;
  }
  .group {
@@ -48,10 +40,6 @@ style: |
  }
  .node {
   stroke: black;
-  width: 100px;
-  height: 60px;
-  padding: 18px 7px;
-  margin: 20px;
   fill: none;
  }
  .icon {
@@ -70,13 +58,40 @@ style: |
  }
 `
 
+const themePacked = themeMinimal + `
+ .node {
+  width: 64px;
+  height: 64px;
+ }
+`
+
+const themeDefault = themeMinimal + `
+ #root {
+  padding: 16px;
+ }
+ .group, .zone {
+  padding: 18px;
+  margin: 24px;
+ }
+ .node {
+  width: 100px;
+  height: 60px;
+  padding: 18px 7px;
+  margin: 20px;
+ }
+`
+
 export function generateSVGSVGElement(d: Document, text: string): SVGSVGElement[] {
-  const {style,  ...defaults } = parseYaml(defaultString)
-
   const [header, code] = split(text)
-  const config = { ...defaults, ...parseYaml(header)}
+  const config = {
+    mode: 'diff',  // mode: 'snapshot'
+    direction: 'portrait', // direction: 'landscape'
+    rough: false,
+    theme: 'default',
+    ...parseYaml(header),
+  }
 
-  const defaultStyle = StyleList.of(parseStyle(style))
+  const defaultStyle = StyleList.of(parseStyle(lookupTheme(config.theme)))
   const styles = defaultStyle.update(StyleList.of(parseStyle(config.style)))
 
   const story = parse(code)
@@ -98,6 +113,21 @@ export function generateSVGSVGElement(d: Document, text: string): SVGSVGElement[
     return ret.map((svg) => new Rougher(d).convertSvg(svg))
   } else {
     return ret
+  }
+}
+
+function lookupTheme(name: string): string {
+  switch (name) {
+    case 'minimal':
+      return themeMinimal
+    case 'packed':
+      return themePacked
+    case 'none':
+      return ``
+    case 'default':
+      return themeDefault
+    default:
+      throw new Error(`unknown theme: ${name}`)
   }
 }
 
@@ -146,6 +176,7 @@ interface Config {
   style: string
   direction: string
   rough: boolean
+  theme: string
 }
 
 const ns = 'http://www.w3.org/2000/svg'

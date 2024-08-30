@@ -3,7 +3,7 @@
 システムやアルゴリズムの動作図（パラパラ漫画）を、DOT（Graphviz）風のテキスト記述から生成できるツールを作りました:
 <a href="https://raiich.github.io/furumai/">Furumai | behavior visualization tool</a>
 
-# ギャラリー
+## ギャラリー
 
 <!-- furumai:generate examples/gallery/native-buffer.furumai -->
 
@@ -11,7 +11,7 @@
 
 <!-- furumai:generate examples/gallery/b-tree-like.furumai -->
 
-# 特徴
+## 特徴
 
 - テキストベースの記述
     - DOT（Graphviz）風の言語で記述
@@ -21,7 +21,7 @@
     - SVG属性の指定により見た目を変更できます
 - CSS風のFlexboxモデルで配置を指定できるレイアウトエンジン
 
-# 背景
+## 背景
 
 既存のお絵かきツール・図表生成ツールには下記の使いにくさがありました。
 
@@ -37,26 +37,26 @@
 
 そこで自動で図中の各要素の配置を調整して動作図を作成できるツールを開発しました。
 
-# 機能
+## 機能
 
-## 基本図形
+### 基本図形
 
 基本図形として `box` / `person` / `cylinder` / `pipe` が指定できます。
 要素間に矢印 (`->` or `--`) を配置できます。
 
 <!-- furumai:describe examples/docs/basic-shapes.furumai -->
 
-## アイコン
+### アイコン
 
 アイコン名を指定すると、Font Awesomeアイコンを使用できます。
 
 <!-- furumai:describe examples/docs/icon.furumai -->
 
-## 動作図（パラパラ漫画）を出力
+### 動作図（パラパラ漫画）を出力
 
 `---` で動作図の各フレームを区切ります。
 
-### 差分記述モード (デフォルト)
+#### 差分記述モード (デフォルト)
 
 デフォルトでは差分記述モードです。
 アルゴリズムの動作説明などの「小さな変化がつみかさなる」ようなものの場合に差分記述モードが役立ちます。
@@ -67,21 +67,21 @@
 
 <!-- furumai:describe examples/docs/diff-mode-box.furumai -->
 
-### スナップショットモード
+#### スナップショットモード
 
 フレームごとに独立している場合はスナップショットモードを使います。
 
 <!-- furumai:describe examples/docs/simple-animation-snapshot.furumai -->
 
-## ラベル / テキスト
+### ラベル / テキスト
 
 <!-- furumai:describe examples/docs/label-text.furumai -->
 
-## SVG属性
+### SVG属性
 
 <!-- furumai:describe examples/docs/svg-attributes.furumai -->
 
-## Zone / Group
+### Zone / Group
 
 図表の構成要素をまとめる方法として下記のものがあります。
 
@@ -92,7 +92,7 @@
 
 <!-- furumai:describe examples/docs/group-zone.furumai -->
 
-## スタイル指定
+### スタイル指定
 
 CSSのようにスタイル指定ができます。
 ノード等の名前はIDとして使用されます。クラス名も設定できます。
@@ -106,23 +106,23 @@ CSSのようにスタイル指定ができます。
 
 <!-- furumai:describe examples/docs/css.furumai -->
 
-## Margin / Padding
+### Margin / Padding
 
 ウェブページにおける `margin` / `padding` のような余白を設定できます。
 
 <!-- furumai:describe examples/docs/margin-padding.furumai -->
 
-## dx / dy
+### dx / dy
 
 矢印の配置が重なってしまうケースがあります。その場合、 `dx` / `dy` 属性により配置をずらせます。
 
 <!-- furumai:describe examples/docs/dx-dy.furumai -->
 
-## Flexbox風レイアウト
+### Flexbox風レイアウト
 
 <!-- furumai:describe examples/docs/justify-content.furumai -->
 
-## 方向
+### 方向
 
 `style` における `flex-direction` の指定、 `config` における `orientation` の指定により配置方向を変更できます。
 
@@ -130,22 +130,32 @@ CSSのようにスタイル指定ができます。
 
 <!-- furumai:describe examples/docs/orientation.furumai -->
 
-## 表示済み要素の非表示
+### 表示済み要素の非表示
 
 表示済み要素を非表示にするには下記のように `hide` を使用します。
 
 <!-- furumai:describe examples/docs/hide.furumai -->
 
-## コメント
+### テーマ
+
+<!-- furumai:describe examples/docs/theme.furumai -->
+
+`theme` を指定しなかった場合は、 `theme: default` が指定されたものとして振る舞います。
+
+### コメント
 
 `//` はラインコメントです。
 
-## Rough Mode
+### Rough Mode
 
 <!-- furumai:describe examples/docs/rough.furumai -->
 
-# 文法
+## 文法
 
 [Furumai.g4](Furumai.g4)
 
 <Footer></Footer>
+
+## Gallery
+
+[Gallery](gallery.md)

@@ -1,0 +1,7 @@
+---
+theme: packed
+---
+group x {
+  zone y { a; b; }
+  zone z { c; }
+}

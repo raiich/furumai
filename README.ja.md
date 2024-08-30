@@ -393,6 +393,22 @@ hide b;
 
 <img src="examples/docs/hide.furumai.generated.02.svg" alt="furumai generated image from examples/docs/hide.furumai"/>
 
+### Theme
+
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQBcAsFMFtoFwAIAOBDAxga2gE1CMKAOYBOA9gK4pIAeSA3qEkgF7kB20SAno0mgDcSAEbCAvszadurfhgmhxQA">Edit</a></p>
+
+```
+---
+theme: packed
+---
+group x {
+  zone y { a; b; }
+  zone z { c; }
+}
+```
+
+<img src="examples/docs/theme.furumai.generated.00.svg" alt="furumai generated image from examples/docs/theme.furumai"/>
+
 ### コメント
 
 `//` はラインコメントです。
@@ -416,8 +432,6 @@ a;
 
 <Footer></Footer>
 
-## その他
+## Gallery
 
 [Gallery](gallery.md)
-
-
