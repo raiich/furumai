@@ -21,25 +21,30 @@ reader.on('line', (line) => {
     const encoded = LZString.compressToEncodedURIComponent(content)
     const editUrl = `https://raiich.github.io/furumai/#/v1/${encoded}`
     result.push(`<p align="right"><a href="${editUrl}">Edit</a></p>`)
-    result.push(``)
 
     if (describe) {
+      result.push(``)
       result.push('```')
       content.split('\n').forEach((value) => {
         result.push(`${value}`)
       })
       result.push('```')
+      result.push(``)
     }
 
     const dirname = path.dirname(filePath)
     const filename = path.basename(filePath)
 
-    fs.readdirSync(dirname)
+    let generatedFiles = fs.readdirSync(dirname)
       .filter((generated) => generated.includes(filename + '.generated.'))
-      .forEach((generated) => {
-        const url = dirname + '/' + generated
-        result.push(`<img src="${url}" alt="furumai generated image from ${filePath}"/>`)
-      })
+    if (generatedFiles.length > 1) {
+      generatedFiles = generatedFiles.slice(1, generatedFiles.length)
+    }
+    const tags = generatedFiles.map((generated) => {
+      const url = dirname + '/' + generated
+      return `<img src="${url}" alt="furumai generated image from ${filePath}"/>`
+    })
+    result.push(tags.join('\n\n---\n\n'))
   } else {
     result.push(line)
   }

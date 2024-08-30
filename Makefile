@@ -1,7 +1,7 @@
 SRC := $(shell find src -name '*.ts')
 
 .PHONY: app
-app: init dist
+app: clean init dist
 	mkdir -p docs
 	mv ./dist/* ./docs/
 
@@ -54,5 +54,5 @@ $(ANTLR_JAR):
 $(ANTLR_OUT):
 	mkdir -p $(ANTLR_OUT)
 
-%.md: %.template.md
-	cat $^ | node scripts/readmegen.js > $@
+%.md: %.template.md scripts/readmegen.js
+	cat $< | node scripts/readmegen.js > $@

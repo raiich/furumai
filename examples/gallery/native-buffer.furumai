@@ -1,4 +1,5 @@
 ---
+rough: true
 style: |
   .group, .zone { label: '' }
   #native { fill: #d0f0fa }

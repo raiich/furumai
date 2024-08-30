@@ -1,4 +1,8 @@
-node[margin='0 70'];
+---
+rough: true
+style: |
+ .node {margin: '0 70'}
+---
 
 group clients {
   User[shape='person'];
