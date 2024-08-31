@@ -11,10 +11,6 @@ Translations:
 
 <!-- furumai:generate examples/gallery/native-buffer.furumai -->
 
----
-
-<!-- furumai:generate examples/gallery/b-tree-like.furumai -->
-
 ## Features
 
 - Text-based description
@@ -159,4 +155,10 @@ To hide the displayed element, use `hide` as follows.
 
 [Furumai.g4](Furumai.g4)
 
-<Footer></Footer>
+## Development of Furumai
+
+[Development](development.md)
+
+## Gallery
+
+[Gallery](gallery.md)

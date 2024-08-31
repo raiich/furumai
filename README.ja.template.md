@@ -7,10 +7,6 @@
 
 <!-- furumai:generate examples/gallery/native-buffer.furumai -->
 
----
-
-<!-- furumai:generate examples/gallery/b-tree-like.furumai -->
-
 ## 特徴
 
 - テキストベースの記述
@@ -154,7 +150,9 @@ CSSのようにスタイル指定ができます。
 
 [Furumai.g4](Furumai.g4)
 
-<Footer></Footer>
+## Development of Furumai
+
+[Development](development.md)
 
 ## Gallery
 

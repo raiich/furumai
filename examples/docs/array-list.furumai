@@ -1,13 +1,18 @@
+---
+theme: packed
+style: |
+ .node { label: '';padding: 10px }
+---
+
 visibility=hidden;
 
 group array {
-  node[margin=0, padding=10, width=80, height=85, label=''];
   c1;
   c2;
   c3;
   c4;
   c5;
-  c6[label='...', stroke='none'];
+  c6[t='...', stroke='none'];
   c7;
   c8;
 };

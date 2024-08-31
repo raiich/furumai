@@ -9,17 +9,12 @@ Translations:
 
 ## Gallery
 
-<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQCcHsFcHMAsBcACALuaBTUBnVBPAG0xQB9RlkA6WKaABwBpqAvSAO02QG9lCBDAEaZCKAORjkAXwrIAxO36oAlgDcuvAGbLCo+QBMADJuP9psqsvadwwTPtgbkeKAGtMwffxzx+4cPz4KAAsyADMANzO6JDuKLSBUTIgwKCgtDD0yADqmIIAasqYAO48stA4mOAA2j789JgAvA3gOBwAuhGyAMbwUAC2mNXK3RyNYoIB7Po4APS9A5hizALChOO5BUXFYp2gUl3pdFmKKupllKsi4wBySmpcAIL09GJdlAAykLDZ4MqoVWGo3Y42g00gyz4QmuYi+sByfwB4F272Qgmgmk0gKha3GACEMVjkcw6g1msoGsxUONKNVMOp2KhkABGdqMAA67DpDKZACY2ZzKFRhZI9p9vgBlTDTQEjMZicD2CEraHrWHfZBSmXIvYHNIZBho-jddzTC7OKrqGpykFiSrgK2Qq5qvHG036FH7Q4VKrIYAAPmQC0gg2q1LEAGFCCNXJ7g4M-YG4b9-oDwwAFaCCaM+T3JxG+gNowmA7oCHA4RpWGx2ByYPbozGFpOS6X6UvlyvVqq1xx7OFa9vgRNGk1tsPjQcooA">Edit</a></p>
-<img src="examples/gallery/native-buffer.furumai.generated.00.svg" alt="furumai generated image from examples/gallery/native-buffer.furumai"/>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQCcHsFcHMAsBcACALuaBTUBbSATTFAZwDsBDAB2PklVGNQE8AbI5AH1GWQDpYo0SgBo+AL0ilMyAN7IW5AEaYWKAORrkAX27IAxBVQBLAG7S5AMyMtV+-AAYLj8tt28jpKeGCZ8sc8iMUADWmMD45DTk4ODkTCgALMgAzADcgeiQoSgCcek6IMCgAjCUyADqmIoAakaYAO6yutDEmOAA2lGUmAC83eDEkgC6qboAxvBQOJjtRmOSPWqKsaT4xAD0E1OYaqIKyiyLlTV19WojoFqjxYJlhqbmuvsqiwBy5MZmyACClJRqox4ABlILByuAjKg2rN5qRFtBVpBdvIlC81CDYBUIVDwOdAchFNALBZoSiDosAEJEkm40RdXqUIzdUSoRY8dqYMykVDIACMQ2EAB1SByuTyAEwC4U8XiyzQXYGggDKmFW0LmCzU4F8SL2qMO6NByBVatxFyuoBupQJ5DGoVWTR4rXAZg6GrhamdruRzwNFNt9vweMuo0KoBabWQwAAfMgtpBpu1WWoAMIsObBYPx6ZR2MY8GQ6HJgAK0EU6Zowfz2MjMYJ1OhYwUxGIPQ8Xh8fkwFzDhOJtbzytVhA6TcirfbbU7-guGJNI9zNrtw6Ti3neKAA">Edit</a></p>
+<img src="examples/gallery/native-buffer.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/native-buffer.furumai"/>
 
 ---
 
-<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyDEAnA9npMgN7IBuAluBQEYWwUwoAWFAJm-AHbIC+GyAHRc8nEsgBm9WCiwA2AAwBRAGIARAEIBuZFHwBrJMhFd4O-pmGj4gyPAAeRUlNgzsclQA4AnAEEATHwCgvBsAObw4np4hrIAwgDMcQCsXkEgwKCgYfgArgAOyLAAhtDwOACMJAI0FVo1-vW89dl5hSVlOIHEAsV1vY29CfWYxQAsTS0ZoLUA2pAAvADkkMw48ODMeLBs4AuzFQoAuksANEXFNPCwy-iES0f1ffPLZPuep94nj6DFCS9LN6zL4PJ5jAFAw7fFq1ZDAAB8yD69VhCKRE1+VTR41mbGgC38Cny9h+fzhiPGUzArDEfXJ6JhFQBq3Wm22bH23lOULOFyuNyWd0goJm-mZaw2Wx2nO5xxFz0WgPe0KydOxwxmWIpGpogXVKL1FImQA">Edit</a></p>
-<img src="examples/gallery/b-tree-like.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/b-tree-like.furumai"/>
-
----
-
-<img src="examples/gallery/b-tree-like.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/b-tree-like.furumai"/>
+<img src="examples/gallery/native-buffer.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/native-buffer.furumai"/>
 
 ## Features
 
@@ -414,6 +409,8 @@ group x {
 
 <img src="examples/docs/theme.furumai.generated.00.svg" alt="furumai generated image from examples/docs/theme.furumai"/>
 
+`theme: default` is used by default if `theme` is not specified.
+
 ### Comment
 
 `//` is line comment.
@@ -435,4 +432,10 @@ a;
 
 [Furumai.g4](Furumai.g4)
 
-<Footer></Footer>
+## Development of Furumai
+
+[Development](development.md)
+
+## Gallery
+
+[Gallery](gallery.md)

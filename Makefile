@@ -54,5 +54,5 @@ $(ANTLR_JAR):
 $(ANTLR_OUT):
 	mkdir -p $(ANTLR_OUT)
 
-%.md: %.template.md scripts/readmegen.js
+%.md: %.template.md scripts/readmegen.js $(shell find examples/docs -name '*.furumai') $(shell find examples/docs -name '*.svg')
 	cat $< | node scripts/readmegen.js > $@

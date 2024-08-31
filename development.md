@@ -24,7 +24,7 @@ make images
 ## Update README.md
 
 ```shell
-make README.md README.ja.md
+make README.md README.ja.md gallery.md
 ```
 
 ## Update syntax

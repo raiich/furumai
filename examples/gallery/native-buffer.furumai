@@ -1,11 +1,11 @@
 ---
 rough: true
+mode: snapshot
 style: |
   .group, .zone { label: '' }
   #native { fill: #d0f0fa }
   .inner-edge { stroke-dasharray: 4 3; stroke: gray; }
 ---
-
 group WebView {
   user[shape=person];
   chrome[icon='brands/chrome', label='WebView'];
@@ -21,9 +21,10 @@ group native {
 group backend {
   server[icon='server', label='Backend'];
 };
-
+---
 user -> chrome[t='Click'];
 chrome -> LogWriter[t='Publish'];
 LogWriter -> buffer[class=inner-edge];
+---
 buffer -> LogSender[class=inner-edge];
 LogSender -> backend[t='Send'];
