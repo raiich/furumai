@@ -86,6 +86,10 @@ export class Arrow {
   }
 
   private arrowPath(): string {
+    if (this.shape.territory.area.width.pixel === 0 && this.shape.territory.area.height.pixel === 0) {
+      return ''
+    }
+
     const {x1, y1, x2, y2} = this.xy
 
     function rotateBase(deg: number, pump: number) {
