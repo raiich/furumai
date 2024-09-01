@@ -42,7 +42,30 @@ The existing drawing tools had the following difficulties.
 
 Therefore, I developed a tool that can automatically create an action diagram by adjusting each element.
 
-## Functions
+## Usage
+
+### Generate SVG via Web app
+
+- <a href="https://raiich.github.io/furumai/">Furumai | behavior visualization tool</a>
+
+### Generate SVG via CLI
+
+Setup:
+
+```shell
+git clone https://github.com/raiich/furumai.git
+cd furumai
+npm install
+```
+
+Generate SVG:
+
+```shell
+make svg FILE=examples/docs/eye-catch.furumai
+open examples/docs/eye-catch.furumai.generated.*.svg
+```
+
+## Text Description
 
 ### Basic Shapes
 

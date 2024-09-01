@@ -38,7 +38,30 @@
 
 そこで自動で図中の各要素の配置を調整して動作図を作成できるツールを開発しました。
 
-## 機能
+## 使用方法
+
+### WebアプリでSVGを生成
+
+- <a href="https://raiich.github.io/furumai/">Furumai | behavior visualization tool</a>
+
+### コマンドラインでSVGを生成
+
+セットアップ:
+
+```shell
+git clone https://github.com/raiich/furumai.git
+cd furumai
+npm install
+```
+
+SVG生成:
+
+```shell
+make svg FILE=examples/docs/eye-catch.furumai
+open examples/docs/eye-catch.furumai.generated.*.svg
+```
+
+## テキスト記述
 
 ### 基本図形
 

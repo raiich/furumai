@@ -1,4 +1,5 @@
 ---
+mode: snapshot
 rough: true
 style: |
  .node {margin: '0 70'}
