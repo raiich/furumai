@@ -1,4 +1,4 @@
-import {SvgElem} from '@/components/model/SvgElem'
+import {SvgElem} from './SvgElem'
 
 export class VIcon {
   public static of(base: SvgElem): SvgElem {

@@ -1,7 +1,7 @@
-import {Length, Point} from '@/layout/types'
-import {SvgElem} from '@/components/model/SvgElem'
-import {TextElem} from '@/components/model/TextElem'
-import {Shape} from '@/components/model/Svg'
+import {Length, Point} from '../../layout/types'
+import {SvgElem} from './SvgElem'
+import {TextElem} from './TextElem'
+import {Shape} from './Svg'
 
 export class Pipe {
   constructor(
@@ -49,19 +49,21 @@ export class Pipe {
     const yum = cy - (height / 2)
     const ydm = cy + (height / 2)
 
-    return `M ${xl},${yum}
-C ${xl + curve},${yum}
-  ${xl + curve},${ydm}
-  ${xl},${ydm}
-M ${xl},${yum}
-C ${xl - curve},${yum}
-  ${xl - curve},${ydm}
-  ${xl},${ydm}
-M ${xl},${yum}
-L ${xr},${yum}
-C ${xr + curve},${yum}
-  ${xr + curve},${ydm}
-  ${xr},${ydm}
-L ${xl},${ydm}`
+    return [
+      `M ${xl},${yum}`,
+      `C ${xl + curve},${yum}`,
+      `  ${xl + curve},${ydm}`,
+      `  ${xl},${ydm}`,
+      `M ${xl},${yum}`,
+      `C ${xl - curve},${yum}`,
+      `  ${xl - curve},${ydm}`,
+      `  ${xl},${ydm}`,
+      `M ${xl},${yum}`,
+      `L ${xr},${yum}`,
+      `C ${xr + curve},${yum}`,
+      `  ${xr + curve},${ydm}`,
+      `  ${xr},${ydm}`,
+      `L ${xl},${ydm}`,
+    ].join(' ')
   }
 }

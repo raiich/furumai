@@ -1,0 +1,35 @@
+---
+mode: snapshot
+style: |
+ .group, .zone { label: ''; }
+---
+
+group clients {
+  zone real {
+    User[shape='person'];
+  };
+  zone pc {
+    Browser;
+  }
+};
+
+group servers {
+  zone AS {
+    Authorizer;
+  };
+  zone RP {
+    Service;
+  }
+}
+---
+
+Browser -> Service [t='request a service',dx=-16px, text.dy=-20px];
+Service -> Browser [t='reply: 303 https://[authorizer url..]', dx=16px, text.dy=20px];
+---
+
+Browser -> Authorizer[t='request auth page', dx=-20px, dy=-20px, text.dy=-20px, text.dx=10px];
+Authorizer -> Browser [t='reply input form', dx='10', dy='20'];
+---
+
+User -> Browser [t='input id/password'];
+Browser -> Authorizer[t='send id/password'];

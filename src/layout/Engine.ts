@@ -1,4 +1,4 @@
-import {Area, AreaAttrs, Boundary, Gap, Length, Point, Territory, TerritoryMap} from '@/layout/types'
+import {Area, AreaAttrs, Boundary, Gap, Length, Point, Territory, TerritoryMap} from './types'
 
 export interface Config {
   orientation: Orientation
@@ -23,7 +23,7 @@ export interface LayoutStyle {
 }
 
 export class Engine {
-  constructor(readonly config: Config) {
+  constructor(readonly orientation: string) {
   }
 
   public fitRoot(root: Box) {
@@ -198,7 +198,7 @@ export class Engine {
   }
 
   private direction(style: LayoutStyle): 'row' | 'column' {
-    switch (this.config.orientation) {
+    switch (this.orientation) {
       case 'portrait':
         return style['flex-direction']
       case 'landscape':
@@ -207,10 +207,10 @@ export class Engine {
         } else if (style['flex-direction'] === 'column') {
           return 'row'
         } else {
-          throw new Error('not implemented')
+          throw new Error('not implemented: ' + this.orientation)
         }
       default:
-        throw new Error('not implemented')
+        throw new Error('not implemented: ' + this.orientation)
     }
   }
 }

@@ -1,10 +1,7 @@
 grammar Furumai;
 
 story
-  : config? layout ( '---' update )* '---'? EOF
-  ;
-config
-  : 'config' '{' declaration? ( ';' declaration )* ';'? '}'
+  : layout ( '---' update )* '---'? EOF
   ;
 layout
   : stmt_list
@@ -23,7 +20,6 @@ stmt
   | edge_stmt
   | hide
   | declaration
-  | style
   | semi_colon
   ;
 
@@ -57,10 +53,10 @@ hide_edge
   ;
 
 style
-  : 'style' '{' css_stmt* '}'
+  : css_stmt*
   ;
-css_stmt
-  : selector_list '{' declaration? ( ( ',' | ';' ) declaration )* ( ',' | ';' )? '}'
+ css_stmt
+  : selector_list '{' declaration? ( ( ',' | ';' ) declaration )* ( ',' | ';' )? '}' ';'?
   ;
 selector_list
   : selector ( ',' selector )* ','?

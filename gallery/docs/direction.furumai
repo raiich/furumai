@@ -1,7 +1,0 @@
-style {
-  #root {
-    flex-direction: row;
-  }
-}
-
-a; b; c;

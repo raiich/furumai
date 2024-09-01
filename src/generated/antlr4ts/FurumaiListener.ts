@@ -1,10 +1,9 @@
-// Generated from Furumai.g4 by ANTLR 4.7.3-SNAPSHOT
+// Generated from Furumai.g4 by ANTLR 4.13.1
 
+import {ParseTreeListener} from "antlr4";
 
-import { ParseTreeListener } from "antlr4ts/tree/ParseTreeListener";
 
 import { StoryContext } from "./FurumaiParser";
-import { ConfigContext } from "./FurumaiParser";
 import { LayoutContext } from "./FurumaiParser";
 import { UpdateContext } from "./FurumaiParser";
 import { Stmt_listContext } from "./FurumaiParser";
@@ -38,7 +37,7 @@ import { Semi_colonContext } from "./FurumaiParser";
  * This interface defines a complete listener for a parse tree produced by
  * `FurumaiParser`.
  */
-export interface FurumaiListener extends ParseTreeListener {
+export default class FurumaiListener extends ParseTreeListener {
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.story`.
 	 * @param ctx the parse tree
@@ -49,18 +48,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitStory?: (ctx: StoryContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `FurumaiParser.config`.
-	 * @param ctx the parse tree
-	 */
-	enterConfig?: (ctx: ConfigContext) => void;
-	/**
-	 * Exit a parse tree produced by `FurumaiParser.config`.
-	 * @param ctx the parse tree
-	 */
-	exitConfig?: (ctx: ConfigContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.layout`.
 	 * @param ctx the parse tree
@@ -71,7 +58,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitLayout?: (ctx: LayoutContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.update`.
 	 * @param ctx the parse tree
@@ -82,7 +68,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitUpdate?: (ctx: UpdateContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.stmt_list`.
 	 * @param ctx the parse tree
@@ -93,7 +78,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitStmt_list?: (ctx: Stmt_listContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.stmt`.
 	 * @param ctx the parse tree
@@ -104,7 +88,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitStmt?: (ctx: StmtContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.group`.
 	 * @param ctx the parse tree
@@ -115,7 +98,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitGroup?: (ctx: GroupContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.zone`.
 	 * @param ctx the parse tree
@@ -126,7 +108,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitZone?: (ctx: ZoneContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.node_stmt`.
 	 * @param ctx the parse tree
@@ -137,7 +118,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitNode_stmt?: (ctx: Node_stmtContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.edge_stmt`.
 	 * @param ctx the parse tree
@@ -148,7 +128,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitEdge_stmt?: (ctx: Edge_stmtContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.attr_list`.
 	 * @param ctx the parse tree
@@ -159,7 +138,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitAttr_list?: (ctx: Attr_listContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.hide`.
 	 * @param ctx the parse tree
@@ -170,7 +148,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitHide?: (ctx: HideContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.hide_elem`.
 	 * @param ctx the parse tree
@@ -181,7 +158,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitHide_elem?: (ctx: Hide_elemContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.hide_edge`.
 	 * @param ctx the parse tree
@@ -192,7 +168,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitHide_edge?: (ctx: Hide_edgeContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.style`.
 	 * @param ctx the parse tree
@@ -203,7 +178,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitStyle?: (ctx: StyleContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.css_stmt`.
 	 * @param ctx the parse tree
@@ -214,7 +188,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitCss_stmt?: (ctx: Css_stmtContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.selector_list`.
 	 * @param ctx the parse tree
@@ -225,7 +198,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitSelector_list?: (ctx: Selector_listContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.selector`.
 	 * @param ctx the parse tree
@@ -236,7 +208,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitSelector?: (ctx: SelectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.combined_selector`.
 	 * @param ctx the parse tree
@@ -247,7 +218,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitCombined_selector?: (ctx: Combined_selectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.combinator`.
 	 * @param ctx the parse tree
@@ -258,7 +228,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitCombinator?: (ctx: CombinatorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.basic_selector`.
 	 * @param ctx the parse tree
@@ -269,7 +238,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitBasic_selector?: (ctx: Basic_selectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.univ_selector`.
 	 * @param ctx the parse tree
@@ -280,7 +248,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitUniv_selector?: (ctx: Univ_selectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.type_selector`.
 	 * @param ctx the parse tree
@@ -291,7 +258,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitType_selector?: (ctx: Type_selectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.class_selector`.
 	 * @param ctx the parse tree
@@ -302,7 +268,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitClass_selector?: (ctx: Class_selectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.id_selector`.
 	 * @param ctx the parse tree
@@ -313,7 +278,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitId_selector?: (ctx: Id_selectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.edge_selector`.
 	 * @param ctx the parse tree
@@ -324,7 +288,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitEdge_selector?: (ctx: Edge_selectorContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.declaration`.
 	 * @param ctx the parse tree
@@ -335,7 +298,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitDeclaration?: (ctx: DeclarationContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.val`.
 	 * @param ctx the parse tree
@@ -346,7 +308,6 @@ export interface FurumaiListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitVal?: (ctx: ValContext) => void;
-
 	/**
 	 * Enter a parse tree produced by `FurumaiParser.semi_colon`.
 	 * @param ctx the parse tree

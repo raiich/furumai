@@ -1,80 +1,265 @@
 # Gallery
 
-<ClientOnly>
-
 ## OpenID Connect
 
-<DocSnippet
-filename="./gallery/examples/oauth2-authorization-code-grant.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEauyAZnAOYAEwVAtgRKlTEgIYAOMAFggC5UAvgB0kMPgE8ANhBqiqVAHQUoCAK4dMSgF7JZtKWwBGEKcwDk5gNxDRIpKJXqOVHFLgQkfGHKQLdSLJQEGxSvgoKAKow0ADaPJwQALzmHNAwyOYAulbyQrl+VAGyHDjhEQBCqgDuMVAFCvaCBY6qGizQkLDlxVQAggDK5Qp9any8UHDa0A35eb0ASgAKw1QDnXA4ELNNogC0B6KiVQi10FR7AHxrG1tUsXwpwQCOahDiVGwdUGCbEOaYfAADySe3QADYOECtHwIEC+Ip8BJQQAmAAMUJyonWPz+F2uJzOUHuj3MwQ4UgkzAAzGjqVRuHw+FxUAB6VmxNhjCZTc5qKBSRSKLIAqjApIQqEwuEIpFJdGYgoHPZHJCEur4-rchCTaZQB5PCCvd4CLnjKgcNgUf5acV7BXQsXI+0Yx2w+GI50O6Ue8XoV1YpCjcY63nEq5UdXnA1kiAUiRUOBIDhjKikHV0UXi8z+rPI8zo7JKw4OJDRc4RqPEmNJlMCOD4VmWmAwao6-BF441DUR4M8vUxmJIfCJxvN1vtzsobBsJBwOhsPiIFCoUBsHBLyBoPhQN6CQRAA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQFsHsBMFMC4AEBnAdgQwA7IBaQC6jL4CeANgogD6iIB0A5gE6QCumANPQF6SqyIA3ojLoARrDJIA5NIDciAL6gQwUKGZtMiAMZkAlrFT5kQ2ol79ETWOjJnEjxAFVksJgG1cWWAF5pmO7IfNIAunLmihGOlgKYOg5OAEIsAO5uTNFKoFHqmuwo7gBuQYmxiACCAMqJjhWs+HhM+tzuWbkxfAIASgAKtYhVxfo6sO05KmCgKZDp7ojAAHyDw6OIHvj+NgCOrLDEiOiFTEUjsNIc0AAevsAAjABsmFdc+LBX+HTQJLcATAAMz3CoCGJzOC2WMzmTHWm2kNkwZBISAAzP8UYgcPh8Nh4AB6PEedANJoteasJhkOh0UIXRDXXyPZ6vd6fb6+AFAiKqdRQjIQyokyDNVqeOE7PYHYmNRCYdAMc5cBnATkvek-FWAtVvD5fDWqlm6hl3LXA+qNYVkmFLRB8+YbLawREkRD6VCYBqIABmwvAdIZ0hN-p+0gBYW5U1c8xtdphDukbo9+Fd0DxcuQyFSwug4emaX5NvNpNF8bcqGgKbT6AzWaYOfCQA">Edit</a></p>
+<img src="examples/gallery/oauth2-authorization-code-grant.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/oauth2-authorization-code-grant.furumai"/>
+
+---
+
+<img src="examples/gallery/oauth2-authorization-code-grant.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/oauth2-authorization-code-grant.furumai"/>
+
+---
+
+<img src="examples/gallery/oauth2-authorization-code-grant.furumai.generated.03.svg" alt="furumai generated image from examples/gallery/oauth2-authorization-code-grant.furumai"/>
 
 ## Sieve of Eratosthenes
 
-<DocSnippet
-filename="./gallery/examples/eratosthenes.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00B0A5lAgK4AOwAtgEMobOElQ0ADAG4aPQfnxi2EmTUqCARhEoSA5HukBfRsxZICEAcNHipsgO5x8pABYSALAFZZriHDZXUk8vEyZWDm4eVgtCVg1tSjp8cgl0Dx4AD1l8TIkADiyw5gBiHig4fggYOicXdxpBLlIEWSERMQkAZkksqSzjRjDGcsrqgG0EnQBePVGq9TgyVD1MGlJZ8YBdPS3pRkZI3ho2dBb0STpTGnRxsCW4TThKOApp12dCJC2AJmku6QeaQ+ABs0gA7NJ8tIAJzSC77JBGRFHaKnM4IH6XBjhdDoeF-dAA9LwnzoMHoSHoaHoOFYxHIw6cY5sH4YnpXcJs6Q-P4-AE-IE-Hw-ME-SE-aE-OE9Bko5loroYjzY65K-5-LoArpAro+LpgrqQrrQrpwlVyplRE4eDFeVXhW2Av4eAEeIHeQFgjyQjzQjxw+2WpCok5eDEgh3McPAv5eAFeIFeHxeMFeSFeaFeOGR4OhtggjHgqM0QvSEF-EEAkFAkGgsEgyEg6EguHF4MAWi7IwqVRg4w29BA4x+WyHe0YP3GADNnpRpkOSuDp8vp9Px4iux3GB4Z3OFyAlyu1+uQBOkCC95R54vl6vT+f8leb4e7yeN4wLs+D0f7x+kOgU6zteP5vmu-7pN+t7HuBZ6IuSUGvjBD7wU+wEvr+75wZOkiIZhsHnryeFgShk67uhoHIf+orEVR2FIJKtF-vRPRMVh55dEB+7QcxHHkdxSG8YiBpsQRwloQJ+GkUgKqidJHhcSBPHsYi7pyf+HiXhRyliTuElKYJKmMPa6n0V4ikYSR-6JqZ56prZiKZg5jCRs5F4WZRQkufxBlSf+IJaZJVn0c2bnFm5W49mM-aDsOPxrF0Y4sXh+QeDg6C6UgkUXilaUZdJMK5elmWAUV+UQV4ZUlfpGGpcV0lslVDU+bVeWZeKTX-qx2mHnV5UsV0nUsYFvl9ZlZpDeeCmTaplU9SUY3yTVP6LdZtzzatZktStbXSemM0ubhG27f5g3HfV-kja1F0hYV539ee2XzBMsUjglaxeEldkpTCJ7SdlX4bb9RkAXNkn5MD7VHeDkMNWDo2w110MI39XXw7ViP0bJQOo1j6MrZjdnIxjuN2fji4Q6TiKuTjIN1j9VOMOFtOZU9vYvQeb00F0H1rOCX2IuCKUQGuOAgv+APbRTIvTmL1HreDMty-RjEbUr4sseTvXqxpHnS6LGtTXdisG9ZV0rTrIVnSbsuG4LxMW6b9Fs9FA6c-F3O8zQ4JrB7PM0F4fNrHiwf+5Swcwr7-vSglWDcz7NC2msrrJwn8YfZHpZx42AuMCA2CCEglSCKQiAoKgoCCDgpeQGgpBQFwEBGEYQA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyB0BzATgPYCuADgN4C2AhnjgJYB2KADANzIlUAmXjOL7WFQBG8WCgDkE1gF8M2BgS7xKNek2RtkAdzpdIACxQAWAKzsD8OjgOQTpuZlyFSCpfGxDRsZGS7QUAEZjEgAPdi5QlAAOMMdkAGISPDoKeHBfXX0jZCoiSAJ2alpGFABmZjDNMNlQEGBQUGTU9IBtLzEAXglmtORYOihECQAaZEhu1oBdCSnWRvxiEmQcQILA5l95QNaAN0G6YToBmE6DPWUGKYAmVjLWY1ZzADZWAHZWaNYATlYN+Zk80WrlWawI102ZG2gT+t0C92Cf3MgVegQ+gS+gV+EIBQJcyxw1zBFS2mCJrGut2u92uj2u5mur2uH2uX2uvwquNAwIJZTBxkh8j5d1uZXuZUeZXMZVeZQ+ZS+ZV+Aq5PJWxjBpkFmA1D1uxnuxkeZger2MH2MX2Mvy1qvxK1MYOe2uQjqet1M91Mj1M5lMr1MH1MX1Mv2ddqWK2eYLeLujrGet2e92ej2eL1ezw+zy+z1+sa59SaKTS4FaEwARK1rlMK3NQNdWgAzY6wToVhJvJtdptNuvzIvGZut9ud7u9vv157D2BtjtdnuT+bRGdzseL-ugDar0cLiebwKNluz3fj3sHofHtd78-1lE7+dnpdbldX08b+sQh-r-efo8jx8P3mWlvxvZ9GVAp9N1ZSCgNACpYN-eYyn-E9AKQ+DLwAn9b2Q6c33Q3D4NfbCwM3AVEKI4xUOvKD6yNSjn2MfDSLo+ZLUYzctU4+tTBo98MO9Hj5n9YTQGDMTnUk-jCOfVNJJYtCcLkkilLI+tYzEotejaStqzGMpa3rMpv2iYwAGNAiIotFLXMzLKI75TIsqzn0PZyHLc0wPNcg9VLslyiKJHygqwpT7N8z83hC58EIIhIIqIsUYs3GUUuMpz4sSpiZISwKmO8rL8vI-zR2yridiKzyuLCgLqt46Kqsi+YpKaojk3SlrbLK4qp0y7DyvrbSS109t9OQMoxlMIyRNM74J2fIttyy+aMMCQqBtWoLmDmhboI28KttinaVr24yDrso7yJOzazvYi6yqu3ibsOu7xIejtoielqXsut7012jDNNOjDhpaMs9OuAyprGN4ZtARqBvgXtzOeTcltqsrkabVHoMqpGUbRz9Ss+7HcfO0yyaJ9jcuiKnyP68L6d47rScJzcOqy5n5mBgmcepuowB0iGxqhiaYeQN4xjFybXVhsZAkCBXZbRBXvml2X2QMpWJql5ANTGA1Db1z0pvV5BozGLMZqAA">Edit</a></p>
+<img src="examples/gallery/eratosthenes.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.03.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.04.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.05.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.06.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.07.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.08.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
+
+---
+
+<img src="examples/gallery/eratosthenes.furumai.generated.09.svg" alt="furumai generated image from examples/gallery/eratosthenes.furumai"/>
 
 ## Kerberos Authentication
 
-<DocSnippet
-filename="./gallery/examples/kerberos.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEauyAZnAOYAEwVAtgRKlTEgIYAOMAFggC4BuKgF8AOknEw+ATwA2EGuKpUAdBSgIArh0yqAXsgW1ZbAEYRZzAORWBYpMoDEOWXAhI+MGlQBWmqXCk0gC0eB7ufMxSbFB8IkpUjjDQYHA4EF60fgFBoch8EVF8MYLxEg6JANIAIgDCNOSylomkAAxtbfZONfUqSIzejc2OAGIjAKIArLWtQlIaANZMVP1IEEJdVXWqBQAecbRDzI6Tp2cb4vbi6locVC5uHgD6yVCQUIoVBmv3rhGZCWUtT+HgECU23wUPU+ymUJnMsgAvFZKhBpFRqnB5nBTJo+IgHLUItBbICqABBADKAG0+MjyXjuBE0mx8cgqKJxJSUmkIFYALpgirKAAqAHEaXSrCK0ks4pykGKoGwPHAkNQFdy3ryBULlPYruqNNoWDz0gCKgB3CCmanwizIgDqNqoWveuoSjQgdrMDqsIzg8ldKRJgsu4nEwSj4mBjziwQAfBTKVRaVREVRpWKRQB+DniAAUpAQHwgbBw3FN2vSAEoBZHo0gqVRE1RYxFU3EM1mRQBCetIKPBGMg+NJ8Up2nIym5qgFgCy6PFIqoTKgEDruj2fBU+F2iOCAA4OLstxB9rvpAfj7t+Q3h0gJy2k+2PJ3p325+4cFBpBwCvgVDFh8zqmMGbzQJuVDbru+5HieZ4XvgV7wbe94jnGz5UNaYFpt2ADylR5gWoHge8rormuG4DkO4g4Vhr5xHhmaEf2d6Do2jFYU+eFWBRxGLlQy6rtA1GITue7Xgh0HnhJKE3uxtGPhKDGju+Vgzr2X5ID+f4AUBJZUAGQZupBVjibBUmnjJSHySeimcWprZep26YsURc7GQopkfDOInrnWDkPi5rZccxVisQOIDYCqcB0KyBJoKA5b4pAaB8FAmgQMIwhAA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQFsHsBMFMC4AEBnAdgQwA7IBaQC6jL4CeANgogD6iKIB0A5gE6QCumANAwF6SqxEAb0Rl0AI1hkkAchkBuAL61EAYgDGZAJaxU+ZMMQArNsS0AzEsHX98u-EmLpm+RMrqrksZgDct62AMREzNLa1t7R3xnfHk3UBVVAGkAEQBhYXMtMmk1cwAGAoL3NVSM+lQYQREsnKRVADEGgFEAVjT8uOJWAGtKSoE4kuT0hjsAD1ca7NzVVvmFodAQYASWdkxETR09AH0vX29hFT4BLe17IJU6NIu9eRUS08Ey47o6MUkyAF4ZJNgSIgUlpulpxGx8Fp+Ig0vZvAprogAIIAZQA2vhfkiITh7P50JDoQAdVAo7x+AIyAC6D3eiAAKgBxdGYmT0-x9VwkxnMdB6LSoRiIElk3z+WDU2nxZSgdYcFDk8VXOgAd1g4jRnykvwA6urEKKfPCaSparBNRJtTIGtlBIbjQ8ZStQLcdq5gAA+ZEoxAYxDfRBsxn0gD8wtQAApzJBmIhYOh1DgFWKAgBKanLMCoxCemF3Vx+gNB+kAQgzztd9hzXqZPoxvxRocQEYAsoCmfTELjmLB09wJvh6NBxt9gAAOTDjfuwSZDkijifjKmZ1a16t5t2+1mNkvN3TqZgkTB2aCIaOxvXiA3k7x9xADocj8eT6ez6Dz59Llcu-PrtVXwtAwAeSSMMI0va9DljRsu28XtyzAf910rPQt39YCkjLZcK1-XM10LGQDSbVt22DWCezvB9hwXF97xnQd3xor9nTXXMUILbdSz3VADyPE8zxjRAbQoSCjWYSj6MfJjXwYj9F2wsB2PXM00KLECwOEu0b2gztu3ghTVhUtjf0AmQQKwoA">Edit</a></p>
+<img src="examples/gallery/kerberos.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.03.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.04.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.05.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.06.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.07.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.08.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.09.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
+
+---
+
+<img src="examples/gallery/kerberos.furumai.generated.10.svg" alt="furumai generated image from examples/gallery/kerberos.furumai"/>
 
 ## B-link tree (desc)
 
-<DocSnippet
-filename="./gallery/examples/b-link-tree-desc.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DEUCCpdNYc8ARnEpwKqGgAs4+QkgC+jZgDokBCMABmQymJYA2AAwBRAGIARAEIBuGmXYBrCDoCCAZnMBWM9flMay1X6kEAAeXMA2pPaOrLrGABwAnE4ATNaalNox8UnJND4KfhD4AOZqtggOALwA5CwAwi51nnHVPkqRAIZI8BBIYfjkYsn6AA7BPvlIxewAriM0lB3k0Pp0BTjoloyyW0iM0whzC0vQ6Gu+-JsF-Knbu-uz84vLULkMvh1XH7cfLrvMHQALLsdoxGABaSGMT4AbVINTAlRh6H0AF1qphjvwIJQauxONVUfckJDwdD0HCEUiEpgUejMYtsbjqvjSITiaToYDKdVEci0eywSSoUhYfDedT6VicXiOGyieSaOCAHw0IEwnCLGAwSqdbpwXqkBV7YVkpCXJWqz67C0qtXAxiXHmkcRQCAwcQISj4HX8qWMmUsuWCk2c0UU8V8hL+jpMmohiEisVUmFxTDRhOm6EuHlR9HGjouS32jlJiMpuL53afYuFjVanV6np9Y2SQhqs52oGls22q1-R3l6out0er0+6m0gUM2OB1mZsM3Z2u92e72Tukhm61gfm3Jdh2hkV9mg3G1Dker8e+1H0RgCYRTSUY6XM+etqS0E+F3Ztr+dq1D0TM0NmXUc13wZ8ZzjIMCWNDZi0uXYELtM8hUXC8VzHb0bzvfV+EfYpn2NYDyVzJEAHZMErBck2ScjUyraF937HsyMjSimPDWsfj-DsdzY81MPA68kUrPCHzgJ8YQzY1vx+EBsC6OAAFsOlIRAUFQUAOhwDTIDQSIZggWRZCAA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyDEAnA9npMgN7IBuAluBQEYWwUwoAWFAJm-AHYC+GyAOi55OxAGb1YKLADYADAFEAYgBEAQgG5kUfAGsk2AIIBmNQFZVWvpiEj4gyPAAeRUjrz7pMpQA4AnIYATFoSsFLY3v5ByHz8AvBsAObwxO76ALwA5FgAwsY5Fj6Z1g44AIZc1NyubNAogXIADk58IMCgoIn4AK6NyLBl0PA4ciT8AMYAjBqgPDOdPX0DQziTY5g00-w0wbPzXXi9-YPDgevIZVuYZbvXxjPXACwzcx1toJcA2pBZZOmfkzkAF1MgAaY40eCwLL4QiZIHzd5fH6ZP6fPygwEg8EDSHQzKwyDwxFgMqPb6-f5Y4lvUmTCmo-5+bEQqEwghEhEfNbAAB8F3J4wG4HA6Ug5UqFGqXNA702yD5Fy28sVZJmmwZkGYOHg4GYeFgbFFAOBYNZ+MJNNldIZaOZZtxbMyVqR9JRaJ8oPtMqRxltTJBXLKxgV-LVtPayMpnx8gZml1DFz9QrKIrFEqqXEgXNYnCVifD1vaKrD91AGpRWp1eoNRqZmNNOLKePZcJ9YB2mu1uv1hvr1K5OwLZaHqueEfLPP5O3VbqyVZ7teNQIAOpKaAwuIkAw7m07LTn2PYS0mZrnj1OBST2lMu9Xe2wd02WwSOTSponNjMP4qZxOK-O3Y1oay5rtQG4UFuO7tpGc6Mp8ADsoKxi6pKBP6MZxh8ZyqmWRbchhCFYQmqq7Oe+a4dek53ouIH-LGYG0Ju27olhJ43BoQA">Edit</a></p>
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.03.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.04.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.05.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.06.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.07.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.08.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.09.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.10.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.11.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.12.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.13.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.14.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.15.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.16.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.17.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree-desc.furumai.generated.18.svg" alt="furumai generated image from examples/gallery/b-link-tree-desc.furumai"/>
 
 ## Dynamo like KVS
 
-<DocSnippet
-filename="./gallery/examples/distributed-kvs.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIA5lAgK4AOABDgDZwRIAuMNwAOkjXQIYBtenwBGEegF4A5AyasafKQF0A3N144RQ0eOmzmLGiOVqedHNrGSZjA3RPcAvqe5lKtGNEhQO6mkkFhK2kAOQIIGgBBKUwaGAALPioIPQBPRiRCKAczJC0g3SkwwhoAIRi4xOS0jKyc3iQLAutiiIBhCoSklJl0uEzoepp4+MtCgAl+lgh8GnG+TIQAMyXOqp6RBAAPHMdubgBaI+4AgRZpAGt0VBowdBy8s8vr2-vVE4tzqSubu5yjg7cHB8GgHAB8-kEXygED4sx+rxywKeUkiNAkEIRf3eSAB3HicBKwNBEICpk0JMhKIA7lA4NMaFiAEwPKHSWn0iLM-7HJAEokiSlkoGC8H+LRfDnTWIAMUiAEkADIAUQAIgBCTWdFjkC4QA74PhdKBQPipaQADhoABYeYC+YSIhSxXlyaKISMaXSGdycZ6vr7THiHQLKSM3UKcDQvZzGS8wCycY1owH44mg7z+U73f4cOSoy62VIYXC47900CC6TPtIS-C00ia6j0Zi05xuG0W2XbhWUNgFnAALZ8FiIFCoUB8HCjyBoHUUCCORxAA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/OYJw9grgDgBAxgGwJYFMB2AXAzjA3gKBngEMBtBYgIxQQF4ByRVTGY+gXQG5D5LyqaDJugwxKHbkThx+1Oo2Qj4E-AF9u+UJFhYUIAG568PNGQpyGAOTAATFDACC9ADQwsAC2JQUQgJ7I0OxAVIjQ+c0F6azsYACEXN09vPwCgkJg0GQj5aPsAYQSPLx9GfyRAvXT3d1lIgAlyjBQbGDriQLAAM07CpJLKMAAPFVV8fABaSfxTUgwGAGsARgAuGH1FlTDZhZW1ja5pmTn6JdX1lUnx-DhiGHGAPgyyY5AUYhbTvZUb7foHGFoj0+5wOl3w7iQMRud0epm4cEoMKevwA7iAkE0YMCAEybZ4MNEY+w4i5TCFQxEPJ7wymwvjHQlNVwAMQcAEkADIAUQAIgBCAWFDDgeYocY2YhFEAgYi+BgADhgABZSVdyfYEUiwjSkdVUejMSSDnrjkbuGD1bxde4dVTMjB9USsbt9LiDvbfmaJmTIRraRk4PC4Fr8fRXu9nWc3UGtUcGOGPi7o9c438AUCkwAdNB5dORtbRoA">Edit</a></p>
+<img src="examples/gallery/distributed-kvs.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/distributed-kvs.furumai"/>
+
+---
+
+<img src="examples/gallery/distributed-kvs.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/distributed-kvs.furumai"/>
+
+---
+
+<img src="examples/gallery/distributed-kvs.furumai.generated.03.svg" alt="furumai generated image from examples/gallery/distributed-kvs.furumai"/>
+
+---
+
+<img src="examples/gallery/distributed-kvs.furumai.generated.04.svg" alt="furumai generated image from examples/gallery/distributed-kvs.furumai"/>
+
+---
+
+<img src="examples/gallery/distributed-kvs.furumai.generated.05.svg" alt="furumai generated image from examples/gallery/distributed-kvs.furumai"/>
+
+---
+
+<img src="examples/gallery/distributed-kvs.furumai.generated.06.svg" alt="furumai generated image from examples/gallery/distributed-kvs.furumai"/>
+
+---
+
+<img src="examples/gallery/distributed-kvs.furumai.generated.07.svg" alt="furumai generated image from examples/gallery/distributed-kvs.furumai"/>
 
 ## B-link tree (asc)
 
-<DocSnippet
-filename="./gallery/examples/b-link-tree.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DEUCCpdNYc8ARnEpwKqGgAs4+QkgDcNAL6NmAOlJQAhkngQkXYDXzkxAJgAMABwAe8pUjuMA5uwCuFmpQ3loZuspo46LKMDkjOCG4eXtDofkw0-EH+-CbB9oxOru6e3lAmccwaSfEaqf4aAMxphQAsaaEAtE2MRQDapAC8AORgHa3oALpdmFH8EJTd7JxdA2mMTQ0t6O3dvf2YFUMjnmMTXVOkM3NICy0VKz19m0cZJ81IbZ2X-Vuj45Mch7NLNA0AfDRKq0cJ4YDAOuotDo9N8kPN7olfgCimlEf9AVVGIkLqRxFAIDBxAhKPhwa1rtsNLsPtNYY9Vn1BsM3nsijc4XdFg9lk81lgTEMBrdTg8TBc1gL2aUkRjjiKijLSmlJIRAbF0ZU5Qj1ciykhsU9cfjCcT8H0TBtXjt3vtPuyRSlFZiOQ6ed0jQSiSTzQNMPRGAJhGEOhVmda9gd2WiASllVJaNHZcL7oEZYk0qn0bGsW6uh6Td7yVaqTbEuzAji8Z7TVdi9TbbS0iBsFo4ABbDSkRAoVCgDQ4LuQNDqFwQBQKIA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyDEAnA9npMgN7IBuAluBQEYWwUwoAWFAJm-AHYDcyAvhmQA6SDgCGXatyKk20FACYADAAcAHn0EhgoUAHN8AV1XJY46PBzKSQgMYBGHqEEHjp85ZwPbmGk6EaRWdXQzwTMwsrRV9kcQDMcWChcQBmZ0SAFhC9HVB4gG1IAF4AcjJigocAXVKAGkiaeFgy-EJS6udQPMKS8sqHOtTahvMmltK2yA6untSisoqC4ZncsF7FgZHG5taCac78n2AAPjj5u3NwcGKxSWkuSEPusH9kU7iAt4+0538F0qQZg4eDgZh4WBsG7LbZjXaTfarDb9Kqw8TjMrxVYvXTIpaDRS1aprXGKAFLQlImI-dIko7vM5JZysTifBnnWavY6M5L-PpAkFgiFsSqKIZojEI9qHPJBdm-Ol8soC0HgyGi6p1AA6UloDC4+mKqXqOwmU1W3zOQWZ7HgyEtHLpjnZ-mczo+1tASsBwNVwsqK1G6Ph-lWjgBKqF6phJrhZsRnSAA">Edit</a></p>
+<img src="examples/gallery/b-link-tree.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.03.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.04.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.05.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.06.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.07.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.08.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.09.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.10.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.11.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
+
+---
+
+<img src="examples/gallery/b-link-tree.furumai.generated.12.svg" alt="furumai generated image from examples/gallery/b-link-tree.furumai"/>
 
 ## Sample image of b-link tree
 
-<DocSnippet
-filename="./gallery/examples/b-tree-like.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DEUCCpdNYc8ARnEpwKqGgAs4+QkwC+jZgDokBWsBoAzIZTEsAbAAYAogDEAIgCEA3DTLsA1hDEqkEG-KY1lqxaQgAPLnUtSh1WPRMADgBOAEEAJhoPJQh8AHM1W1IHJ1YAYQBmPIBWKKTGD0Y09gBXAAcaSgBDcmh0OgUafnQrTv543qRZQarahubWqESGTyaezqaBhYLB5iaAFkHhxkYAWn3GboBtUgBeAHJScSgIGHEESnwYU6P0AwBdc8xGpv4ISgu7E453egzmJwuYBekUw0U+oMYTQKEPOUKOcJBYPWKLRb3hIyQ3RouwAfDQ5oMiaTyZtEe1qRsjvhyKd4gY6v4EUgkcSyRsCftdoxJIRyfS+bSkId0Cirjc7g98C9opg8V8fn8AecgaRMYd4rLrrd7o9laqPnruTKzqjofidlbeeSVtKnUjKYkGS7CZ6JYMQNgmkg4ABbJqkRAoVCgJo4COQNDZGoQWSyIA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQCcHsFcHMAsBcACALuaBTUBnVBPAG0xQB9RlkBiKSVZAb2QDcBLHVgI1cNYJXisAJkMwA7ZAF8KyAHRjIoxsgBmPQiioA2AAwBRAGIARAEIBuZHigBrEsgVjMF6ZXmLMs1JgAe9JmsINai0DAA4ATgBBACYpGVlMIVhMZStIW00AYQBmTIBWMLiQYFBQWChoAAdkQgBDfExwAEZGGU4mszbozslOsorquobwWIYZWo7x7vHszspagBYevuLQdoBtVABeAHJUeHBMHHhIQiEcLfWmnQBdHYAaGtrOTEJd2lQdm86Jzd3mS6he7hO7fUC1bJ-HYA9Ygr4-BZQmHXUF9drIYAAPmQE066KxOKW4JaBMW6yE+C20R0lW8YIhGOxixWYEESgmjMJaKaUP2h2OpyEl3C9xRDyeLzeOw+8LW0V5ByOJzOwtFt1lv220MBqNKHNJszWJKZhs4sQNePNTKWQA">Edit</a></p>
+<img src="examples/gallery/b-tree-like.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/b-tree-like.furumai"/>
 
-## Sample image of native app
+---
 
-<DocSnippet
-filename="./gallery/examples/native-buffer.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00B0A5lAgK4AOmrAL2S1gNSgEMARhEqoaAcnk0Avo2YBiJONJxIdGgDM4lWTXX4ADAaviVa1nCRJoAWgj42ImmU4BrCC744jAAFuJQUOLkcgAsNADMANzepH4QchxRyapIyomMjBzcPDQA6hCSAGpwEADudPZcMNAA2qHiPBAAvJ2wyAC6+Uw0OCGcALYQLXB4SF3ykpFI+DAA9KMTEPL8EtKU8+VVNbXyg4x5BUhFvDRaOnoMw7sy8wBy2rq0AII8PPJDzAAMgg2KUoHBSK0Zsh5lxlghtmIpC95MC2GVwZCoKcATRJFwDAZWki9vMAEIEonY-jtTo9OCdfikebMFoQSBIUg0dD9TD0RhsjlcgBMvP5wxYkqUZ2GaIAyhBllDZvMoO4ETtkftUSCaAqldiZRckIVODdJOIcP5lg1hs0oJAoNMVfJ7Y7Ec9tWTLdb8DjzkNGE1oDQXAA+EZjBCTFrM+QAYUoM18-qQG2jtHDNDRYIhrTjAAUuJIk6FUznMSGs-jCa0cBIYDAuo5nFA3B4IDKa1TQxH5YrCE768Emy3XO5PDL+wbe3ifQPY-N9X6ZSBsOIkHBxh9kGhQJb7kRUKkuBBlMogA"
-viewCode="false"
-></DocSnippet>
+<img src="examples/gallery/b-tree-like.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/b-tree-like.furumai"/>
 
 ## Sample image of Array List
 
-<DocSnippet
-filename="./gallery/examples/array-list.furumai"
-url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DEUCCpdNYc8ARnEpwKqGgAs4+QkgDcNAL6NmAOiQEIwALYBDKAHM4SMQAYADgA95ZndKP6x6c1ZoB3KaXFiArM-niIOH1xUjEAFm9LJSRoxn12AFczGj0oHXI6ZRocdFksnAAmPKZsgGZi5hwwiuzvGpwANnqAdnqADnqATnqnAG1KHX4ISgBeAHIVSbHMGjJ2AGsIcfUkCDGAXR7c-PQinfKd6p26nabGaIBaK8Yc4sK7g6Qqu5Ons6fWm47GRiuLm-QvVI4x0G2KfxuBSB434YN+1yepWhYxwcKQEKeYWR+DRGJw3mRa028P+b2RADNcQicM1kfoqaScG1keIGTdOsi4GiciY7uhtk9dnzHjkjoLXjl3nj+ciAFZswVQ4FjeYKnJI5WUNXoLHKrTagnKpDahrIhBokDYHRIOC6UiIFCoUA6HD2yBoUhQBIQBQKIA"
-viewCode="false"
-></DocSnippet>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQBcAsFMFtoFwAIAOBDAxga2gE1AM7gCeANokgD6hIB0AdgPa7RIDeSpaARtKcgHIBAbnS5cAS3oBzZAEYADCgAeSAL6gQwUKABuEghO4TSEkgF5IE8dHrCd0gE6MAriiRpHjtMXY0kGHL2SAEATMEBAMwRGAAsMQCsMQBsANrg5gK02QIANEhEzjiZTPTQAgC6MQDsMQAc9mr2WqCB6ZlocqGRlfYYoe0C3F2xva2Rg4GhCWNxg7hdyWMtGAmD0F3Vs8l9ta0NQA">Edit</a></p>
+<img src="examples/docs/array-list.furumai.generated.01.svg" alt="furumai generated image from examples/docs/array-list.furumai"/>
 
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">!: Not working, see this page.</a>
+---
 
-<Footer></Footer>
+<img src="examples/docs/array-list.furumai.generated.02.svg" alt="furumai generated image from examples/docs/array-list.furumai"/>
+<!-- # furumai:generate examples/gallery/array-list.furumai -->
+
+<!-- # furumai:generate examples/docs/diff-mode.furumai -->
+<!-- # furumai:generate examples/docs/eye-catch.furumai -->

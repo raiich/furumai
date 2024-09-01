@@ -1,4 +1,4 @@
-import {Assigns, m} from '@/style/Style'
+import {Assigns, m} from '../../style/Style'
 
 export class SecureSvgAttrs {
   public static of(svgAttrs: Assigns): SecureSvgAttrs {

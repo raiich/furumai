@@ -1,16 +1,16 @@
-import {Boundary, Territory} from '@/layout/types'
-import {SecureSvgAttrs} from '@/components/model/security'
-import {VIcon} from '@/components/model/VIcon'
-import {Box} from '@/components/model/Box'
-import {Arrow, TextAttrs} from '@/components/model/Arrow'
-import {Cylinder} from '@/components/model/Cylinder'
-import {TextElem} from '@/components/model/TextElem'
-import {SvgElem} from '@/components/model/SvgElem'
-import {Person} from '@/components/model/Person'
-import {Pipe} from '@/components/model/Pipe'
-import {asString} from '@/style/Style'
+import {Boundary, Territory} from '../../layout/types'
+import {SecureSvgAttrs} from './security'
+import {VIcon} from './VIcon'
+import {Box} from './Box'
+import {Arrow, TextAttrs} from './Arrow'
+import {Cylinder} from './Cylinder'
+import {TextElem} from './TextElem'
+import {SvgElem} from './SvgElem'
+import {Person} from './Person'
+import {Pipe} from './Pipe'
+import {asString} from '../../style/Style'
 
-export interface Svg {
+export interface Snapshot {
   styles: string
   size: Boundary
   root: Group
@@ -70,7 +70,7 @@ export class Shape {
   public elem(id: string, className: string): SvgElem {
     const visibility = this.appearance.visibility
     if (visibility) {
-      if (visibility !== 'visible' && visibility !== 'hidden') {
+      if (visibility !== 'visible' && visibility !== 'hidden' && visibility !== 'inherit') {
         throw new Error('not supported: ' + visibility)
       }
     }

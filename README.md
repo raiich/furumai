@@ -1,29 +1,22 @@
 # Furumai
 
 A tool of behavior visualization, via a DOT (Graphviz) like description:
-<a href="https://raiich.github.io/furumai/">Furumai - behavior visualization tool</a>
+<a href="https://raiich.github.io/furumai/">Furumai | behavior visualization tool</a>
 
-# Gallery
+Translations:
 
-<ClientOnly>
-<DocSnippet
-  filename="Buffered Writer/Sender"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00B0A5lAgK4AOmrAL2S1gNSgEMARhEqoaAcnk0Avo2YBiJONJxIdGgDM4lWTXX4ADAaviVa1nCRJoAWgj42ImmU4BrCC744jAAFuJQUOLkcgAsNADMANzepH4QchxRyapIyomMjBzcPDQA6hCSAGpwEADudPZcMNAA2qHiPBAAvJ2wyAC6+Uw0OCGcALYQLXB4SF3ykpFI+DAA9KMTEPL8EtKU8+VVNbXyg4x5BUhFvDRaOnoMw7sy8wBy2rq0AII8PPJDzAAMgg2KUoHBSK0Zsh5lxlghtmIpC95MC2GVwZCoKcATRJFwDAZWki9vMAEIEonY-jtTo9OCdfikebMFoQSBIUg0dD9TD0RhsjlcgBMvP5wxYkqUZ2GaIAyhBllDZvMoO4ETtkftUSCaAqldiZRckIVODdJOIcP5lg1hs0oJAoNMVfJ7Y7Ec9tWTLdb8DjzkNGE1oDQXAA+EZjBCTFrM+QAYUoM18-qQG2jtHDNDRYIhrTjAAUuJIk6FUznMSGs-jCa0cBIYDAuo5nFA3B4IDKa1TQxH5YrCE768Emy3XO5PDL+wbe3ifQPY-N9X6ZSBsOIkHBxh9kGhQJb7kRUKkuBBlNgzWwQmgT2egA"
-  viewCode="false"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+- [日本語](README.ja.md)
 
-<ClientOnly>
-<DocSnippet
-  filename="B-tree like"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DEUCCpdNYc8ARnEpwKqGgAs4+QkwC+jZgDokBWsBoAzIZTEsAbAAYAogDEAIgCEA3DTLsA1hDEqkEG-KY1lqxaQgAPLnUtSh1WPRMADgBOAEEAJhoPJQh8AHM1W1IHJ1YAYQBmPIBWKKTGD0Y09gBXAAcaSgBDcmh0OgUafnQrTv543qRZQarahubWqESGTyaezqaBhYLB5iaAFkHhxkYAWn3GboBtUgBeAHJScSgIGHEESnwYU6P0AwBdc8xGpv4ISgu7E453egzmJwuYBekUw0U+oMYTQKEPOUKOcJBYPWKLRb3hIyQ3RouwAfDQ5oMiaTyZtEe1qRsjvhyKd4gY6v4EUgkcSyRsCftdoxJIRyfS+bSkId0Cirjc7g98C9opg8V8fn8AecgaRMYd4rLrrd7o9laqPnruTKzqjofidlbeeSVtKnUjKYkGS7CZ6JYMQNgmkg4ABbJqkRAoVCgJo4COQNDZGoQWTYfB8OoTExwWCkADKYDSaA0TUoMAg2FqaXEiagydkQA"
-  viewCode="false"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+## Gallery
 
-# Features
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQCcHsFcHMAsBcACALuaBTUBbSATTFAZwDsBDAB2PklVGNQE8AbI5AH1GWQDpYo0SgBo+AL0ilMyAN7IW5AEaYWKAORrkAX27IAxBVQBLAG7S5AMyMtV+-AAYLj8tt28jpKeGCZ8sc8iMUADWmMD45DTk4ODkTCgALMgAzADcgeiQoSgCcek6IMCgAjCUyADqmIoAakaYAO6yutDEmOAA2lGUmAC83eDEkgC6qboAxvBQOJjtRmOSPWqKsaT4xAD0E1OYaqIKyiyLlTV19WojoFqjxYJlhqbmuvsqiwBy5MZmyACClJRqox4ABlILByuAjKg2rN5qRFtBVpBdvIlC81CDYBUIVDwOdAchFNALBZoSiDosAEJEkm40RdXqUIzdUSoRY8dqYMykVDIACMQ2EAB1SByuTyAEwC4U8XiyzQXYGggDKmFW0LmCzU4F8SL2qMO6NByBVatxFyuoBupQJ5DGoVWTR4rXAZg6GrhamdruRzwNFNt9vweMuo0KoBabWQwAAfMgtpBpu1WWoAMIsObBYPx6ZR2MY8GQ6HJgAK0EU6Zowfz2MjMYJ1OhYwUxGIPQ8Xh8fkwFzDhOJtbzytVhA6TcirfbbU7-guGJNI9zNrtw6Ti3neKAA">Edit</a></p>
+<img src="examples/gallery/native-buffer.furumai.generated.01.svg" alt="furumai generated image from examples/gallery/native-buffer.furumai"/>
+
+---
+
+<img src="examples/gallery/native-buffer.furumai.generated.02.svg" alt="furumai generated image from examples/gallery/native-buffer.furumai"/>
+
+## Features
 
 - Text-based description
     - You can write behavior in DOT (Graphviz) style
@@ -33,7 +26,7 @@ A tool of behavior visualization, via a DOT (Graphviz) like description:
     - You can also adjust the appearance by specifying the SVG attribute.
 - Layout engine that can specify placement in `Flexbox model` like CSS.
 
-# Background
+## Background
 
 The existing drawing tools had the following difficulties.
 
@@ -49,110 +42,196 @@ The existing drawing tools had the following difficulties.
 
 Therefore, I developed a tool that can automatically create an action diagram by adjusting each element.
 
-# Functions
+## Functions
 
-## Basic Shapes
+### Basic Shapes
 
-You can specify `box` / `person` / `cylinder` / `Pipe` as the basic shape.
+You can specify `box` / `person` / `cylinder` / `pipe` as the basic shape.
 Arrows (`->` or `--`) can be placed between elements.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/basic-shapes.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIAhjgC4JToDaMAFiQA4QC8A5C7MuwLoDcAHSRICEWg2Zt2AIwQAPPkKQxKUcXUYsOOAJ4AbOEkJQlw4WTXoABAFpb10YXTKn4uwD5rqquOUhsEiQ4AFsSckQUVFBLOEg0cigAVwgAX1SgA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/IYYwLg9gTgjA2gZwBbAA4FMC8ByDUEQB22AugNwBQhEAJuvMmltgEYQAeplCkU9iKDDhABPADYBLQnShcKFULxgACALSrl1OjEpb6agHzKe0emSA">Edit</a></p>
 
-## Icon Shapes
+```
+actor1[shape='person'];
+node1[shape='box'];
+store1[shape='cylinder'];
+
+actor1 -- node1;
+node1 -> store1;
+```
+
+<img src="examples/docs/basic-shapes.furumai.generated.00.svg" alt="furumai generated image from examples/docs/basic-shapes.furumai"/>
+
+### Icon Shapes
 
 You can specify Font Awesome icon as below.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/icon.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIAhgNpx5IC8A5AK4zS0C6A3ADpIBGFVdUCAHN6AGxJQA9I2bsuOPsjrcoJJPhiShcAC4ALet1acU2NXAC2JHYhSpQJHDchodUehAC+noA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/IYbQlgxg9gdgvAcgK4GcCmAnBBdA3AKACNxp4EM0BzJAG2AwHpVMcCITZFCNgYATFA0pgALgAskhVkA">Edit</a></p>
 
-## Behavior motion diagram (like a flipbook comic)
+```
+a[icon='user'];
+b[icon='regular/user'];
+c[icon='brands/github'];
+```
+
+<img src="examples/docs/icon.furumai.generated.00.svg" alt="furumai generated image from examples/docs/icon.furumai"/>
+
+### Behavior motion diagram (like a flipbook comic)
 
 Separate each frame of the motion diagram with `---`.
 
-### Diff mode (default)
+#### Diff mode (default)
 
 Default is `diff mode`.
 The `diff mode` is useful especially for "incremental small changes" such as explaining how an algorithm works.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/simple-animation-diff.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIAhgNwA6SARpUjnQLTNUkAEjAfG7Vc41WoduDKiGwkkcALYkALohSpQJHAsho5UAK4QAvnqA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/IYbgUARuDG4LQLMABHAfMqYF0qjsQA">Edit</a></p>
+
+```
+a;
+b;
+c;
+---
+a -> b;
+---
+b -> c;
+```
+
+<img src="examples/docs/simple-animation-diff.furumai.generated.01.svg" alt="furumai generated image from examples/docs/simple-animation-diff.furumai"/>
+
+---
+
+<img src="examples/docs/simple-animation-diff.furumai.generated.02.svg" alt="furumai generated image from examples/docs/simple-animation-diff.furumai"/>
 
 If you hide it initial layout, it can be made to appear only after changes have been made.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/array-list.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEa4c8ARnADZwAuAngLwAWc+hSA3ADpI8DmUBAFcADgAIAhlCgS6Y4DzFikBCAG0AtlL5wkDAAyYxIiW118G6Q2IDurGkwYAOa0whw+TGs4CsRyhJkEJQMAOShALrcSEo46NGxAEwJYjgAzCk4ACyZPpkAbGoBQSGhAHQVoUYwNIIA1hBhKkgQkZkA7JlO0QC+0QC0gzxxat6hEuiJaW3DiaNhZJNZM0jp86FxiT4r2ev4k-krg-3DPusQk+07+dE4ncPdPCDYEkhwWjSIKKigEjifkDQtSEEB6PSAA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/G4SwziBGIDYgLgTwLwAsQBMMFMB2BuAKEIHMAnAewFcAHAAgEMyyHE6BvQuugYwEYi3HgCZBvAMwBteMgDkAOkWyANHTDxKAa2xzcFXNlkBdMTwAsRAL5EAtHcL8iI6XL7CA7Mdv2e4p2ZdZNwAOLyA">Edit</a></p>
 
-### Snapshot mode
+```
+visibility=hidden;
+
+group array {
+  c1;
+  c2;
+  c3[t='...', stroke='none'];
+  c4;
+};
+---
+c1;
+c2[t='127'];
+---
+c3;
+c4[t='128'];
+```
+
+<img src="examples/docs/diff-mode-box.furumai.generated.01.svg" alt="furumai generated image from examples/docs/diff-mode-box.furumai"/>
+
+---
+
+<img src="examples/docs/diff-mode-box.furumai.generated.02.svg" alt="furumai generated image from examples/docs/diff-mode-box.furumai"/>
+
+#### Snapshot mode
 
 If each frame is independent, use the `snapshot` mode.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/simple-animation-snapshot.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEauyAZnAOYAEwVAtgRKlTEgIYAOMAFggC4BuKgF8AOknFsB4gEbSkOeQFoVkqkoB8VOeJVLZ6rYvEhsbJHDps+iFKlBscNyGj5QArhGHCgA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQFsHsBMFMC4AEBnAdgQwA7IBaQC6gjCijoDcoARpQMaXFmLAB8iNRYVzb9QA">Edit</a></p>
 
-## Label / Text
+```
+---
+mode: snapshot
+---
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/label-text.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaISBE6A2jABYCGADhALwDkARggB4uYAEALqzxJ+EEb2rQILALoBuADpJaOfgiiUaDZi0axkPXgBtabCEda1eAVxjRZipDDVRyVOoyEBPI3CSEoQxMzCxZndQgAQkNBFgBrdFReMHQHJRBsWiQ4AFtafkQUVFAVAsg0fihrCABfGqA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+a;
+b;
+c;
+---
+a -> b;
+---
+b -> c;
+```
 
-## SVG attribute
+<img src="examples/docs/simple-animation-snapshot.furumai.generated.01.svg" alt="furumai generated image from examples/docs/simple-animation-snapshot.furumai"/>
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/svg-attributes.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIS6A2gC4C8A5BRAB4UAE6NmzAZnADY9UBDAI4BXAQFsBUOEggBdANwAdJEgBMypCtLMAtAD5m6siubMYFKAgDWEXQHc4+CgAsqAdkynzlm3Z4yEDgCAA60ViJI+OzeFla2uvgCMC5SUAIAnlRKIADMzACcOd4IIQI4cBRZOQAMAHQArMVIZtQ0Asz0TDEtnYwUddx8VADEAgBsnF5Iiiog2AJIcJIUiCiooOWrkGiWIhAAvgdAA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+---
 
-## Zone / Group
+<img src="examples/docs/simple-animation-snapshot.furumai.generated.02.svg" alt="furumai generated image from examples/docs/simple-animation-snapshot.furumai"/>
+
+### Label / Text
+
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/HYewJgpgjA2gzgCwIYAcIF4DkAjEAPTAGgAIAXLAYxGFIhuIQgCcJMBdAbgCgkLSQmsRKgyY0TONSLEANkmwQZWJMQCucZu25x+LIcjSUAnjICWwSE2lyFSzDoEQAhNPKYA1lABcxAG5QtIA">Edit</a></p>
+
+```
+node1[shape='box', t='content here'];
+actor1[shape='person', label='a user'];
+store1[shape='cylinder', label='store!', t='k1: v1'];
+```
+
+<img src="examples/docs/label-text.furumai.generated.00.svg" alt="furumai generated image from examples/docs/label-text.furumai"/>
+
+### SVG attribute
+
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/HYRg2gLgvA5BCmAPCACEMA0KBmBLANvlAIYCOArsQLbEBOuw8AugNwBQwATOxyCgLQA+FFzBsUKAM4RaAewDW8fgHdcAEwgALKAHYM4qTIVL8DeAGNiAB1hzywNZgPS5i-muKTNdWsQCeUABEAMwoAJyBBrJWxOa4EAGBAAwAdACskRLQMMQoCMhOWUgQKXiEUADExABs2PqsQA">Edit</a></p>
+
+```
+n1[t='text 1', fill=aquamarine];
+n2;
+
+n1 -> n2[
+  stroke-width=7,
+  stroke-linecap='round',
+  stroke-dasharray="3 9"
+  opacity="0.5"
+  t='a text',
+  text.fill=#a6f,
+];
+```
+
+<img src="examples/docs/svg-attributes.furumai.generated.00.svg" alt="furumai generated image from examples/docs/svg-attributes.furumai"/>
+
+### Zone / Group
 
 There are the following methods to summarize the diagram elements.
 
 - `group`
-	- Lay it side by side
+    - Lay it side by side
 - `zone`
-	- It arranges them in vertical direction
+    - It arranges them in vertical direction
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/group-zone.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIA5lAgK4AOABDujcADpI00BmcANlwLwDE7dhADcLNgFsIAbRgALAIZUIvAOTLYyVQF0xrGgCNyAdxjR0etgBcECLhZYBfFmUq0zUMHBwQGzfZw8qDSCwpY0AF7IEDQKEX7ibBzcfIIQ7OFsVOQAHgCeDvpsBgo4ANYQSPiFbM76UUgxcQBMjIlsganCGe002Qj5zZmGpRVVQ4l1dSxSNAC0AHyGJh6FNnYMi8sIpubSuiwsRjur80v9+YXHu1Cb57l5E0gXBWcj5ZXVei+tWyUf4z0IGwCiQcAkCisiBQqFApShkDQVigFAgjkcQA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/OYJw9grgDgBAxgRhgbwFAxgMwJYBtcC8AxJpgKYDc6MAtmQNoDOAFgIZRkEDkHIjYAOy4BdKhgBG4AO6MyIBGJgAXMGFwLUAX1ShIsWSABu2OGSRoMOfAC4YJcooBegsjFaPz1S3kIkymRQwocAAPAE8NDAlWOABrMgEAE0iYbQxnAVd3ACYULywfYnIA-OCwcOzAmHEY+KTK6m1tVDoYAFoAPmrpAw0VNSRO7rAZOQR6UVRUSRHe9q6y8I0Z0fl5mEWwhs3Brpq4hOSqTdyh-brEyqA">Edit</a></p>
 
-## Style
+```
+group c1 {
+  fill=#ffe;
+  me[shape='person'];
+  browser1;
+  tool1;
+}
+group service1 {
+  fill: #ffe;
+  zone az1 {
+    fill=#fef;
+    proxy1;
+    backend1;
+  }
+  zone az2 {
+    fill=#fef;
+    proxy2;
+    backend2;
+  }
+}
+
+me -> browser1;
+tool1 -> browser1[];
+
+browser1 -> proxy1;
+browser1 -> proxy2;
+proxy1 -> backend1;
+proxy2 -> backend2;
+```
+
+<img src="examples/docs/group-zone.furumai.generated.00.svg" alt="furumai generated image from examples/docs/group-zone.furumai"/>
+
+### Style
 
 It can be styled just like CSS.
 The name of the node, etc. is used as the `id`. You can also set `class` names.
@@ -164,91 +243,199 @@ The following IDs and classes are provided by default.
 - `.node`, `.edge` : nodes, edges
 - `.text`, `.label` : texts, labels
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/css.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DES6dNZUCA1hKlYA2AIYAzGgF9GzNhwB0lEQCMIlTmLiVKglmNEBuGmOSkAtPABeAmgGYATAAcAHkelNW7GvNIRnpDS0dVhEhMQN3SQNGRnYAbVIAXgByX38adGTMYyDEkQBHAFcRAFsRKDgkCABdaKQkezrYjjMAPhoGuJkuUh5+MwB3OHxSAAtEgHZMbu4+CDNKSogcEUcUnkKkfCyZ3rmzfBEYUfKoEXJE+hBbGgBOK+6ERxEcOApLkAAGeQBWB48kskRDQ0qQdgC-KR5JptIkWKExNMkLVGCBsCIkHAyqREChUKAXjjIGheoUIJJJEA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyDEA7AjMgN7JQBOA9gNZLYBsAhgGbIC+G2+yAdLPQEbxYRZIwCWsWCiyMGAbhHkckYOFEAvGgGYATAAcAHvLaZcBLpHj7IwsRKn1ajWce4BjWOGAFitydkb09M6gIMCgoPgA2pAAvADkFlbIeHEANCLisDH0AI4ArvQAtvSkojjwALqyEdqR7vTg4DEARO6eeM1V4ZzAAHzIOLXsZFTwwADuogAmkAAWMQDsqcOQFNTAsGXwrvS68RR5OFNpK2tjUw2zJaT00C2ayACczezkuvSuojAtAAxcAKwvTCxOL0ZCJSAnYGWSBcXwxLAORjLKpAA">Edit</a></p>
 
-## Margin / Padding
+```
+---
+style: |
+  #n1 { stroke: #6af }
+  #n1 .label { fill: #f6a; font-size: 32px; }
+  #n1 .text { fill: #a6f;}
+  .cls-1 { fill: #faa;}
+---
+
+n1[t='text 1', fill=aquamarine];
+n2[class="cls-1"];
+
+n1 -> n2[
+  stroke-width=7,
+  stroke-linecap='round',
+  stroke-dasharray="3 9"
+  opacity="0.5"
+  t='a text',
+  text.fill=#a6f,
+];
+```
+
+<img src="examples/docs/css.furumai.generated.00.svg" alt="furumai generated image from examples/docs/css.furumai"/>
+
+### Margin / Padding
 
 You can set `margin` / `padding`, like web pages.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/margin-padding.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIS6A2gLYCGUA5nEgLwDkAbAAwAOAHs5gAQAXFoIjdBAQj79OVfPga1G6VjwC6AbgA6SJACZKNek2Z6e04c1HiJUgbPmKW6Lt356AHOc079B6nQMjADMrj4o2FRIcNSCiCiooFQ4cZBoglAArhAAvjlAA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/HYRg2gtghgTg5gS2AXgOQDYAMAHAHqgGgAIAXNEgU1xIEJCjsoATJpOZEdPAXQG4AoYACZIsRClRC89MqkrUadYoxZs0IHLiJCAHNL6ChI6PCTIAzJr5A">Edit</a></p>
 
-## dx / dy
+```
+n1[margin='60px', t='text!', padding=16px];
+n2[margin='2px', t='text!!', padding='10px 28px'];
+n22[margin=30px];
+```
+
+<img src="examples/docs/margin-padding.furumai.generated.00.svg" alt="furumai generated image from examples/docs/margin-padding.furumai"/>
+
+### dx / dy
 
 There are cases where arrows overlap as a result of automatic placement.
 You can shift the arrangement of arrows by specifying the `dx` / `dy` attribute.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/dx-dy.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIAhgNwA6SARpUjnVQOZQICuADgARMBMXwKly746wiGK4AzOgF9GSElwC0APi44A2vgAeAXgDMABg46AunWor1DKvmvS6EB1O0BPPbyMWqIbCSQ4AFsSABdEFFRQEhxwyDRQqDYIWVkgA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/IYbgUARuDG5g5gJwPYFcAOACeAmTBvMTTAE3GIFNzMAzcAXzmEwFoA+TaAbRIA8BeAMwAGdLwC64CKw6wwJGbXAVFNHgE9+OYZKA">Edit</a></p>
 
-## Layout like CSS Flexbox
+```
+a;
+b;
+c;
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/justify-content.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DEA5gEx2PPMBWAVzJwAZuQC0eJKQjTUNMgEMopANw8aAXw3sAzNya9BwsZOQy5CgA6KcEccoQCk+dYe1IPjNlCdWabOh0NIqqNABGYR4+fgFcwDQ4Ud6+Av5s+gmuWimxbAAswRDJKNiKSHAAtoqkiCiooLa1kGikUAIQmppAA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+group g2 {
+  d;
+  e;
+  f;
+};
 
-## Direction / Orientation
+a -> c[dx=30px];
+b -> c;
+d -> f;
+e -> f[dy=20];
+```
+
+<img src="examples/docs/dx-dy.furumai.generated.00.svg" alt="furumai generated image from examples/docs/dx-dy.furumai"/>
+
+### Layout like CSS Flexbox
+
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyDEBzATMgN4abIBWArlAJYBm0wAxgPYB2k87KUAhgE6QA3CQC+JXAGYiJTJRr0mbDl2TgADj0bxg-ZhVYATYZjEhgoUDj561yHAEYiyHoOQAjV2Ks27BQskZPS2sKWxwpfyNkLxCwgBYneE8gA">Edit</a></p>
+
+```
+---
+style: |
+  #g2 {
+    justify-content: start;
+  }
+  #g3 {
+    justify-content: space-around;
+  }
+---
+
+group g1 { a; b; }
+group g2 { c; }
+group g3 { d; }
+group g4 { e; }
+```
+
+<img src="examples/docs/justify-content.furumai.generated.00.svg" alt="furumai generated image from examples/docs/justify-content.furumai"/>
+
+### Direction / Orientation
 
 You can change the layout direction by specifying `flex-direction` in `style` or `orientation` in `config`.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/direction.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEaIMALgJ4A2EABMADpI00DEUCCpdjzzAZtQAeAWnxwoEHKURJUNdgHcA3DxoBfRhqSMAhkpoAjfThUpsOpHAC2O6cjSgdUuJDSkoAVwhq1QA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQGcBcE8BsFMBcACAPqZyDEAnA9npMgN4abIBmCAHsACYCWO8AxpA3gHYr4DuA3GQC+oEMFCgAhv2QAjGS35A">Edit</a></p>
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/orientation.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEauyAZnAOYAEwCUcESALgIZOJIC8ANi0vjBwsADhAC+AHSRSkBCOgDcUljiZ10AbRgALERE6jYyALpKkMNVHlbdozjgCe3OP2impIbHzgBbNhzRQFXZINCYoAFdxMSA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+```
+---
+style: |
+  #root {
+    flex-direction: row;
+  }
+---
 
-## Hide displayed elements
+a; b; c;
+```
+
+<img src="examples/docs/direction.furumai.generated.00.svg" alt="furumai generated image from examples/docs/direction.furumai"/>
+
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQBMEsCcFMGMAukD2A7AXAAgDYEM1wBnePAB1lBGFFDRXFgEYBuUPJFaJgbSIAtysALwVoRdAF02RRF2Z9BFYfACeOSIVjRpQA">Edit</a></p>
+
+```
+---
+direction: landscape
+---
+
+node1;
+actor1[shape=person];
+store1[shape=cylinder];
+```
+
+<img src="examples/docs/orientation.furumai.generated.00.svg" alt="furumai generated image from examples/docs/orientation.furumai"/>
+
+### Hide displayed elements
 
 To hide the displayed element, use `hide` as follows.
 
-<ClientOnly>
-<DocSnippet
-  filename="./gallery/docs/hide.furumai"
-  url="v1/N4IgbgpgTgzglgewHYgFwEYA0IDGCAmEauyAZnAOYAEwAtgRKlTEgIYAOMAFggC4C+AHSTDWAbmEAjCWyoBaAHxVpw4XPXCucQlVbylKkUnVzN2iMpkhsrJHFqteiFKlCscTyGl5QArhH5+IA"
-></DocSnippet>
-</ClientOnly>
-<a v-if="false" href="https://raiich.github.io/furumai/docs">Image not rendered. [view image]</a>
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQFsHsBMFMC4AEBnAdgQwA7IBaQC6gjCijoDcoARpeosAHyI2nGg4CWcidjzlRMJ240gA">Edit</a></p>
 
-## Comment
+```
+---
+mode: snapshot
+---
+
+a;
+b;
+a -> b;
+
+---
+hide a -> b;
+
+---
+hide b;
+```
+
+<img src="examples/docs/hide.furumai.generated.01.svg" alt="furumai generated image from examples/docs/hide.furumai"/>
+
+---
+
+<img src="examples/docs/hide.furumai.generated.02.svg" alt="furumai generated image from examples/docs/hide.furumai"/>
+
+### Theme
+
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQBcAsFMFtoFwAIAOBDAxga2gE1CMKAOYBOA9gK4pIAeSA3qEkgF7kB20SAno0mgDcSAEbCAvszadurfhgmhxQA">Edit</a></p>
+
+```
+---
+theme: packed
+---
+group x {
+  zone y { a; b; }
+  zone z { c; }
+}
+```
+
+<img src="examples/docs/theme.furumai.generated.00.svg" alt="furumai generated image from examples/docs/theme.furumai"/>
+
+`theme: default` is used by default if `theme` is not specified.
+
+### Comment
 
 `//` is line comment.
 
-## Rough Mode
+### Rough Mode
 
-You can enable `Rough.js` when checkbox is checked.
+<p align="right"><a href="https://raiich.github.io/furumai/#/v1/LQhQCcHsFcHMAsBcACALuaBTUJigIYDcQA">Edit</a></p>
 
-# Syntax
+```
+---
+rough: true
+---
+a;
+```
 
-<<< ./Furumai.g4
+<img src="examples/docs/rough.furumai.generated.00.svg" alt="furumai generated image from examples/docs/rough.furumai"/>
 
-<Footer></Footer>
+## Syntax
+
+[Furumai.g4](Furumai.g4)
+
+## Development of Furumai
+
+[Development](development.md)
+
+## Gallery
+
+[Gallery](gallery.md)

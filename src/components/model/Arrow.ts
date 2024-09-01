@@ -1,9 +1,9 @@
-import {Vector2d} from '@/layout/Vector2d'
-import {SvgElem} from '@/components/model/SvgElem'
-import {Length, Point} from '@/layout/types'
-import {TextElem} from '@/components/model/TextElem'
-import {m} from '@/style/Style'
-import {Shape} from '@/components/model/Svg'
+import {Vector2d} from '../../layout/Vector2d'
+import {SvgElem} from './SvgElem'
+import {Length, Point} from '../../layout/types'
+import {TextElem} from './TextElem'
+import {m} from '../../style/Style'
+import {Shape} from './Svg'
 
 export class Arrow {
   private defaults = {
@@ -86,6 +86,10 @@ export class Arrow {
   }
 
   private arrowPath(): string {
+    if (this.shape.territory.area.width.pixel === 0 && this.shape.territory.area.height.pixel === 0) {
+      return ''
+    }
+
     const {x1, y1, x2, y2} = this.xy
 
     function rotateBase(deg: number, pump: number) {
@@ -98,12 +102,14 @@ export class Arrow {
     const va = rotateBase(degree, pumpUp)
     const vb = rotateBase(-degree, pumpUp)
 
-    return `M ${x1} ${y1}
-L ${x2} ${y2}
-M ${va.x2} ${va.y2}
-L ${x2} ${y2}
-M ${vb.x2} ${vb.y2}
-L ${x2} ${y2}`
+    return [
+      `M ${x1} ${y1}`,
+      `L ${x2} ${y2}`,
+      `M ${va.x2} ${va.y2}`,
+      `L ${x2} ${y2}`,
+      `M ${vb.x2} ${vb.y2}`,
+      `L ${x2} ${y2}`
+    ].join(' ')
   }
 }
 
